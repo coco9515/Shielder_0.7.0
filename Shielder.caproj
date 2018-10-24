@@ -1,0 +1,1149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Shielder</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>iodcyxn41mf6</unique-id>
+    <saved-with-version>26500</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
+        <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="glowhorizontal">Glow Horizontal</effect>
+        <effect author="Scirra" id="glowvertical">Glow Vertical</effect>
+        <effect author="Scirra" id="warp">Warp</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>768</width>
+        <height>432</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Main menu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="HUD">
+            <object-type name="bg_Lifebar" sid="149104504511783">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="614892847756910" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Lifebar" sid="279581162915931">
+                <plugin id="progressbar" />
+            </object-type>
+            <object-type name="icon_Lifebar" sid="372370972665715">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="921751930519826" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="text_Test1" sid="296186067881413">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="text_Life" sid="804327069653229">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="text_Test2" sid="906819244348447">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="text_Titre" sid="455219188206253">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="text_GameOver" sid="441431818223168">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="text_FinDémo" sid="209860748707392">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TitreJeu" sid="440054151588595">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="532702359633769" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\titlelogo_big.png">
+                            <collision-poly>
+                                <point x="0.0546875" y="0.21875" />
+                                <point x="0.5" y="0.21875" />
+                                <point x="0.9375" y="0.25" />
+                                <point x="0.953125" y="0.5" />
+                                <point x="0.945313" y="0.78125" />
+                                <point x="0.0546875" y="0.78125" />
+                                <point x="0.03125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SousTitreJeu" sid="302653371258466">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="893928469976423" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\titlelogo_soustitret_big.png">
+                            <collision-poly>
+                                <point x="0.0305344" y="0.166667" />
+                                <point x="0.5" y="0.0416667" />
+                                <point x="0.969466" y="0.166667" />
+                                <point x="1" y="0.5" />
+                                <point x="0.969466" y="0.833333" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0305344" y="0.833333" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="fnt_text" sid="340433645515002">
+                <plugin id="Spritefont2" />
+                <texture original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\spritefont test 1.png" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Dangers">
+            <object-folder name="Ennemis">
+                <object-type name="spr_GoblinArcher" sid="183403338216309">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="DestroyOutsideLayout" sid="709737012618527">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="678571753853678" speed="8">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 1" x="0" y="0.5" />
+                            </frame>
+                        </animation>
+                        <animation framecount="14" loop="1" name="GobelinQuiTire" pingpong="0" repeatcount="1" repeatto="0" sid="990709699013998" speed="8">
+                            <frame duration="1" hotspotX="0.498008" hotspotY="0.502564">
+                                <image-point name="Imagepoint 1" x="0" y="0.502564" />
+                                <collision-poly>
+                                    <point x="0.752987" y="1" />
+                                    <point x="0.414343" y="1" />
+                                    <point x="0.294821" y="0.435897" />
+                                    <point x="0.374502" y="0.169231" />
+                                    <point x="0.599601" y="0.176923" />
+                                    <point x="0.780876" y="0.507692" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501992" hotspotY="0.502564">
+                                <collision-poly>
+                                    <point x="0.219124" y="0.507692" />
+                                    <point x="0.400399" y="0.176923" />
+                                    <point x="0.625498" y="0.169231" />
+                                    <point x="0.705179" y="0.435897" />
+                                    <point x="0.585657" y="1" />
+                                    <point x="0.247013" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501992" hotspotY="0.502564">
+                                <collision-poly>
+                                    <point x="0.219124" y="0.507692" />
+                                    <point x="0.400399" y="0.176923" />
+                                    <point x="0.625498" y="0.169231" />
+                                    <point x="0.705179" y="0.435897" />
+                                    <point x="0.585657" y="1" />
+                                    <point x="0.247013" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501992" hotspotY="0.502564">
+                                <collision-poly>
+                                    <point x="0.219124" y="0.507692" />
+                                    <point x="0.400399" y="0.176923" />
+                                    <point x="0.625498" y="0.169231" />
+                                    <point x="0.705179" y="0.435897" />
+                                    <point x="0.585657" y="1" />
+                                    <point x="0.247013" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501992" hotspotY="0.502564">
+                                <collision-poly>
+                                    <point x="0.219124" y="0.507692" />
+                                    <point x="0.400399" y="0.176923" />
+                                    <point x="0.625498" y="0.169231" />
+                                    <point x="0.705179" y="0.435897" />
+                                    <point x="0.585657" y="1" />
+                                    <point x="0.247013" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501992" hotspotY="0.502564">
+                                <collision-poly>
+                                    <point x="0.219124" y="0.507692" />
+                                    <point x="0.400399" y="0.176923" />
+                                    <point x="0.625498" y="0.169231" />
+                                    <point x="0.705179" y="0.435897" />
+                                    <point x="0.585657" y="1" />
+                                    <point x="0.247013" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501992" hotspotY="0.502564">
+                                <collision-poly>
+                                    <point x="0.219124" y="0.507692" />
+                                    <point x="0.400399" y="0.176923" />
+                                    <point x="0.625498" y="0.169231" />
+                                    <point x="0.705179" y="0.435897" />
+                                    <point x="0.585657" y="1" />
+                                    <point x="0.247013" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501992" hotspotY="0.502564">
+                                <collision-poly>
+                                    <point x="0.219124" y="0.507692" />
+                                    <point x="0.400399" y="0.176923" />
+                                    <point x="0.625498" y="0.169231" />
+                                    <point x="0.705179" y="0.435897" />
+                                    <point x="0.585657" y="1" />
+                                    <point x="0.247013" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501992" hotspotY="0.502564">
+                                <collision-poly>
+                                    <point x="0.219124" y="0.507692" />
+                                    <point x="0.400399" y="0.176923" />
+                                    <point x="0.625498" y="0.169231" />
+                                    <point x="0.705179" y="0.435897" />
+                                    <point x="0.585657" y="1" />
+                                    <point x="0.247013" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501992" hotspotY="0.502564">
+                                <collision-poly>
+                                    <point x="0.219124" y="0.507692" />
+                                    <point x="0.400399" y="0.176923" />
+                                    <point x="0.625498" y="0.169231" />
+                                    <point x="0.705179" y="0.435897" />
+                                    <point x="0.585657" y="1" />
+                                    <point x="0.247013" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501992" hotspotY="0.502564">
+                                <collision-poly>
+                                    <point x="0.219124" y="0.507692" />
+                                    <point x="0.400399" y="0.176923" />
+                                    <point x="0.625498" y="0.169231" />
+                                    <point x="0.705179" y="0.435897" />
+                                    <point x="0.585657" y="1" />
+                                    <point x="0.247013" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501992" hotspotY="0.502564">
+                                <collision-poly>
+                                    <point x="0.219124" y="0.507692" />
+                                    <point x="0.400399" y="0.176923" />
+                                    <point x="0.625498" y="0.169231" />
+                                    <point x="0.705179" y="0.435897" />
+                                    <point x="0.585657" y="1" />
+                                    <point x="0.247013" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501992" hotspotY="0.502564">
+                                <collision-poly>
+                                    <point x="0.219124" y="0.507692" />
+                                    <point x="0.400399" y="0.176923" />
+                                    <point x="0.625498" y="0.169231" />
+                                    <point x="0.705179" y="0.435897" />
+                                    <point x="0.585657" y="1" />
+                                    <point x="0.247013" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501992" hotspotY="0.502564">
+                                <collision-poly>
+                                    <point x="0.219124" y="0.507692" />
+                                    <point x="0.400399" y="0.176923" />
+                                    <point x="0.625498" y="0.169231" />
+                                    <point x="0.705179" y="0.435897" />
+                                    <point x="0.585657" y="1" />
+                                    <point x="0.247013" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="spr_GoblinWalk" sid="626576769147442">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="DestroyOutsideLayout" sid="649209412339155">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="727700396542891" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 1" x="0" y="0.5" />
+                            </frame>
+                        </animation>
+                        <animation framecount="6" loop="0" name="GobelinQuiMarche" pingpong="0" repeatcount="1" repeatto="0" sid="233146478692116" speed="5">
+                            <frame duration="1" hotspotX="0.504202" hotspotY="0.504">
+                                <collision-poly>
+                                    <point x="0.781511" y="1" />
+                                    <point x="0.121849" y="1" />
+                                    <point x="0.132353" y="0.434426" />
+                                    <point x="0.441176" y="0.0327869" />
+                                    <point x="0.781513" y="0.471311" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.504202" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.781511" y="1" />
+                                    <point x="0.121849" y="1" />
+                                    <point x="0.132353" y="0.434426" />
+                                    <point x="0.441176" y="0.0327869" />
+                                    <point x="0.781513" y="0.471311" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.504202" hotspotY="0.504">
+                                <collision-poly>
+                                    <point x="0.781511" y="1" />
+                                    <point x="0.121849" y="1" />
+                                    <point x="0.132353" y="0.434426" />
+                                    <point x="0.441176" y="0.0327869" />
+                                    <point x="0.781513" y="0.471311" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.504202" hotspotY="0.504">
+                                <collision-poly>
+                                    <point x="0.781511" y="1" />
+                                    <point x="0.121849" y="1" />
+                                    <point x="0.132353" y="0.434426" />
+                                    <point x="0.441176" y="0.0327869" />
+                                    <point x="0.781513" y="0.471311" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.504202" hotspotY="0.507813">
+                                <collision-poly>
+                                    <point x="0.781511" y="1" />
+                                    <point x="0.121849" y="1" />
+                                    <point x="0.132353" y="0.434426" />
+                                    <point x="0.441176" y="0.0327869" />
+                                    <point x="0.781513" y="0.471311" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.504202" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.781511" y="1" />
+                                    <point x="0.121849" y="1" />
+                                    <point x="0.132353" y="0.434426" />
+                                    <point x="0.441176" y="0.0327869" />
+                                    <point x="0.781513" y="0.471311" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Pièges">
+                <object-type name="spr_TurretVertical" sid="153489045911118">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable comment="Simply the angle the turrets is facing" name="AngleOfAttack" sid="515063470450535" type="number" />
+                        <instance-variable comment="Timer du projectile" name="ShootTimer" sid="189766470813124" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974878646820208" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\turret.png">
+                                <image-point name="Imagepoint 1" x="0.5" y="0.125" />
+                                <collision-poly>
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="spr_Spikes" sid="753568164191089">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="699477026037037">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="248408776938868" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\pics.png">
+                                <collision-poly>
+                                    <point x="0" y="0.3875" />
+                                    <point x="1" y="0.39375" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="spr_Projectile" sid="184558159052179">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="le projectile est-il friendly ?" name="isFriendly" sid="448983847688887" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="472736732515842">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="409399319681496">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="GlowHorizontal">
+                        <effect id="glowhorizontal" />
+                    </effect-type>
+                    <effect-type name="GlowVertical">
+                        <effect id="glowvertical" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="963406277834984" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\fireball.png">
+                            <collision-poly>
+                                <point x="0.375" y="0.625" />
+                                <point x="0.3125" y="0.5" />
+                                <point x="0.3125" y="0.3125" />
+                                <point x="0.75" y="0.25" />
+                                <point x="0.90625" y="0.5" />
+                                <point x="0.75" y="0.75" />
+                                <point x="0.5" y="0.71875" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MurInvisiblePourMob" sid="611057882661218">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="135237550776220" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Décor">
+            <object-folder name="Tuto">
+                <object-type name="infobulle_turn" sid="425075020389419">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="727367871573567" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\infobulle_turn.png">
+                                <collision-poly>
+                                    <point x="0.0348837" y="0.09375" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.965116" y="0.09375" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.953488" y="0.875" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.0465116" y="0.875" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="infobulle_move" sid="759187971500821">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="472700844951901" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\infobulle_move.png">
+                                <collision-poly>
+                                    <point x="0.0348837" y="0.09375" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.965116" y="0.09375" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.953488" y="0.875" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.0465116" y="0.875" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="infobulle_shelter" sid="253168587059480">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="426104549545873" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\infobulle_shelter.png">
+                                <collision-poly>
+                                    <point x="0.0234375" y="0.09375" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.976563" y="0.09375" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.96875" y="0.875" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.03125" y="0.875" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="infobulle_jump" sid="175912697112428">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="976796847764355" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\infobulle_jump.png">
+                                <collision-poly>
+                                    <point x="0.0348837" y="0.09375" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.965116" y="0.09375" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.953488" y="0.875" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.0465116" y="0.875" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="infobulle_surf" sid="661927331441002">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="843397962909066" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\infobulle_surf.png">
+                                <collision-poly>
+                                    <point x="0.0234375" y="0.09375" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.976563" y="0.09375" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.96875" y="0.875" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.03125" y="0.875" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="infobulle_parry" sid="465465362633028">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="727067456285692" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\infobulle_parry.png">
+                                <collision-poly>
+                                    <point x="0.0348837" y="0.09375" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.965116" y="0.09375" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.953488" y="0.875" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.0465116" y="0.875" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="infobulle_dash" sid="291833263100822">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="717880056888000" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\infobulle_dash.png">
+                                <collision-poly>
+                                    <point x="0.0348837" y="0.09375" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.965116" y="0.09375" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.953488" y="0.875" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.0465116" y="0.875" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="infobulle_throw" sid="362583825502150">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="455493165983524" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\infobulle_throw.png">
+                                <collision-poly>
+                                    <point x="0.0348837" y="0.09375" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.965116" y="0.09375" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.953488" y="0.875" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.0465116" y="0.875" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Effets">
+                <object-type name="fx_Smoke" sid="853132263287237">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="534877597296768">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <effects>
+                        <effect-type name="Warp">
+                            <effect id="warp" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="3" repeatto="0" sid="937180601378731" speed="8">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="fx_fire" sid="139274887674537">
+                    <plugin id="Particles" />
+                    <texture />
+                </object-type>
+                <object-type name="spr_torch_halo" sid="315346886180247">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Sine" sid="891946259427492">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="891513901396243" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ShadowLight" sid="213650703502578">
+                    <plugin id="shadowlight" />
+                </object-type>
+                <object-type name="spr_point_light" sid="810072977627883">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Sine" sid="756060552547614">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                        <behavior-type name="Sine2" sid="221655062766191">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="672891775392009" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\light.png">
+                                <collision-poly>
+                                    <point x="0.328" y="0.328" />
+                                    <point x="0.5" y="0.256" />
+                                    <point x="0.676" y="0.324" />
+                                    <point x="0.748" y="0.5" />
+                                    <point x="0.676" y="0.676" />
+                                    <point x="0.5" y="0.748" />
+                                    <point x="0.324" y="0.676" />
+                                    <point x="0.256" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="spr_point_light_Player" sid="204810121826954">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Sine" sid="585867002088977">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="633466019670828" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\light.png">
+                                <collision-poly>
+                                    <point x="0.328" y="0.328" />
+                                    <point x="0.5" y="0.256" />
+                                    <point x="0.676" y="0.324" />
+                                    <point x="0.748" y="0.5" />
+                                    <point x="0.676" y="0.676" />
+                                    <point x="0.5" y="0.748" />
+                                    <point x="0.324" y="0.676" />
+                                    <point x="0.256" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="spr_StairsDown" sid="361614628708377">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="479925531250516">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="983927025129416" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\escalier.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.996094" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spr_StairsUp" sid="588437125172448">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="982007310361854">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="954113915954290" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="1" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\escalier.png">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="tile_WallHitbox" sid="984073207721116">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="270384253275071">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="ShadowCaster" sid="535749722529585">
+                        <behavior id="shadowcaster" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\wall.png" />
+            </object-type>
+            <object-type name="tile_Chains" sid="662209199867869">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\chainspetit.png" />
+            </object-type>
+            <object-type name="tile_BrickBlack" sid="643646880178064">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\wall chelou.png" />
+            </object-type>
+            <object-type name="tilemap_WallMenu" sid="693148953843235">
+                <plugin id="Tilemap" />
+                <texture original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\wall_tilemap.png" />
+                <tiles />
+            </object-type>
+            <object-type name="tilemap_Wall" sid="934804904962420">
+                <plugin id="Tilemap" />
+                <texture original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\tilemap chelou.png" />
+                <tiles />
+            </object-type>
+            <object-type name="tile_Ladder" sid="945391222703820">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\tile_Ladder.png" />
+            </object-type>
+            <object-type name="spr_Lever" sid="616212241916582">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="125008138136787" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.6875" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.6875" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.6875" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.6875" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="window" sid="353118165287427">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="551860612558598" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\window.png">
+                            <collision-poly>
+                                <point x="0.25" y="0.25" />
+                                <point x="0.5" y="0" />
+                                <point x="0.75" y="0.25" />
+                                <point x="0.8125" y="0.5" />
+                                <point x="0.828125" y="0.828125" />
+                                <point x="0.5" y="0.984375" />
+                                <point x="0.171875" y="0.828125" />
+                                <point x="0.1875" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spr_torch" sid="883585822325383">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="961766286487324" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\torch.png">
+                            <collision-poly>
+                                <point x="0.4375" y="0.4375" />
+                                <point x="0.5" y="0.15625" />
+                                <point x="0.5625" y="0.4375" />
+                                <point x="0.6875" y="0.5" />
+                                <point x="0.625" y="0.625" />
+                                <point x="0.5" y="0.84375" />
+                                <point x="0.375" y="0.625" />
+                                <point x="0.3125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spr_DamagedPlatform" sid="691651397621232">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="478919394829886">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Timer" sid="743562017098673">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="984522796434194" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spr_Porte" sid="705875883807903">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Open when the trigger is active" name="IsTriggerActive" sid="652659229874344" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="868289098896268">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="547082928144320" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spr_ExitLevel" sid="216482507563283">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="124852252825035" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Joueur">
+            <object-type name="spr_Player" sid="153239440205090">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="vie du joueur" name="vieJoueur" sid="802080658089579" type="number" />
+                    <instance-variable comment="état du joueur" name="playerState" sid="596088488411148" type="string" />
+                    <instance-variable comment="sens du joueur" name="playerSens" sid="124789971830773" type="string" />
+                    <instance-variable comment="Le joueur peut-il dash ?" name="canDash" sid="628574347130373" type="boolean" />
+                    <instance-variable comment="A quel imagepoint mettre le bouclier ?" name="imagepointBras" sid="454398198497940" type="number" />
+                    <instance-variable comment="Est-il en cours de parry ?" name="isParrying" sid="620097329169846" type="boolean" />
+                    <instance-variable comment="Compte le nombre de dégâts subit" name="Blessures" sid="109915060907728" type="number" />
+                    <instance-variable comment="Rend le joueur invincible" name="Invincible" sid="422262055263968" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Platform" sid="754739628599200">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                    <behavior-type name="Timer" sid="780387617597293">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                    <behavior-type name="Flash" sid="903371995912020">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                    <behavior-type name="ScrollTo" sid="624418681110627">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="513616666822364">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Dash" pingpong="0" repeatcount="1" repeatto="0" sid="242274206503011" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\chevalier 3 vert.png">
+                            <image-point name="Bras" x="0.825" y="0.5" />
+                            <image-point name="Up" x="0.475" y="0.1" />
+                            <image-point name="Down" x="0.5" y="0.933333" />
+                            <collision-poly>
+                                <point x="0.125" y="0.183333" />
+                                <point x="0.674999" y="0.183333" />
+                                <point x="0.668751" y="1" />
+                                <point x="0.125" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Down" pingpong="0" repeatcount="1" repeatto="0" sid="957800719838164" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\chevalier 3.png">
+                            <image-point name="Bras" x="0.825" y="0.5" />
+                            <image-point name="Up" x="0.475" y="0.1" />
+                            <image-point name="Down" x="0.5" y="0.933333" />
+                            <collision-poly>
+                                <point x="0.125" y="0.183333" />
+                                <point x="0.674999" y="0.183333" />
+                                <point x="0.668751" y="1" />
+                                <point x="0.125" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Parry" pingpong="0" repeatcount="1" repeatto="0" sid="238231014773334" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\chevalier 3 rouge.png">
+                            <image-point name="Bras" x="0.825" y="0.5" />
+                            <image-point name="Up" x="0.475" y="0.1" />
+                            <image-point name="Down" x="0.5" y="0.933333" />
+                            <collision-poly>
+                                <point x="0.125" y="0.183333" />
+                                <point x="0.674999" y="0.183333" />
+                                <point x="0.668751" y="1" />
+                                <point x="0.125" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="452331017808937" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\chevalier 3.png">
+                            <image-point name="Bras" x="0.825" y="0.5" />
+                            <image-point name="Up" x="0.475" y="0.1" />
+                            <image-point name="Down" x="0.5" y="0.933333" />
+                            <collision-poly>
+                                <point x="0.125" y="0.183333" />
+                                <point x="0.674999" y="0.183333" />
+                                <point x="0.668751" y="1" />
+                                <point x="0.125" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spr_Shield" sid="733277861352517">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Quel direction le bouclier fait face" name="BouclierSens" sid="544673509665469" type="string" />
+                    <instance-variable comment="Est-ce que le bouclier est planté dans un mur ?" name="Planté" sid="947790328595444" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="457540433747848">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Solid" sid="976057938871453">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="602268716821830" speed="5">
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier wip.png">
+                            <collision-poly>
+                                <point x="0.210526" y="0.125" />
+                                <point x="0.473684" y="0" />
+                                <point x="0.789474" y="0.125" />
+                                <point x="0.947368" y="0.5" />
+                                <point x="0.684211" y="0.8125" />
+                                <point x="0.473684" y="0.9375" />
+                                <point x="0.210526" y="0.875" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Dash" pingpong="0" repeatcount="1" repeatto="0" sid="834414656538265" speed="5">
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier vert.png">
+                            <collision-poly>
+                                <point x="0.210526" y="0.125" />
+                                <point x="0.473684" y="0" />
+                                <point x="0.789474" y="0.125" />
+                                <point x="0.947368" y="0.5" />
+                                <point x="0.684211" y="0.8125" />
+                                <point x="0.473684" y="0.9375" />
+                                <point x="0.210526" y="0.875" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Parry" pingpong="0" repeatcount="1" repeatto="0" sid="859887427204494" speed="5">
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\bouclier rouge wip-export.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spr_Deadzone" sid="675933871190545">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="664515936257622" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Camera">
+            <object-type name="CameraVertical" sid="485147451187593">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="613322027734692" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Camera" sid="908036017838160">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Indique la direction de la caméra, par rapport au joueur" name="DirectionCamera" sid="217034273767807" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="648264255092231">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="213016214010875" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CameraScroll" sid="144174792812321">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="477238756609109" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="Gamepad" sid="910059966444602">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Keyboard" sid="979708477097447">
+            <plugin id="Keyboard" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="Ennemies" plugin-id="Sprite" sid="402308118130530">
+            <members>
+                <member>spr_GoblinArcher</member>
+                <member>spr_GoblinWalk</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="PV" sid="184891876895494" type="number" />
+                <instance-variable comment="Sens vers lequel marche les mobs" name="SensMarche" sid="512909376425868" type="string" />
+                <instance-variable comment="Quantité de dégâts qu&apos;il inflige au contact" name="Dégâts" sid="557002760894863" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform2" sid="497418359468558">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ShadowCaster" sid="974776196446421">
+                    <behavior id="shadowcaster" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Décors" plugin-id="Sprite" sid="985796639333834">
+            <members>
+                <member>spr_DamagedPlatform</member>
+                <member>spr_Porte</member>
+                <member>spr_Spikes</member>
+                <member>spr_StairsDown</member>
+                <member>spr_StairsUp</member>
+                <member>spr_TurretVertical</member>
+            </members>
+        </family>
+        <family name="Interactif" plugin-id="Sprite" sid="867929429312036">
+            <members>
+                <member>spr_Lever</member>
+            </members>
+            <instance-variables>
+                <instance-variable comment="Est-ce que l&apos;objet a été activé ?" name="IsTriggered" sid="408185039428134" type="boolean" />
+            </instance-variables>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Démo.xml</layout>
+        <layout>Stage 1.xml</layout>
+        <layout>Hall d&apos;entrée.xml</layout>
+        <layout>Stage 2.xml</layout>
+        <layout>Main menu.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Events Démo.xml</event-sheet>
+        <event-sheet>Events Menu.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Gamepad" uid="2">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="14" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

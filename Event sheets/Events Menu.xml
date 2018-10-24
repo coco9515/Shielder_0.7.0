@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Events Menu</name>
+    <events>
+        <variable comment="Temps necessaire avant de pouvoir skip le menu" constant="0" name="WaitToStart" sid="225570698799867" static="0" type="number">1</variable>
+        <event-block sid="644960127282589">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="939421653159665" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="424605701534816" type="System">
+                    <param id="0" name="Variable">WaitToStart</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="584761357104614" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-9" name="Set value" sid="121773248641129" type="System">
+                    <param id="0" name="Variable">WaitToStart</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="113002615271700">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="117593905681357" type="System">
+                    <param id="0" name="Variable">WaitToStart</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="668447445963217">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="333205124147723" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="865049979634054" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="754123140463371" type="System">
+                            <param id="0" name="Layout">Démo</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Main menu</layout>
+        <layout order="2">Démo</layout>
+        <layout order="4">Stage 1</layout>
+        <layout order="5">Stage 2</layout>
+        <layout order="6">Hall d&apos;entrée</layout>
+        <event-sheet order="1">Events Menu</event-sheet>
+        <event-sheet active="1" order="3">Events Démo</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="0" name="Ennemies" />
+        <family expanded="0" name="Décors" />
+        <family expanded="0" name="Interactif" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/HUD/" />
+        <folder expanded="1" path="object-folder/Dangers/" />
+        <folder expanded="1" path="object-folder/Dangers/Ennemis/" />
+        <folder expanded="0" path="object-folder/Dangers/Pièges/" />
+        <folder expanded="0" path="object-folder/Décor/" />
+        <folder expanded="0" path="object-folder/Décor/Tuto/" />
+        <folder expanded="0" path="object-folder/Décor/Effets/" />
+        <folder expanded="0" path="object-folder/Joueur/" />
+        <folder expanded="0" path="object-folder/Camera/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/bg_Lifebar/" />
+        <folder expanded="1" path="animation-folder/icon_Lifebar/" />
+        <folder expanded="1" path="animation-folder/TitreJeu/" />
+        <folder expanded="1" path="animation-folder/SousTitreJeu/" />
+        <folder expanded="1" path="animation-folder/spr_GoblinArcher/" />
+        <folder expanded="1" path="animation-folder/spr_GoblinWalk/" />
+        <folder expanded="1" path="animation-folder/spr_TurretVertical/" />
+        <folder expanded="1" path="animation-folder/spr_Spikes/" />
+        <folder expanded="1" path="animation-folder/spr_Projectile/" />
+        <folder expanded="1" path="animation-folder/MurInvisiblePourMob/" />
+        <folder expanded="1" path="animation-folder/infobulle_turn/" />
+        <folder expanded="1" path="animation-folder/infobulle_move/" />
+        <folder expanded="1" path="animation-folder/infobulle_shelter/" />
+        <folder expanded="1" path="animation-folder/infobulle_jump/" />
+        <folder expanded="1" path="animation-folder/infobulle_surf/" />
+        <folder expanded="1" path="animation-folder/infobulle_parry/" />
+        <folder expanded="1" path="animation-folder/infobulle_dash/" />
+        <folder expanded="1" path="animation-folder/infobulle_throw/" />
+        <folder expanded="1" path="animation-folder/fx_Smoke/" />
+        <folder expanded="1" path="animation-folder/spr_torch_halo/" />
+        <folder expanded="1" path="animation-folder/spr_point_light/" />
+        <folder expanded="1" path="animation-folder/spr_point_light_Player/" />
+        <folder expanded="1" path="animation-folder/spr_StairsDown/" />
+        <folder expanded="1" path="animation-folder/spr_StairsUp/" />
+        <folder expanded="1" path="animation-folder/spr_Lever/" />
+        <folder expanded="1" path="animation-folder/window/" />
+        <folder expanded="1" path="animation-folder/spr_torch/" />
+        <folder expanded="1" path="animation-folder/spr_DamagedPlatform/" />
+        <folder expanded="1" path="animation-folder/spr_Porte/" />
+        <folder expanded="1" path="animation-folder/spr_ExitLevel/" />
+        <folder expanded="1" path="animation-folder/spr_Player/" />
+        <folder expanded="1" path="animation-folder/spr_Shield/" />
+        <folder expanded="1" path="animation-folder/spr_Deadzone/" />
+        <folder expanded="1" path="animation-folder/CameraVertical/" />
+        <folder expanded="1" path="animation-folder/Camera/" />
+        <folder expanded="1" path="animation-folder/CameraScroll/" />
+    </folders-expanded>
+</c2uistate>
