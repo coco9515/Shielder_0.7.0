@@ -11,12 +11,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Main menu</layout>
-        <layout order="2">Démo</layout>
+        <layout active="1" order="2">Démo</layout>
         <layout order="4">Stage 1</layout>
         <layout order="5">Stage 2</layout>
         <layout order="6">Hall d&apos;entrée</layout>
         <event-sheet order="1">Events Menu</event-sheet>
-        <event-sheet active="1" order="3">Events Démo</event-sheet>
+        <event-sheet order="3">Events Démo</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -32,10 +32,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/HUD/" />
-        <folder expanded="1" path="object-folder/Dangers/" />
-        <folder expanded="1" path="object-folder/Dangers/Ennemis/" />
+        <folder expanded="0" path="object-folder/Dangers/" />
+        <folder expanded="0" path="object-folder/Dangers/Ennemis/" />
         <folder expanded="0" path="object-folder/Dangers/Pièges/" />
-        <folder expanded="0" path="object-folder/Décor/" />
+        <folder expanded="1" path="object-folder/Décor/" />
         <folder expanded="0" path="object-folder/Décor/Tuto/" />
         <folder expanded="0" path="object-folder/Décor/Effets/" />
         <folder expanded="0" path="object-folder/Joueur/" />
@@ -54,7 +54,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/spr_GoblinWalk/" />
         <folder expanded="1" path="animation-folder/spr_TurretVertical/" />
         <folder expanded="1" path="animation-folder/spr_Spikes/" />
-        <folder expanded="1" path="animation-folder/spr_Projectile/" />
+        <folder expanded="1" path="animation-folder/spr_Fireball/" />
         <folder expanded="1" path="animation-folder/MurInvisiblePourMob/" />
         <folder expanded="1" path="animation-folder/infobulle_turn/" />
         <folder expanded="1" path="animation-folder/infobulle_move/" />
