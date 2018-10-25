@@ -388,6 +388,7 @@
                     <instance-variables>
                         <instance-variable comment="Simply the angle the turrets is facing" name="AngleOfAttack" sid="515063470450535" type="number" />
                         <instance-variable comment="Timer du projectile" name="ShootTimer" sid="189766470813124" type="number" />
+                        <instance-variable comment="What type of ammo / attack this turret uses" name="AmmoType" sid="926858068764187" type="string" />
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974878646820208" speed="5">
@@ -424,7 +425,7 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
-            <object-type name="spr_Projectile" sid="184558159052179">
+            <object-type name="spr_Fireball" sid="184558159052179">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable comment="le projectile est-il friendly ?" name="isFriendly" sid="448983847688887" type="boolean" />
