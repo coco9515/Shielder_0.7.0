@@ -32,10 +32,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/HUD/" />
-        <folder expanded="0" path="object-folder/Dangers/" />
-        <folder expanded="0" path="object-folder/Dangers/Ennemis/" />
+        <folder expanded="1" path="object-folder/Dangers/" />
+        <folder expanded="1" path="object-folder/Dangers/Ennemis/" />
         <folder expanded="0" path="object-folder/Dangers/Pièges/" />
-        <folder expanded="1" path="object-folder/Décor/" />
+        <folder expanded="0" path="object-folder/Décor/" />
         <folder expanded="0" path="object-folder/Décor/Tuto/" />
         <folder expanded="0" path="object-folder/Décor/Effets/" />
         <folder expanded="0" path="object-folder/Joueur/" />
@@ -54,7 +54,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/spr_GoblinWalk/" />
         <folder expanded="1" path="animation-folder/spr_TurretVertical/" />
         <folder expanded="1" path="animation-folder/spr_Spikes/" />
-        <folder expanded="1" path="animation-folder/spr_Fireball/" />
+        <folder expanded="1" path="animation-folder/spr_Projectile/" />
         <folder expanded="1" path="animation-folder/MurInvisiblePourMob/" />
         <folder expanded="1" path="animation-folder/infobulle_turn/" />
         <folder expanded="1" path="animation-folder/infobulle_move/" />
@@ -82,5 +82,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/CameraVertical/" />
         <folder expanded="1" path="animation-folder/Camera/" />
         <folder expanded="1" path="animation-folder/CameraScroll/" />
+        <folder expanded="1" path="animation-folder/spr_chandelier/" />
     </folders-expanded>
 </c2uistate>

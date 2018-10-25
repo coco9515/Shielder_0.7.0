@@ -943,34 +943,6 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="557534949583156">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="409834813847742" type="spr_Player">
-                            <param id="0" name="Object">spr_ExitLevel</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block any="1" sid="739347869432800">
-                            <conditions>
-                                <condition id="5" name="Compare axis" sid="629025340610283" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Axis">1</param>
-                                    <param id="2" name="Comparison">2</param>
-                                    <param id="3" name="Value">-50</param>
-                                </condition>
-                                <condition id="0" name="On key pressed" sid="231068341508181" type="Keyboard">
-                                    <param id="0" name="Key">38</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-43" name="Go to next/previous layout" sid="116773537823177" type="System">
-                                    <param id="0" name="Which">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-group description="Le déplacement &amp; saut du joueur" sid="650652338705128" title="Player control : Run &amp; Jump">
                     <sub-events>
                         <comment>Les controles claviers sont fait automatiquement</comment>
@@ -2136,7 +2108,7 @@
                                             <param id="1" name="From">1</param>
                                         </action>
                                         <action behavior="Timer" id="0" name="Start timer" sid="287838515730675" type="spr_Player">
-                                            <param id="0" name="Duration">0.75</param>
+                                            <param id="0" name="Duration">0.5</param>
                                             <param id="1" name="Type">0</param>
                                             <param id="2" name="Tag">&quot;Durée du parry&quot;</param>
                                         </action>
@@ -2676,7 +2648,7 @@
                         <comment>Quand le projectile touche le bouclier en mode parry, il est renvoyé et devient amical. En mode shelter, il est détruit.</comment>
                         <event-block sid="551628898772250">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="973249621696857" type="spr_Fireball">
+                                <condition id="0" name="On collision with another object" sid="973249621696857" type="spr_Projectile">
                                     <param id="0" name="Object">spr_Shield</param>
                                 </condition>
                             </conditions>
@@ -2689,13 +2661,25 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="162636168790465" type="spr_Fireball">
-                                            <param id="0" name="Angle">spr_Fireball.Bullet.AngleOfMotion + 180</param>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="162636168790465" type="spr_Projectile">
+                                            <param id="0" name="Angle">spr_Projectile.Bullet.AngleOfMotion + 180</param>
                                         </action>
-                                        <action id="-13" name="Set boolean" sid="690134467411999" type="spr_Fireball">
+                                        <action id="-13" name="Set boolean" sid="690134467411999" type="spr_Projectile">
                                             <param id="0" name="Instance variable">isFriendly</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="947908460228915">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="539536549333664" type="spr_Player">
+                                            <param id="0" name="Instance variable">playerState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;shelter&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="618339537180919" type="spr_Projectile" />
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -2703,10 +2687,10 @@
                         <comment>Quand le projectile hostile touche le joueur, il est détruit et le joueur perd 1PV</comment>
                         <event-block sid="122644925206022">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="813158564463283" type="spr_Fireball">
+                                <condition id="0" name="On collision with another object" sid="813158564463283" type="spr_Projectile">
                                     <param id="0" name="Object">spr_Player</param>
                                 </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="900501957918319" type="spr_Fireball">
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="900501957918319" type="spr_Projectile">
                                     <param id="0" name="Instance variable">isFriendly</param>
                                 </condition>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="288905474316952" type="spr_Player">
@@ -2718,18 +2702,18 @@
                                     <param id="0" name="Instance variable">Blessures</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="444216790359844" type="spr_Fireball" />
+                                <action id="-9" name="Destroy" sid="444216790359844" type="spr_Projectile" />
                             </actions>
                         </event-block>
                         <comment>Quand le projectile touche un ennemi, il est détruit et l&apos;ennemi meurt</comment>
                         <event-block sid="917582514505844">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="282000004603211" type="spr_Fireball">
+                                <condition id="0" name="On collision with another object" sid="282000004603211" type="spr_Projectile">
                                     <param id="0" name="Object">Ennemies</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="249326291170177" type="spr_Fireball" />
+                                <action id="-9" name="Destroy" sid="249326291170177" type="spr_Projectile" />
                                 <action id="-12" name="Subtract from" sid="428630221287275" type="Ennemies">
                                     <param id="0" name="Instance variable">PV</param>
                                     <param id="1" name="Value">1</param>
@@ -2739,10 +2723,10 @@
                         <comment>Quand le projectile touche un mur ou le décor, il est détruit (sauf les tourelles)</comment>
                         <event-block any="1" sid="319124089956646">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="306208698066719" type="spr_Fireball">
+                                <condition id="0" name="On collision with another object" sid="306208698066719" type="spr_Projectile">
                                     <param id="0" name="Object">tile_WallHitbox</param>
                                 </condition>
-                                <condition id="0" name="On collision with another object" sid="915344247726742" type="spr_Fireball">
+                                <condition id="0" name="On collision with another object" sid="915344247726742" type="spr_Projectile">
                                     <param id="0" name="Object">Décors</param>
                                 </condition>
                             </conditions>
@@ -2750,7 +2734,7 @@
                             <sub-events>
                                 <event-block sid="871113771165112">
                                     <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="628152834569419" type="spr_Fireball">
+                                        <condition id="1" name="Is overlapping another object" sid="628152834569419" type="spr_Projectile">
                                             <param id="0" name="Object">spr_TurretVertical</param>
                                         </condition>
                                     </conditions>
@@ -2761,7 +2745,7 @@
                                         <condition id="-22" name="Else" sid="275930151145497" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="250426623821137" type="spr_Fireball" />
+                                        <action id="-9" name="Destroy" sid="250426623821137" type="spr_Projectile" />
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -2770,54 +2754,27 @@
                 </event-group>
                 <event-group description="Comportement de TurretVertical" sid="537396504404129" title="Enemy : TurretVertical">
                     <sub-events>
-                        <comment>Un projectile est tiré toutes les sec - toujours face à elle</comment>
+                        <comment>Un projectile toutes les 2s toujours face à elle</comment>
                         <event-block sid="363965240407207">
                             <conditions>
-                                <condition id="-6" name="Every X seconds" sid="573259124573223" type="System">
-                                    <param id="0" name="Interval (seconds)">1</param>
+                                <condition id="-6" name="Every X seconds" sid="234153240385099" type="System">
+                                    <param id="0" name="Interval (seconds)">spr_TurretVertical.ShootTimer</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="190174577722070">
-                                    <conditions>
-                                        <condition id="-11" name="For Each" sid="725424557702565" type="System">
-                                            <param id="0" name="Object">spr_TurretVertical</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-16" name="Wait" sid="608952921739568" type="System">
-                                            <param id="0" name="Seconds">spr_TurretVertical.ShootTimer</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="827146100108930" type="spr_TurretVertical">
-                                            <param id="0" name="Instance variable">AngleOfAttack</param>
-                                            <param id="1" name="Value">spr_TurretVertical.Angle +90</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <comment>Des fireballs ou des arrows dependant le type de tourelles</comment>
-                                        <event-block sid="883964516890607">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="274163706417586" type="spr_TurretVertical">
-                                                    <param id="0" name="Instance variable">AmmoType</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Fireball&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Spawn another object" sid="425743417900708" type="spr_TurretVertical">
-                                                    <param id="0" name="Object">spr_Fireball</param>
-                                                    <param id="1" name="Layer">0</param>
-                                                    <param id="2" name="Image point">1</param>
-                                                </action>
-                                                <action id="-8" name="Set angle" sid="375852337265680" type="spr_Fireball">
-                                                    <param id="0" name="Angle">spr_TurretVertical.AngleOfAttack</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="425743417900708" type="spr_TurretVertical">
+                                    <param id="0" name="Object">spr_Projectile</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="827146100108930" type="spr_TurretVertical">
+                                    <param id="0" name="Instance variable">AngleOfAttack</param>
+                                    <param id="1" name="Value">spr_TurretVertical.Angle +90</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="375852337265680" type="spr_Projectile">
+                                    <param id="0" name="Angle">spr_TurretVertical.AngleOfAttack</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -3196,20 +3153,20 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Spawn another object" sid="585331691869312" type="spr_GoblinArcher">
-                                            <param id="0" name="Object">spr_Fireball</param>
+                                            <param id="0" name="Object">spr_Projectile</param>
                                             <param id="1" name="Layer">0</param>
                                             <param id="2" name="Image point">1</param>
                                         </action>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="762154245277060" type="spr_Fireball">
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="762154245277060" type="spr_Projectile">
                                             <param id="0" name="Angle">spr_GoblinArcher.Angle</param>
                                         </action>
-                                        <action id="11" name="Set collisions enabled" sid="472715969019236" type="spr_Fireball">
+                                        <action id="11" name="Set collisions enabled" sid="472715969019236" type="spr_Projectile">
                                             <param id="0" name="Collisions">0</param>
                                         </action>
                                         <action id="-16" name="Wait" sid="593707877331254" type="System">
                                             <param id="0" name="Seconds">0.1</param>
                                         </action>
-                                        <action id="11" name="Set collisions enabled" sid="478342911343523" type="spr_Fireball">
+                                        <action id="11" name="Set collisions enabled" sid="478342911343523" type="spr_Projectile">
                                             <param id="0" name="Collisions">1</param>
                                         </action>
                                     </actions>
@@ -3426,5 +3383,33 @@
                 </event-group>
             </sub-events>
         </event-group>
+        <event-block sid="557534949583156">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="409834813847742" type="spr_Player">
+                    <param id="0" name="Object">spr_ExitLevel</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="739347869432800">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="629025340610283" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">-50</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="231068341508181" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-43" name="Go to next/previous layout" sid="116773537823177" type="System">
+                            <param id="0" name="Which">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>
