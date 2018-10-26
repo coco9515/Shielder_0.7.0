@@ -2,7 +2,7 @@
 <c2project>
     <name>Shielder</name>
     <description></description>
-    <version>1.0.0.0</version>
+    <version>7.1.0</version>
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
@@ -61,7 +61,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">NW.js</prop>
+        <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -388,6 +388,7 @@
                     <instance-variables>
                         <instance-variable comment="Simply the angle the turrets is facing" name="AngleOfAttack" sid="515063470450535" type="number" />
                         <instance-variable comment="Timer du projectile" name="ShootTimer" sid="189766470813124" type="number" />
+                        <instance-variable comment='Quel type de tirs : &quot;fireball&quot; ou &quot;arrow&quot;' name="AmmoType" sid="207773238020395" type="string" />
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974878646820208" speed="5">
@@ -424,7 +425,7 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
-            <object-type name="spr_Projectile" sid="184558159052179">
+            <object-type name="spr_Fireball" sid="184558159052179">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable comment="le projectile est-il friendly ?" name="isFriendly" sid="448983847688887" type="boolean" />

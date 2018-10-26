@@ -2287,7 +2287,8 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1</ShootTimer>
+                        <ShootTimer>0.1</ShootTimer>
+                        <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2313,7 +2314,8 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1</ShootTimer>
+                        <ShootTimer>0.2</ShootTimer>
+                        <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2339,7 +2341,8 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1</ShootTimer>
+                        <ShootTimer>0.3</ShootTimer>
+                        <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2365,7 +2368,8 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1</ShootTimer>
+                        <ShootTimer>0.3</ShootTimer>
+                        <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2391,7 +2395,8 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1</ShootTimer>
+                        <ShootTimer>0.2</ShootTimer>
+                        <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2417,7 +2422,8 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1</ShootTimer>
+                        <ShootTimer>0.1</ShootTimer>
+                        <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2800,7 +2806,8 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1</ShootTimer>
+                        <ShootTimer>0.9</ShootTimer>
+                        <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2826,7 +2833,8 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1</ShootTimer>
+                        <ShootTimer>0.9</ShootTimer>
+                        <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2853,6 +2861,7 @@
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
                         <ShootTimer>1</ShootTimer>
+                        <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
