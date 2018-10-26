@@ -2700,6 +2700,22 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>Quand la flêche touche le bouclier, elle rebondit</comment>
+                        <event-block sid="111751983670123">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="931469252496148" type="spr_Arrow">
+                                    <param id="0" name="Object">spr_Shield</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="735881008693118" type="spr_Arrow">
+                                    <param id="0" name="Instance variable">isFriendly</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="4" name="Bounce off object" sid="228261426244495" type="spr_Arrow">
+                                    <param id="0" name="Object">spr_Shield</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <comment>Quand la Fireball hostile touche le joueur, il est détruit et le joueur perd 1PV</comment>
                         <event-block sid="122644925206022">
                             <conditions>
@@ -2721,6 +2737,27 @@
                                 <action id="-9" name="Destroy" sid="444216790359844" type="spr_Fireball" />
                             </actions>
                         </event-block>
+                        <comment>Quand la flêche touche le joueur, il est détruit et le joueur perd 1PV</comment>
+                        <event-block sid="990713188014833">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="690563776590497" type="spr_Arrow">
+                                    <param id="0" name="Object">spr_Player</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="449480993254245" type="spr_Arrow">
+                                    <param id="0" name="Instance variable">isFriendly</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="957724390190435" type="spr_Player">
+                                    <param id="0" name="Instance variable">Invincible</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="738705608831015" type="spr_Player">
+                                    <param id="0" name="Instance variable">Blessures</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="674822609010231" type="spr_Arrow" />
+                            </actions>
+                        </event-block>
                         <comment>Quand la Fireball touche un ennemi, il est détruit et l&apos;ennemi meurt</comment>
                         <event-block sid="917582514505844">
                             <conditions>
@@ -2733,6 +2770,38 @@
                                 <action id="-12" name="Subtract from" sid="428630221287275" type="Ennemies">
                                     <param id="0" name="Instance variable">PV</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Quand la flêhce touche un ennemi, il est repoussé</comment>
+                        <event-block sid="447417731281665">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="950898727527940" type="spr_Arrow">
+                                    <param id="0" name="Object">Ennemies</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="655096067663847" type="spr_Arrow" />
+                                <action behavior="Platform2" id="0" name="Set ignoring input" sid="297060661664497" type="Ennemies">
+                                    <param id="0" name="Input">1</param>
+                                </action>
+                                <action behavior="Platform2" id="1" name="Set max speed" sid="809647053049604" type="Ennemies">
+                                    <param id="0" name="Max Speed">1000</param>
+                                </action>
+                                <action behavior="Platform2" id="9" name="Set vector Y" sid="874592356871105" type="Ennemies">
+                                    <param id="0" name="Vector Y">-200</param>
+                                </action>
+                                <action behavior="Platform2" id="8" name="Set vector X" sid="696630482946662" type="Ennemies">
+                                    <param id="0" name="Vector X">spr_Player.Platform.VectorX * 1.50</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="487299429021018" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform2" id="1" name="Set max speed" sid="142610017270148" type="Ennemies">
+                                    <param id="0" name="Max Speed">300</param>
+                                </action>
+                                <action behavior="Platform2" id="0" name="Set ignoring input" sid="328799495833465" type="Ennemies">
+                                    <param id="0" name="Input">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2756,12 +2825,50 @@
                                     </conditions>
                                     <actions />
                                 </event-block>
+                                <comment>Quand la Fireball touche un mur ou le décor, il est détruit (sauf les tourelles)</comment>
                                 <event-block sid="826400667007679">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="275930151145497" type="System" />
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Destroy" sid="250426623821137" type="spr_Fireball" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Quand la flêche touche un mur ou le décor, il est détruit (sauf les tourelles)</comment>
+                        <event-block any="1" sid="252503846697035">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="816606996970489" type="spr_Arrow">
+                                    <param id="0" name="Object">tile_WallHitbox</param>
+                                </condition>
+                                <condition id="0" name="On collision with another object" sid="896301666235572" type="spr_Arrow">
+                                    <param id="0" name="Object">Décors</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="866366985172520">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="763964669421431" type="spr_Arrow">
+                                            <param id="0" name="Object">spr_TurretVertical</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                                <comment>Quand la fl^che touche un mur ou le décor, il est détruit (sauf les tourelles)</comment>
+                                <event-block sid="301075629113850">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="862676212441935" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="792892494775195" type="spr_Arrow">
+                                            <param id="0" name="Instance variable">isFriendly</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="276278412985534" type="spr_Arrow">
+                                            <param id="0" name="State">0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -2810,6 +2917,25 @@
                                                     <param id="2" name="Image point">1</param>
                                                 </action>
                                                 <action id="-8" name="Set angle" sid="375852337265680" type="spr_Fireball">
+                                                    <param id="0" name="Angle">spr_TurretVertical.AngleOfAttack</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="908906534290390">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="164548992532368" type="spr_TurretVertical">
+                                                    <param id="0" name="Instance variable">AmmoType</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;arrow&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="727649284481566" type="spr_TurretVertical">
+                                                    <param id="0" name="Object">spr_Arrow</param>
+                                                    <param id="1" name="Layer">0</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="-8" name="Set angle" sid="234839378189515" type="spr_Arrow">
                                                     <param id="0" name="Angle">spr_TurretVertical.AngleOfAttack</param>
                                                 </action>
                                             </actions>
@@ -3195,20 +3321,20 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Spawn another object" sid="585331691869312" type="spr_GoblinArcher">
-                                            <param id="0" name="Object">spr_Fireball</param>
+                                            <param id="0" name="Object">spr_Arrow</param>
                                             <param id="1" name="Layer">0</param>
                                             <param id="2" name="Image point">1</param>
                                         </action>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="762154245277060" type="spr_Fireball">
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="762154245277060" type="spr_Arrow">
                                             <param id="0" name="Angle">spr_GoblinArcher.Angle</param>
                                         </action>
-                                        <action id="11" name="Set collisions enabled" sid="472715969019236" type="spr_Fireball">
+                                        <action id="11" name="Set collisions enabled" sid="472715969019236" type="spr_Arrow">
                                             <param id="0" name="Collisions">0</param>
                                         </action>
                                         <action id="-16" name="Wait" sid="593707877331254" type="System">
                                             <param id="0" name="Seconds">0.1</param>
                                         </action>
-                                        <action id="11" name="Set collisions enabled" sid="478342911343523" type="spr_Fireball">
+                                        <action id="11" name="Set collisions enabled" sid="478342911343523" type="spr_Arrow">
                                             <param id="0" name="Collisions">1</param>
                                         </action>
                                     </actions>
