@@ -318,8 +318,8 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1</ShootTimer>
-                        <AmmoType>fireball</AmmoType>
+                        <ShootTimer>0</ShootTimer>
+                        <AmmoType>arrow</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -661,8 +661,8 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1</ShootTimer>
-                        <AmmoType>fireball</AmmoType>
+                        <ShootTimer>0.1</ShootTimer>
+                        <AmmoType>arrow</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -722,8 +722,8 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1.1</ShootTimer>
-                        <AmmoType>fireball</AmmoType>
+                        <ShootTimer>0.2</ShootTimer>
+                        <AmmoType>arrow</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -749,8 +749,8 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1.2</ShootTimer>
-                        <AmmoType>fireball</AmmoType>
+                        <ShootTimer>0.3</ShootTimer>
+                        <AmmoType>arrow</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -776,8 +776,8 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1.3</ShootTimer>
-                        <AmmoType>fireball</AmmoType>
+                        <ShootTimer>0.4</ShootTimer>
+                        <AmmoType>arrow</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -803,8 +803,8 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1.4</ShootTimer>
-                        <AmmoType>fireball</AmmoType>
+                        <ShootTimer>0.5</ShootTimer>
+                        <AmmoType>arrow</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1189,7 +1189,7 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1</ShootTimer>
+                        <ShootTimer>0.1</ShootTimer>
                         <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -1250,7 +1250,7 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1</ShootTimer>
+                        <ShootTimer>0.1</ShootTimer>
                         <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -1311,7 +1311,7 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1</ShootTimer>
+                        <ShootTimer>0.2</ShootTimer>
                         <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -1338,7 +1338,7 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1</ShootTimer>
+                        <ShootTimer>0.3</ShootTimer>
                         <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -1399,7 +1399,7 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1</ShootTimer>
+                        <ShootTimer>0.2</ShootTimer>
                         <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -1426,7 +1426,7 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>1</ShootTimer>
+                        <ShootTimer>0.3</ShootTimer>
                         <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -2726,6 +2726,45 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="particle_mur" uid="450">
+                    <properties>
+                        <rate>15</rate>
+                        <spray-cone>50</spray-cone>
+                        <type>One-shot</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>250</speed>
+                        <size>4</size>
+                        <opacity>100</opacity>
+                        <grow-rate>0</grow-rate>
+                        <x-randomiser>10</x-randomiser>
+                        <y-randomiser>25</y-randomiser>
+                        <speed-randomiser->10</speed-randomiser->
+                        <size-randomiser>6</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>-160</acceleration>
+                        <gravity>120</gravity>
+                        <angle-randomiser>10</angle-randomiser>
+                        <speed-randomiser>800</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>0.6</timeout>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-128</x>
+                        <y>224</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="fnt_text" uid="446">
                     <properties>
                         <character-width>34</character-width>
