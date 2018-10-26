@@ -998,7 +998,7 @@
                             <collision-poly>
                                 <point x="0.125" y="0.183333" />
                                 <point x="0.674999" y="0.183333" />
-                                <point x="0.668751" y="1" />
+                                <point x="0.675" y="1" />
                                 <point x="0.125" y="1" />
                             </collision-poly>
                         </frame>
@@ -1011,7 +1011,7 @@
                             <collision-poly>
                                 <point x="0.125" y="0.183333" />
                                 <point x="0.674999" y="0.183333" />
-                                <point x="0.668751" y="1" />
+                                <point x="0.675" y="1" />
                                 <point x="0.125" y="1" />
                             </collision-poly>
                         </frame>
@@ -1024,7 +1024,7 @@
                             <collision-poly>
                                 <point x="0.125" y="0.183333" />
                                 <point x="0.674999" y="0.183333" />
-                                <point x="0.668751" y="1" />
+                                <point x="0.675" y="1" />
                                 <point x="0.125" y="1" />
                             </collision-poly>
                         </frame>
@@ -1037,7 +1037,7 @@
                             <collision-poly>
                                 <point x="0.125" y="0.183333" />
                                 <point x="0.674999" y="0.183333" />
-                                <point x="0.668751" y="1" />
+                                <point x="0.675" y="1" />
                                 <point x="0.125" y="1" />
                             </collision-poly>
                         </frame>

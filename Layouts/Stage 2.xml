@@ -1144,7 +1144,7 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>0.6</ShootTimer>
+                        <ShootTimer>0.7</ShootTimer>
                         <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -1171,7 +1171,7 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>0.6</ShootTimer>
+                        <ShootTimer>0.7</ShootTimer>
                         <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
