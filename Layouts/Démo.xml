@@ -2861,7 +2861,7 @@
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
                         <ShootTimer>1</ShootTimer>
-                        <AmmoType>fireball</AmmoType>
+                        <AmmoType>arrow</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3635,6 +3635,7 @@
                     </properties>
                     <instance-variables>
                         <IsTriggered>false</IsTriggered>
+                        <NumeroPorte>1</NumeroPorte>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
