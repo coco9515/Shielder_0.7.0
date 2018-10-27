@@ -1234,7 +1234,25 @@
             </properties>
         </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="Bouclier planté.m4a" />
+        <file name="Bouclier planté.ogg" />
+        <file name="Gobelin qui meurt.m4a" />
+        <file name="Gobelin qui meurt.ogg" />
+        <file name="Lancer bouclier 3.m4a" />
+        <file name="Lancer bouclier 3.ogg" />
+        <file name="Gobelin dégât.m4a" />
+        <file name="Gobelin dégât.ogg" />
+        <file name="Tourelle fireball.m4a" />
+        <file name="Tourelle fireball.ogg" />
+        <file name="Arc - Tir.m4a" />
+        <file name="Arc - Tir.ogg" />
+        <file name="Arc - Flèche parée.m4a" />
+        <file name="Arc - Flèche parée.ogg" />
+        <file name="Arc - Flèche non parée.ogg" />
+        <file name="porte secrète.m4a" />
+        <file name="porte secrète.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">
