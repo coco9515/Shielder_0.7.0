@@ -2264,6 +2264,12 @@
                                             <param id="1" name="Type">0</param>
                                             <param id="2" name="Tag">&quot;RappelBouclier&quot;</param>
                                         </action>
+                                        <action id="0" name="Play" sid="405791175176843" type="Audio">
+                                            <param id="0" name="Audio file">Lancer bouclier 3</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
                                     </actions>
                                     <sub-events>
                                         <comment>Tourne et envoie le bouclier dans la direction que le joueur fait face s&apos;il ne touche pas à la caméra</comment>
@@ -2587,6 +2593,12 @@
                                     <param id="0" name="Instance variable">Planté</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="0" name="Play" sid="834354535346445" type="Audio">
+                                    <param id="0" name="Audio file">Bouclier planté</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="564336578594189">
@@ -2610,6 +2622,12 @@
                                 <action id="-13" name="Set boolean" sid="403823124234124" type="spr_Shield">
                                     <param id="0" name="Instance variable">Planté</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="360005891867142" type="Audio">
+                                    <param id="0" name="Audio file">Bouclier planté</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -2703,6 +2721,25 @@
                                             <param id="0" name="Opacity">20</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="191992942508174">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="667366124883990" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="25" name="Play at object" sid="349747554129762" type="Audio">
+                                                    <param id="0" name="Audio file">porte secrète</param>
+                                                    <param id="1" name="Loop">0</param>
+                                                    <param id="2" name="Volume">-10</param>
+                                                    <param id="3" name="Object">spr_Porte</param>
+                                                    <param id="4" name="Inner angle">360</param>
+                                                    <param id="5" name="Outer angle">360</param>
+                                                    <param id="6" name="Outer gain">0</param>
+                                                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -2752,6 +2789,12 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Play" sid="527326527473463" type="Audio">
+                                    <param id="0" name="Audio file">Arc - Flèche parée</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action behavior="Bullet" id="4" name="Bounce off object" sid="228261426244495" type="spr_Arrow">
                                     <param id="0" name="Object">spr_Shield</param>
                                 </action>
@@ -2792,6 +2835,12 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Play" sid="420808547472910" type="Audio">
+                                    <param id="0" name="Audio file">Arc - Flèche non parée</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="-11" name="Add to" sid="738705608831015" type="spr_Player">
                                     <param id="0" name="Instance variable">Blessures</param>
                                     <param id="1" name="Value">1</param>
@@ -2825,6 +2874,12 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Play" sid="786949794311823" type="Audio">
+                                    <param id="0" name="Audio file">Gobelin dégât</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="-9" name="Destroy" sid="655096067663847" type="spr_Arrow" />
                                 <action behavior="Platform2" id="0" name="Set ignoring input" sid="297060661664497" type="Ennemies">
                                     <param id="0" name="Input">1</param>
@@ -3029,6 +3084,25 @@
                                                     <param id="0" name="Angle">spr_TurretVertical.AngleOfAttack</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="647799550967287">
+                                                    <conditions>
+                                                        <condition id="-3" name="Is on-screen" sid="568243346194677" type="spr_TurretVertical" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="25" name="Play at object" sid="393391072005169" type="Audio">
+                                                            <param id="0" name="Audio file">Tourelle fireball</param>
+                                                            <param id="1" name="Loop">0</param>
+                                                            <param id="2" name="Volume">-15</param>
+                                                            <param id="3" name="Object">spr_Fireball</param>
+                                                            <param id="4" name="Inner angle">360</param>
+                                                            <param id="5" name="Outer angle">360</param>
+                                                            <param id="6" name="Outer gain">0</param>
+                                                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="908906534290390">
                                             <conditions>
@@ -3048,6 +3122,25 @@
                                                     <param id="0" name="Angle">spr_TurretVertical.AngleOfAttack</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="346382396224638">
+                                                    <conditions>
+                                                        <condition id="-3" name="Is on-screen" sid="925451415063579" type="spr_TurretVertical" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="25" name="Play at object" sid="787575812638102" type="Audio">
+                                                            <param id="0" name="Audio file">Arc - Tir</param>
+                                                            <param id="1" name="Loop">0</param>
+                                                            <param id="2" name="Volume">-15</param>
+                                                            <param id="3" name="Object">spr_Arrow</param>
+                                                            <param id="4" name="Inner angle">360</param>
+                                                            <param id="5" name="Outer angle">360</param>
+                                                            <param id="6" name="Outer gain">0</param>
+                                                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -3210,6 +3303,12 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Play" sid="483823414160117" type="Audio">
+                                            <param id="0" name="Audio file">Gobelin dégât</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-5</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
                                         <action id="-10" name="Set value" sid="915087534589900" type="spr_Player">
                                             <param id="0" name="Instance variable">playerState</param>
                                             <param id="1" name="Value">&quot;idle&quot;</param>
@@ -3286,6 +3385,12 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Play" sid="666969450884496" type="Audio">
+                                            <param id="0" name="Audio file">Gobelin dégât</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-5</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
                                         <action behavior="Platform2" id="0" name="Set ignoring input" sid="924079168916410" type="Ennemies">
                                             <param id="0" name="Input">1</param>
                                         </action>
@@ -3322,6 +3427,12 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Play" sid="353741525928778" type="Audio">
+                                            <param id="0" name="Audio file">Gobelin dégât</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-5</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
                                         <action behavior="Bullet" id="2" name="Set gravity" sid="267383191608614" type="spr_Shield">
                                             <param id="0" name="Gravity">2500</param>
                                         </action>
@@ -3418,6 +3529,12 @@
                                         </action>
                                         <action behavior="Fade" id="1" name="Start fade" sid="722217570281615" type="fx_Smoke" />
                                         <action id="-9" name="Destroy" sid="434260264082479" type="Ennemies" />
+                                        <action id="0" name="Play" sid="148537320450487" type="Audio">
+                                            <param id="0" name="Audio file">Gobelin qui meurt</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-5</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -3464,6 +3581,7 @@
                                             <param id="0" name="Comparison">0</param>
                                             <param id="1" name="Number">12</param>
                                         </condition>
+                                        <condition id="-3" name="Is on-screen" sid="394620179870444" type="spr_GoblinArcher" />
                                         <condition id="-4" name="Trigger once while true" sid="745436695937473" type="System" />
                                     </conditions>
                                     <actions>
@@ -3483,6 +3601,16 @@
                                         </action>
                                         <action id="11" name="Set collisions enabled" sid="478342911343523" type="spr_Arrow">
                                             <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="25" name="Play at object" sid="499659163042338" type="Audio">
+                                            <param id="0" name="Audio file">Arc - Tir</param>
+                                            <param id="1" name="Loop">0</param>
+                                            <param id="2" name="Volume">-10</param>
+                                            <param id="3" name="Object">spr_Arrow</param>
+                                            <param id="4" name="Inner angle">360</param>
+                                            <param id="5" name="Outer angle">360</param>
+                                            <param id="6" name="Outer gain">0</param>
+                                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>

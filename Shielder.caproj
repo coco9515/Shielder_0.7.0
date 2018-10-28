@@ -2,7 +2,7 @@
 <c2project>
     <name>Shielder</name>
     <description></description>
-    <version>0.7.2</version>
+    <version>0.7.3</version>
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
@@ -10,6 +10,7 @@
     <unique-id>iodcyxn41mf6</unique-id>
     <saved-with-version>26500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -485,7 +486,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="854224004783523" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Download\Fleche_bigt.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.6" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\Fleche.png">
                             <collision-poly>
                                 <point x="0.09375" y="0.6" />
                                 <point x="0.5" y="0.4" />
@@ -749,6 +750,10 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="particle_mur" sid="881157152363379">
+                    <plugin id="Particles" />
+                    <texture original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\particle_mur.png" />
+                </object-type>
             </object-folder>
             <object-type name="spr_StairsDown" sid="361614628708377">
                 <plugin id="Sprite" />
@@ -914,7 +919,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="547082928144320" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                        <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bg wip dark mais un peu moins.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -960,6 +965,18 @@
                         </frame>
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="tile_porte" sid="865772902973819">
+                <plugin id="TiledBg" />
+                <instance-variables>
+                    <instance-variable name="IsTriggerActive" sid="281726916422037" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="775333619705101">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bg wip.png" />
             </object-type>
         </object-folder>
         <object-folder name="Joueur">
@@ -1144,6 +1161,9 @@
         <object-type name="Keyboard" sid="979708477097447">
             <plugin id="Keyboard" />
         </object-type>
+        <object-type name="Audio" sid="517501936451574">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Ennemies" plugin-id="Sprite" sid="402308118130530">
@@ -1196,14 +1216,46 @@
         <event-sheet>Events Menu.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Gamepad" uid="2">
+        <global-instance type="Gamepad" uid="14">
             <properties>
                 <analog-deadzone>25</analog-deadzone>
             </properties>
         </global-instance>
-        <global-instance type="Keyboard" uid="14" />
+        <global-instance type="Keyboard" uid="451" />
+        <global-instance type="Audio" uid="452">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="Bouclier planté.m4a" />
+        <file name="Bouclier planté.ogg" />
+        <file name="Gobelin qui meurt.m4a" />
+        <file name="Gobelin qui meurt.ogg" />
+        <file name="Lancer bouclier 3.m4a" />
+        <file name="Lancer bouclier 3.ogg" />
+        <file name="Gobelin dégât.m4a" />
+        <file name="Gobelin dégât.ogg" />
+        <file name="Tourelle fireball.m4a" />
+        <file name="Tourelle fireball.ogg" />
+        <file name="Arc - Tir.m4a" />
+        <file name="Arc - Tir.ogg" />
+        <file name="Arc - Flèche parée.m4a" />
+        <file name="Arc - Flèche parée.ogg" />
+        <file name="Arc - Flèche non parée.ogg" />
+        <file name="porte secrète.m4a" />
+        <file name="porte secrète.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">
