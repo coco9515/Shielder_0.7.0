@@ -35,9 +35,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Dangers/" />
         <folder expanded="0" path="object-folder/Dangers/Ennemis/" />
         <folder expanded="0" path="object-folder/Dangers/Pièges/" />
-        <folder expanded="0" path="object-folder/Décor/" />
+        <folder expanded="1" path="object-folder/Décor/" />
         <folder expanded="0" path="object-folder/Décor/Tuto/" />
-        <folder expanded="0" path="object-folder/Décor/Effets/" />
+        <folder expanded="1" path="object-folder/Décor/Effets/" />
         <folder expanded="0" path="object-folder/Joueur/" />
         <folder expanded="0" path="object-folder/Camera/" />
         <folder expanded="1" path="layout-folder/" />

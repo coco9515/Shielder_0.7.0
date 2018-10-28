@@ -2241,7 +2241,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="tile_porte" uid="448">
+                <instance type="tile_porte" uid="2">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>

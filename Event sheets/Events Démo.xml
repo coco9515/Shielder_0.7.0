@@ -2599,6 +2599,14 @@
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
+                                <action id="0" name="Spawn another object" sid="202513122823004" type="spr_Shield">
+                                    <param id="0" name="Object">particle_mur</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="110009240154596" type="particle_mur">
+                                    <param id="0" name="Angle">spr_Shield.Angle -90</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="564336578594189">
