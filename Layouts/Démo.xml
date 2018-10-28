@@ -2806,7 +2806,6 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>0.9</ShootTimer>
                         <ShootTimer>0.6</ShootTimer>
                         <AmmoType>Arrow</AmmoType>
                     </instance-variables>
