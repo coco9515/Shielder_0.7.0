@@ -1267,14 +1267,14 @@
                                                 <action behavior="Platform" id="0" name="Set ignoring input" sid="733487102533624" type="spr_Player">
                                                     <param id="0" name="Input">1</param>
                                                 </action>
+                                                <action id="-13" name="Set boolean" sid="768171358268673" type="spr_Player">
+                                                    <param id="0" name="Instance variable">canDash</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
                                                 <action behavior="Timer" id="0" name="Start timer" sid="785681032651016" type="spr_Player">
                                                     <param id="0" name="Duration">0.8</param>
                                                     <param id="1" name="Type">0</param>
                                                     <param id="2" name="Tag">&quot;Durée du dash&quot;</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="768171358268673" type="spr_Player">
-                                                    <param id="0" name="Instance variable">canDash</param>
-                                                    <param id="1" name="Value">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -2110,6 +2110,26 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>Empeche le joueur de rester en position surf</comment>
+                        <event-block sid="980848971016191">
+                            <conditions>
+                                <condition behavior="Platform" id="1" name="Compare speed" sid="737302630040608" type="spr_Player">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Speed">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="135501685405882" type="spr_Player">
+                                    <param id="0" name="Instance variable">playerState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;surf&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="138457200117272" type="spr_Player">
+                                    <param id="0" name="Instance variable">playerState</param>
+                                    <param id="1" name="Value">&quot;idle&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="Le parry du joueur" sid="212333909326710" title="Player Control : Parry">
@@ -2233,14 +2253,8 @@
                                             <param id="0" name="Instance variable">canDash</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
-                                        <action id="0" name="Play" sid="478305955640777" type="Audio">
-                                            <param id="0" name="Audio file">Lancer bouclier 3</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                        </action>
                                         <action behavior="Bullet" id="0" name="Set speed" sid="536731947464085" type="spr_Shield">
-                                            <param id="0" name="Speed">600</param>
+                                            <param id="0" name="Speed">400</param>
                                         </action>
                                         <action behavior="Bullet" id="5" name="Set enabled" sid="710696755553309" type="spr_Shield">
                                             <param id="0" name="State">1</param>
@@ -2249,6 +2263,12 @@
                                             <param id="0" name="Duration">0.5</param>
                                             <param id="1" name="Type">0</param>
                                             <param id="2" name="Tag">&quot;RappelBouclier&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="405791175176843" type="Audio">
+                                            <param id="0" name="Audio file">Lancer bouclier 3</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -2573,18 +2593,10 @@
                                     <param id="0" name="Instance variable">Planté</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="427957428965210" type="spr_Shield">
-                                    <param id="0" name="Object">particle_mur</param>
-                                    <param id="1" name="Layer">&quot;Game&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="990062578156753" type="particle_mur">
-                                    <param id="0" name="Angle">spr_Shield.Angle -90</param>
-                                </action>
-                                <action id="0" name="Play" sid="906367042259640" type="Audio">
+                                <action id="0" name="Play" sid="834354535346445" type="Audio">
                                     <param id="0" name="Audio file">Bouclier planté</param>
                                     <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
+                                    <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
@@ -2611,10 +2623,10 @@
                                     <param id="0" name="Instance variable">Planté</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Play" sid="418102466050700" type="Audio">
+                                <action id="0" name="Play" sid="360005891867142" type="Audio">
                                     <param id="0" name="Audio file">Bouclier planté</param>
                                     <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
+                                    <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
@@ -2661,24 +2673,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Le levier active le trigger général qui activera un élément</comment>
-                        <event-block sid="179841615082282">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="253253991710910" type="spr_Lever">
-                                    <param id="0" name="Instance variable">IsTriggered</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="103112481673044" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="5" name="Set frame" sid="166776272395735" type="spr_Lever">
-                                    <param id="0" name="Frame number">1</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="235471194118237" type="System">
-                                    <param id="0" name="Variable">TriggerActivated</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
+                        <comment>Animation du levier tant qu&apos;il n&apos;est pas activé</comment>
                         <event-block sid="823123331750717">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="277670758503073" type="spr_Lever">
@@ -2691,40 +2686,60 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Le trigger général qui active la porte</comment>
-                        <event-block sid="561778158595251">
+                        <comment>Le levier active le trigger général qui activera un élément</comment>
+                        <event-block sid="179841615082282">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="582022764927137" type="System">
-                                    <param id="0" name="Variable">TriggerActivated</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">spr_Porte.IsTriggerActive</param>
+                                <condition id="-8" name="Is boolean instance variable set" sid="253253991710910" type="spr_Lever">
+                                    <param id="0" name="Instance variable">IsTriggered</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="103112481673044" type="System" />
                             </conditions>
                             <actions>
-                                <action behavior="Solid" id="0" name="Set enabled" sid="708453374150284" type="spr_Porte">
-                                    <param id="0" name="State">0</param>
+                                <action id="5" name="Set frame" sid="166776272395735" type="spr_Lever">
+                                    <param id="0" name="Frame number">1</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="895584747633633" type="spr_Porte">
-                                    <param id="0" name="Opacity">20</param>
+                                <action id="-9" name="Set value" sid="235471194118237" type="System">
+                                    <param id="0" name="Variable">TriggerActivated</param>
+                                    <param id="1" name="Value">spr_Lever.NumeroPorte</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="665307917425945">
+                                <comment>Le trigger qui active la porte</comment>
+                                <event-block sid="822551488719269">
                                     <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="401667216805658" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="159540004027183" type="System">
+                                            <param id="0" name="Variable">TriggerActivated</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">spr_Porte.IsTriggerActive</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="25" name="Play at object" sid="743382983799415" type="Audio">
-                                            <param id="0" name="Audio file">porte secrète</param>
-                                            <param id="1" name="Loop">0</param>
-                                            <param id="2" name="Volume">-10</param>
-                                            <param id="3" name="Object">spr_Porte</param>
-                                            <param id="4" name="Inner angle">360</param>
-                                            <param id="5" name="Outer angle">360</param>
-                                            <param id="6" name="Outer gain">0</param>
-                                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                                        <action behavior="Solid" id="0" name="Set enabled" sid="708453374150284" type="spr_Porte">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="895584747633633" type="spr_Porte">
+                                            <param id="0" name="Opacity">20</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="191992942508174">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="667366124883990" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="25" name="Play at object" sid="349747554129762" type="Audio">
+                                                    <param id="0" name="Audio file">porte secrète</param>
+                                                    <param id="1" name="Loop">0</param>
+                                                    <param id="2" name="Volume">-10</param>
+                                                    <param id="3" name="Object">spr_Porte</param>
+                                                    <param id="4" name="Inner angle">360</param>
+                                                    <param id="5" name="Outer angle">360</param>
+                                                    <param id="6" name="Outer gain">0</param>
+                                                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -2774,14 +2789,14 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Bullet" id="4" name="Bounce off object" sid="228261426244495" type="spr_Arrow">
-                                    <param id="0" name="Object">spr_Shield</param>
-                                </action>
-                                <action id="0" name="Play" sid="643456799689409" type="Audio">
+                                <action id="0" name="Play" sid="527326527473463" type="Audio">
                                     <param id="0" name="Audio file">Arc - Flèche parée</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">-10</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action behavior="Bullet" id="4" name="Bounce off object" sid="228261426244495" type="spr_Arrow">
+                                    <param id="0" name="Object">spr_Shield</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2820,17 +2835,17 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" sid="738705608831015" type="spr_Player">
-                                    <param id="0" name="Instance variable">Blessures</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="674822609010231" type="spr_Arrow" />
-                                <action id="0" name="Play" sid="554533019985592" type="Audio">
+                                <action id="0" name="Play" sid="420808547472910" type="Audio">
                                     <param id="0" name="Audio file">Arc - Flèche non parée</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">-10</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
+                                <action id="-11" name="Add to" sid="738705608831015" type="spr_Player">
+                                    <param id="0" name="Instance variable">Blessures</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="674822609010231" type="spr_Arrow" />
                             </actions>
                         </event-block>
                         <comment>Quand la Fireball touche un ennemi, il est détruit et l&apos;ennemi meurt</comment>
@@ -2854,8 +2869,17 @@
                                 <condition id="0" name="On collision with another object" sid="950898727527940" type="spr_Arrow">
                                     <param id="0" name="Object">Ennemies</param>
                                 </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="441595571980405" type="spr_Arrow">
+                                    <param id="0" name="Instance variable">isFriendly</param>
+                                </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Play" sid="786949794311823" type="Audio">
+                                    <param id="0" name="Audio file">Gobelin dégât</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="-9" name="Destroy" sid="655096067663847" type="spr_Arrow" />
                                 <action behavior="Platform2" id="0" name="Set ignoring input" sid="297060661664497" type="Ennemies">
                                     <param id="0" name="Input">1</param>
@@ -2864,21 +2888,52 @@
                                     <param id="0" name="Max Speed">1000</param>
                                 </action>
                                 <action behavior="Platform2" id="9" name="Set vector Y" sid="874592356871105" type="Ennemies">
-                                    <param id="0" name="Vector Y">-200</param>
-                                </action>
-                                <action behavior="Platform2" id="8" name="Set vector X" sid="696630482946662" type="Ennemies">
-                                    <param id="0" name="Vector X">spr_Player.Platform.VectorX * 1.50</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="487299429021018" type="System">
-                                    <param id="0" name="Seconds">1.0</param>
-                                </action>
-                                <action behavior="Platform2" id="1" name="Set max speed" sid="142610017270148" type="Ennemies">
-                                    <param id="0" name="Max Speed">300</param>
-                                </action>
-                                <action behavior="Platform2" id="0" name="Set ignoring input" sid="328799495833465" type="Ennemies">
-                                    <param id="0" name="Input">0</param>
+                                    <param id="0" name="Vector Y">-400</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="924305586440063">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="787673946229602" type="spr_Arrow">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">Ennemies.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform2" id="8" name="Set vector X" sid="696630482946662" type="Ennemies">
+                                            <param id="0" name="Vector X">spr_Arrow.Bullet.Speed * 2</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="487299429021018" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="Platform2" id="1" name="Set max speed" sid="142610017270148" type="Ennemies">
+                                            <param id="0" name="Max Speed">300</param>
+                                        </action>
+                                        <action behavior="Platform2" id="0" name="Set ignoring input" sid="328799495833465" type="Ennemies">
+                                            <param id="0" name="Input">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="722109152766620">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="236361519654029" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform2" id="8" name="Set vector X" sid="535480116239887" type="Ennemies">
+                                            <param id="0" name="Vector X">-spr_Arrow.Bullet.Speed * 2</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="535498304253460" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="Platform2" id="1" name="Set max speed" sid="371536537977971" type="Ennemies">
+                                            <param id="0" name="Max Speed">300</param>
+                                        </action>
+                                        <action behavior="Platform2" id="0" name="Set ignoring input" sid="566672816517135" type="Ennemies">
+                                            <param id="0" name="Input">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Quand la Fireball touche un mur ou le décor, il est détruit (sauf les tourelles)</comment>
                         <event-block any="1" sid="319124089956646">
@@ -2900,6 +2955,17 @@
                                     </conditions>
                                     <actions />
                                 </event-block>
+                                <comment>Quand la fireball touche une porte ouverte, elle continue son chemin</comment>
+                                <event-block sid="844937099503944">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="354577375305827" type="System" />
+                                        <condition id="1" name="Is overlapping another object" sid="657677572867346" type="spr_Fireball">
+                                            <param id="0" name="Object">spr_Porte</param>
+                                        </condition>
+                                        <condition behavior="Solid" id="0" inverted="1" name="Is enabled" sid="916424005822138" type="spr_Porte" />
+                                    </conditions>
+                                    <actions />
+                                </event-block>
                                 <comment>Quand la Fireball touche un mur ou le décor, il est détruit (sauf les tourelles)</comment>
                                 <event-block sid="826400667007679">
                                     <conditions>
@@ -2911,7 +2977,19 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Quand la flêche touche un mur ou le décor, il est détruit (sauf les tourelles)</comment>
+                        <comment>Quand la flèche touche une autre flèche, elles sont détruites</comment>
+                        <event-block sid="729851499102199">
+                            <conditions>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="822821327439339" type="spr_Arrow" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="938763289777300" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="540824296372201" type="spr_Arrow" />
+                            </actions>
+                        </event-block>
+                        <comment>Quand la flèche touche un mur ou le décor, il est détruit (sauf les tourelles)</comment>
                         <event-block any="1" sid="252503846697035">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="816606996970489" type="spr_Arrow">
@@ -2931,7 +3009,18 @@
                                     </conditions>
                                     <actions />
                                 </event-block>
-                                <comment>Quand la fl^che touche un mur ou le décor, il est détruit (sauf les tourelles)</comment>
+                                <comment>Quand la flèche touche une porte ouverte, elle continue son chemin</comment>
+                                <event-block sid="537115478094093">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="887328296239231" type="System" />
+                                        <condition id="1" name="Is overlapping another object" sid="104473005346180" type="spr_Arrow">
+                                            <param id="0" name="Object">spr_Porte</param>
+                                        </condition>
+                                        <condition behavior="Solid" id="0" inverted="1" name="Is enabled" sid="462767099754626" type="spr_Porte" />
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                                <comment>Quand la flèche touche un mur ou le décor, il est détruit (sauf les tourelles)</comment>
                                 <event-block sid="301075629113850">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="862676212441935" type="System" />
@@ -2996,12 +3085,12 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="411148100814314">
+                                                <event-block sid="647799550967287">
                                                     <conditions>
-                                                        <condition id="-3" name="Is on-screen" sid="983283617590542" type="spr_TurretVertical" />
+                                                        <condition id="-3" name="Is on-screen" sid="568243346194677" type="spr_TurretVertical" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="25" name="Play at object" sid="135576887732652" type="Audio">
+                                                        <action id="25" name="Play at object" sid="393391072005169" type="Audio">
                                                             <param id="0" name="Audio file">Tourelle fireball</param>
                                                             <param id="1" name="Loop">0</param>
                                                             <param id="2" name="Volume">-15</param>
@@ -3034,12 +3123,12 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="542385096077417">
+                                                <event-block sid="346382396224638">
                                                     <conditions>
-                                                        <condition id="-3" name="Is on-screen" sid="434645012460780" type="spr_TurretVertical" />
+                                                        <condition id="-3" name="Is on-screen" sid="925451415063579" type="spr_TurretVertical" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="25" name="Play at object" sid="361959443643088" type="Audio">
+                                                        <action id="25" name="Play at object" sid="787575812638102" type="Audio">
                                                             <param id="0" name="Audio file">Arc - Tir</param>
                                                             <param id="1" name="Loop">0</param>
                                                             <param id="2" name="Volume">-15</param>
@@ -3214,11 +3303,18 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Play" sid="975268515306468" type="Audio">
+                                        <action id="0" name="Play" sid="483823414160117" type="Audio">
                                             <param id="0" name="Audio file">Gobelin dégât</param>
                                             <param id="2" name="Loop">0</param>
                                             <param id="3" name="Volume">-5</param>
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="915087534589900" type="spr_Player">
+                                            <param id="0" name="Instance variable">playerState</param>
+                                            <param id="1" name="Value">&quot;idle&quot;</param>
+                                        </action>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="559900779998282" type="spr_Player">
+                                            <param id="0" name="Vector X">0</param>
                                         </action>
                                         <action behavior="Platform2" id="0" name="Set ignoring input" sid="243807638481625" type="Ennemies">
                                             <param id="0" name="Input">1</param>
@@ -3229,19 +3325,50 @@
                                         <action behavior="Platform2" id="9" name="Set vector Y" sid="885620117944164" type="Ennemies">
                                             <param id="0" name="Vector Y">-200</param>
                                         </action>
-                                        <action behavior="Platform2" id="8" name="Set vector X" sid="527089063182960" type="Ennemies">
-                                            <param id="0" name="Vector X">spr_Player.Platform.VectorX * 3</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="412505647222754" type="System">
-                                            <param id="0" name="Seconds">1.0</param>
-                                        </action>
-                                        <action behavior="Platform2" id="1" name="Set max speed" sid="286882639006121" type="Ennemies">
-                                            <param id="0" name="Max Speed">300</param>
-                                        </action>
-                                        <action behavior="Platform2" id="0" name="Set ignoring input" sid="128480838013022" type="Ennemies">
-                                            <param id="0" name="Input">0</param>
-                                        </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="225956694026922">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="494970899891170" type="Ennemies">
+                                                    <param id="0" name="Comparison">5</param>
+                                                    <param id="1" name="X co-ordinate">spr_Player.X</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform2" id="8" name="Set vector X" sid="527089063182960" type="Ennemies">
+                                                    <param id="0" name="Vector X">900</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="412505647222754" type="System">
+                                                    <param id="0" name="Seconds">1.0</param>
+                                                </action>
+                                                <action behavior="Platform2" id="1" name="Set max speed" sid="286882639006121" type="Ennemies">
+                                                    <param id="0" name="Max Speed">300</param>
+                                                </action>
+                                                <action behavior="Platform2" id="0" name="Set ignoring input" sid="128480838013022" type="Ennemies">
+                                                    <param id="0" name="Input">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="666658237437547">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="221412894318127" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform2" id="8" name="Set vector X" sid="860016059436416" type="Ennemies">
+                                                    <param id="0" name="Vector X">-900</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="512028490351818" type="System">
+                                                    <param id="0" name="Seconds">1.0</param>
+                                                </action>
+                                                <action behavior="Platform2" id="1" name="Set max speed" sid="664664438002211" type="Ennemies">
+                                                    <param id="0" name="Max Speed">300</param>
+                                                </action>
+                                                <action behavior="Platform2" id="0" name="Set ignoring input" sid="147838353788008" type="Ennemies">
+                                                    <param id="0" name="Input">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <comment>L&apos;ennemi est repoussé quand le joueur lui surfe dessus</comment>
                                 <event-block sid="611989458961276">
@@ -3258,7 +3385,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Play" sid="120195395277860" type="Audio">
+                                        <action id="0" name="Play" sid="666969450884496" type="Audio">
                                             <param id="0" name="Audio file">Gobelin dégât</param>
                                             <param id="2" name="Loop">0</param>
                                             <param id="3" name="Volume">-5</param>
@@ -3300,7 +3427,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Play" sid="544884258148170" type="Audio">
+                                        <action id="0" name="Play" sid="353741525928778" type="Audio">
                                             <param id="0" name="Audio file">Gobelin dégât</param>
                                             <param id="2" name="Loop">0</param>
                                             <param id="3" name="Volume">-5</param>
@@ -3394,12 +3521,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Play" sid="256516594095381" type="Audio">
-                                            <param id="0" name="Audio file">Gobelin qui meurt</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">-5</param>
-                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                        </action>
                                         <action id="-3" name="Create object" sid="499023281210032" type="System">
                                             <param id="0" name="Object to create">fx_Smoke</param>
                                             <param id="1" name="Layer">1</param>
@@ -3408,6 +3529,12 @@
                                         </action>
                                         <action behavior="Fade" id="1" name="Start fade" sid="722217570281615" type="fx_Smoke" />
                                         <action id="-9" name="Destroy" sid="434260264082479" type="Ennemies" />
+                                        <action id="0" name="Play" sid="148537320450487" type="Audio">
+                                            <param id="0" name="Audio file">Gobelin qui meurt</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-5</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -3454,7 +3581,7 @@
                                             <param id="0" name="Comparison">0</param>
                                             <param id="1" name="Number">12</param>
                                         </condition>
-                                        <condition id="-3" name="Is on-screen" sid="717791132623836" type="spr_GoblinArcher" />
+                                        <condition id="-3" name="Is on-screen" sid="394620179870444" type="spr_GoblinArcher" />
                                         <condition id="-4" name="Trigger once while true" sid="745436695937473" type="System" />
                                     </conditions>
                                     <actions>
@@ -3462,16 +3589,6 @@
                                             <param id="0" name="Object">spr_Arrow</param>
                                             <param id="1" name="Layer">0</param>
                                             <param id="2" name="Image point">1</param>
-                                        </action>
-                                        <action id="25" name="Play at object" sid="499017587530427" type="Audio">
-                                            <param id="0" name="Audio file">Arc - Tir</param>
-                                            <param id="1" name="Loop">0</param>
-                                            <param id="2" name="Volume">-10</param>
-                                            <param id="3" name="Object">spr_Arrow</param>
-                                            <param id="4" name="Inner angle">360</param>
-                                            <param id="5" name="Outer angle">360</param>
-                                            <param id="6" name="Outer gain">0</param>
-                                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="762154245277060" type="spr_Arrow">
                                             <param id="0" name="Angle">spr_GoblinArcher.Angle</param>
@@ -3484,6 +3601,16 @@
                                         </action>
                                         <action id="11" name="Set collisions enabled" sid="478342911343523" type="spr_Arrow">
                                             <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="25" name="Play at object" sid="499659163042338" type="Audio">
+                                            <param id="0" name="Audio file">Arc - Tir</param>
+                                            <param id="1" name="Loop">0</param>
+                                            <param id="2" name="Volume">-10</param>
+                                            <param id="3" name="Object">spr_Arrow</param>
+                                            <param id="4" name="Inner angle">360</param>
+                                            <param id="5" name="Outer angle">360</param>
+                                            <param id="6" name="Outer gain">0</param>
+                                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>

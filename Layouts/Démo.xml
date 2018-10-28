@@ -2807,6 +2807,7 @@
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
                         <ShootTimer>0.9</ShootTimer>
+                        <ShootTimer>0.6</ShootTimer>
                         <AmmoType>Arrow</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -2833,7 +2834,7 @@
                     </properties>
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
-                        <ShootTimer>0.9</ShootTimer>
+                        <ShootTimer>0.6</ShootTimer>
                         <AmmoType>Arrow</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -2861,7 +2862,7 @@
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
                         <ShootTimer>1</ShootTimer>
-                        <AmmoType>fireball</AmmoType>
+                        <AmmoType>arrow</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3024,14 +3025,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>256</x>
-                        <y>736</y>
+                        <x>272.007110596</x>
+                        <y>805.899902344</y>
                         <z>0</z>
                         <width>32</width>
-                        <height>128</height>
+                        <height>160</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -3638,6 +3639,7 @@
                     </properties>
                     <instance-variables>
                         <IsTriggered>false</IsTriggered>
+                        <NumeroPorte>1</NumeroPorte>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

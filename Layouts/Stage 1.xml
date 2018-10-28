@@ -225,6 +225,35 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="spr_Spikes" uid="448">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1344</x>
+                        <y>832</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>-1.57079649</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -996,6 +1025,7 @@
                     </properties>
                     <instance-variables>
                         <IsTriggered>false</IsTriggered>
+                        <NumeroPorte>2</NumeroPorte>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1453,10 +1483,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>960</x>
-                        <y>800</y>
+                        <y>832</y>
                         <z>0</z>
                         <width>160</width>
-                        <height>320</height>
+                        <height>288</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -2112,10 +2142,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1184</x>
-                        <y>800</y>
+                        <y>832</y>
                         <z>0</z>
                         <width>160</width>
-                        <height>128</height>
+                        <height>96</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -2200,10 +2230,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1152</x>
-                        <y>800</y>
+                        <y>832</y>
                         <z>0</z>
                         <width>32</width>
-                        <height>256</height>
+                        <height>224</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
