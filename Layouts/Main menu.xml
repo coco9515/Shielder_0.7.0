@@ -191,6 +191,8 @@
                     <instance-variables>
                         <BouclierSens>&quot;&quot;</BouclierSens>
                         <Planté>false</Planté>
+                        <TombeAuSol>false</TombeAuSol>
+                        <DistanceJoueur>100</DistanceJoueur>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -234,6 +236,8 @@
                     <instance-variables>
                         <BouclierSens>&quot;&quot;</BouclierSens>
                         <Planté>false</Planté>
+                        <TombeAuSol>false</TombeAuSol>
+                        <DistanceJoueur>100</DistanceJoueur>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">

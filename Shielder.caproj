@@ -2,7 +2,7 @@
 <c2project>
     <name>Shielder</name>
     <description></description>
-    <version>0.7.4</version>
+    <version>0.7.5</version>
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
@@ -26,6 +26,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
@@ -97,7 +98,7 @@
             <object-type name="text_Life" sid="804327069653229">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="text_Test2" sid="906819244348447">
+            <object-type name="text_QuantityShield" sid="906819244348447">
                 <plugin id="Text" />
             </object-type>
             <object-type name="text_Titre" sid="455219188206253">
@@ -948,6 +949,12 @@
                     <behavior-type name="Sine" sid="260848201899799">
                         <behavior id="Sin" />
                     </behavior-type>
+                    <behavior-type name="Bullet" sid="172524341920753">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Physics" sid="446028025402401">
+                        <behavior id="Physics" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="295103406737833" speed="5">
@@ -991,6 +998,7 @@
                     <instance-variable comment="Est-il en cours de parry ?" name="isParrying" sid="620097329169846" type="boolean" />
                     <instance-variable comment="Compte le nombre de dégâts subit" name="Blessures" sid="109915060907728" type="number" />
                     <instance-variable comment="Rend le joueur invincible" name="Invincible" sid="422262055263968" type="boolean" />
+                    <instance-variable comment="Combien de bouclier le joueur a en stock ?" name="QuantityShield" sid="144486089824002" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="754739628599200">
@@ -1069,6 +1077,8 @@
                 <instance-variables>
                     <instance-variable comment="Quel direction le bouclier fait face" name="BouclierSens" sid="544673509665469" type="string" />
                     <instance-variable comment="Est-ce que le bouclier est planté dans un mur ?" name="Planté" sid="947790328595444" type="boolean" />
+                    <instance-variable comment="Est-ce que le bouclier est tombé sur le sol ?" name="TombeAuSol" sid="602311112641764" type="boolean" />
+                    <instance-variable comment="La distance entre le bouclier et le joueur" name="DistanceJoueur" sid="595027603686121" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Bullet" sid="457540433747848">
@@ -1134,6 +1144,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable comment="Indique la direction de la caméra, par rapport au joueur" name="DirectionCamera" sid="217034273767807" type="string" />
+                    <instance-variable comment="Est-ce que le joueur vise ?" name="IsAiming" sid="930531018625103" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="ScrollTo" sid="648264255092231">
@@ -1197,11 +1208,17 @@
         </family>
         <family name="Interactif" plugin-id="Sprite" sid="867929429312036">
             <members>
+                <member>spr_chandelier</member>
                 <member>spr_Lever</member>
             </members>
             <instance-variables>
                 <instance-variable comment="Est-ce que l&apos;objet a été activé ?" name="IsTriggered" sid="408185039428134" type="boolean" />
             </instance-variables>
+        </family>
+        <family name="Shields" plugin-id="Sprite" sid="583031045162670">
+            <members>
+                <member>spr_Shield</member>
+            </members>
         </family>
     </families>
     <layout-folder>

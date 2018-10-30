@@ -26,8 +26,8 @@
                 <action id="0" name="Set text" sid="791020103923919" type="text_Test1">
                     <param id="0" name="Text">spr_Player.playerState</param>
                 </action>
-                <action id="0" name="Set text" sid="532226389368143" type="text_Test2">
-                    <param id="0" name="Text">Gamepad.Axis(0,1)</param>
+                <action id="0" name="Set text" sid="532226389368143" type="text_QuantityShield">
+                    <param id="0" name="Text">spr_Player.QuantityShield</param>
                 </action>
                 <action id="3" name="Set progress" sid="690912980384413" type="Lifebar">
                     <param id="0" name="Value">spr_Player.vieJoueur</param>
@@ -62,6 +62,19 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="403329185229644">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="721572969944074" type="spr_Shield">
+                            <param id="0" name="Instance variable">TombeAuSol</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="924678393069100" type="spr_Shield">
+                            <param id="0" name="Instance variable">DistanceJoueur</param>
+                            <param id="1" name="Value">abs( abs(spr_Shield.X) - abs(spr_Player.X) )</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-group description="Gestion de la caméra" sid="820505197611447" title="Camera">
@@ -84,6 +97,13 @@
                                 <action id="-3" name="Set position" sid="331309683539194" type="Camera">
                                     <param id="0" name="X">lerp(Self.X, spr_Player.X+200, 0.08)</param>
                                     <param id="1" name="Y">lerp(Self.Y, (spr_Player.Y -30), 0.08)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="458180762731913" type="Camera">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="324994674663275" type="Camera">
+                                    <param id="0" name="Instance variable">IsAiming</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -199,6 +219,10 @@
                         <event-block sid="237397606226990">
                             <conditions>
                                 <condition id="-22" name="Else" sid="389693187609861" type="System" />
+                                <condition id="3" name="Is button down" sid="728307614082209" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">6</param>
+                                </condition>
                                 <condition id="5" name="Compare axis" sid="748722600481122" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Axis">2</param>
@@ -210,6 +234,13 @@
                                 <action id="-3" name="Set position" sid="942904799030608" type="Camera">
                                     <param id="0" name="X">lerp(Self.X, spr_Player.X+200, 0.08)</param>
                                     <param id="1" name="Y">lerp(Self.Y, (spr_Player.Y -30), 0.08)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="257250701113745" type="Camera">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="147108813692197" type="Camera">
+                                    <param id="0" name="Instance variable">IsAiming</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -274,6 +305,10 @@
                                 <comment>Stick droit vers la droit + haut =&gt; avance la caméra dans cette direction</comment>
                                 <event-block sid="284325798947247">
                                     <conditions>
+                                        <condition id="3" name="Is button down" sid="316923456935403" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">6</param>
+                                        </condition>
                                         <condition id="5" name="Compare axis" sid="661272522040595" type="Gamepad">
                                             <param id="0" name="Gamepad">0</param>
                                             <param id="1" name="Axis">3</param>
@@ -296,6 +331,10 @@
                                 <event-block sid="140574504410490">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="173865318214797" type="System" />
+                                        <condition id="3" name="Is button down" sid="433365957486126" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">6</param>
+                                        </condition>
                                         <condition id="5" name="Compare axis" sid="386935627976669" type="Gamepad">
                                             <param id="0" name="Gamepad">0</param>
                                             <param id="1" name="Axis">3</param>
@@ -339,6 +378,13 @@
                                 <action id="-3" name="Set position" sid="599922209556750" type="Camera">
                                     <param id="0" name="X">lerp(Self.X, spr_Player.X-200, 0.08)</param>
                                     <param id="1" name="Y">lerp(Self.Y, (spr_Player.Y -30), 0.08)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="101945596699343" type="Camera">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="573260288854141" type="Camera">
+                                    <param id="0" name="Instance variable">IsAiming</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -454,6 +500,10 @@
                         <event-block sid="950372626065643">
                             <conditions>
                                 <condition id="-22" name="Else" sid="179267696307909" type="System" />
+                                <condition id="3" name="Is button down" sid="845260681811502" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">6</param>
+                                </condition>
                                 <condition id="5" name="Compare axis" sid="366949574916596" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Axis">2</param>
@@ -465,6 +515,13 @@
                                 <action id="-3" name="Set position" sid="116523191452532" type="Camera">
                                     <param id="0" name="X">lerp(Self.X, spr_Player.X-200, 0.08)</param>
                                     <param id="1" name="Y">lerp(Self.Y, (spr_Player.Y -30), 0.08)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="852854743481941" type="Camera">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="201977983005649" type="Camera">
+                                    <param id="0" name="Instance variable">IsAiming</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -529,6 +586,10 @@
                                 <comment>Stick droit vers la gauche + haut =&gt; avance la caméra dans cette direction</comment>
                                 <event-block sid="514387621659658">
                                     <conditions>
+                                        <condition id="3" name="Is button down" sid="377387272128381" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">6</param>
+                                        </condition>
                                         <condition id="5" name="Compare axis" sid="328596215271357" type="Gamepad">
                                             <param id="0" name="Gamepad">0</param>
                                             <param id="1" name="Axis">3</param>
@@ -551,6 +612,10 @@
                                 <event-block sid="768433895642917">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="876100485569099" type="System" />
+                                        <condition id="3" name="Is button down" sid="180417377385095" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">6</param>
+                                        </condition>
                                         <condition id="5" name="Compare axis" sid="456987695020069" type="Gamepad">
                                             <param id="0" name="Gamepad">0</param>
                                             <param id="1" name="Axis">3</param>
@@ -599,12 +664,23 @@
                                     <param id="0" name="Instance variable">DirectionCamera</param>
                                     <param id="1" name="Value">&quot;bas&quot;</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="808263368291655" type="Camera">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="376100002440092" type="Camera">
+                                    <param id="0" name="Instance variable">IsAiming</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <comment>Stick droit vers le bas =&gt; avance la caméra dans cette direction</comment>
                         <event-block sid="578383765757740">
                             <conditions>
                                 <condition id="-22" name="Else" sid="741255124296469" type="System" />
+                                <condition id="3" name="Is button down" sid="968010885816622" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">6</param>
+                                </condition>
                                 <condition id="5" name="Compare axis" sid="749108747375604" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Axis">3</param>
@@ -620,6 +696,13 @@
                                 <action id="-10" name="Set value" sid="551247432348381" type="Camera">
                                     <param id="0" name="Instance variable">DirectionCamera</param>
                                     <param id="1" name="Value">&quot;bas&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="674227450320628" type="Camera">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="406644014084696" type="Camera">
+                                    <param id="0" name="Instance variable">IsAiming</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -640,12 +723,23 @@
                                     <param id="0" name="Instance variable">DirectionCamera</param>
                                     <param id="1" name="Value">&quot;haut&quot;</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="900992613698037" type="Camera">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="852765003095285" type="Camera">
+                                    <param id="0" name="Instance variable">IsAiming</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <comment>Stick droit vers le haut =&gt; avance la caméra dans cette direction</comment>
                         <event-block sid="690536199155090">
                             <conditions>
                                 <condition id="-22" name="Else" sid="596230798135417" type="System" />
+                                <condition id="3" name="Is button down" sid="784652147439935" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">6</param>
+                                </condition>
                                 <condition id="5" name="Compare axis" sid="305652325563104" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Axis">3</param>
@@ -662,6 +756,13 @@
                                     <param id="0" name="Instance variable">DirectionCamera</param>
                                     <param id="1" name="Value">&quot;haut&quot;</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="454799847362030" type="Camera">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="184694132762961" type="Camera">
+                                    <param id="0" name="Instance variable">IsAiming</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <comment>Suit le joueur, par défaut</comment>
@@ -677,6 +778,13 @@
                                 <action id="-10" name="Set value" sid="951470661997488" type="Camera">
                                     <param id="0" name="Instance variable">DirectionCamera</param>
                                     <param id="1" name="Value">&quot;centre&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="883888678996335" type="Camera">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="966978853484949" type="Camera">
+                                    <param id="0" name="Instance variable">IsAiming</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1244,6 +1352,9 @@
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;throw&quot;</param>
                                                 </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="753456337092462" type="Camera">
+                                                    <param id="0" name="Instance variable">IsAiming</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="-10" name="Set value" sid="504354271150349" type="spr_Player">
@@ -1425,7 +1536,7 @@
                             <conditions>
                                 <condition id="5" name="Compare axis" sid="364585748726517" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Axis">1</param>
+                                    <param id="1" name="Axis">3</param>
                                     <param id="2" name="Comparison">2</param>
                                     <param id="3" name="Value">-75</param>
                                 </condition>
@@ -1446,6 +1557,9 @@
                                             <param id="0" name="Instance variable">playerState</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;surf&quot;</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="256853820065165" type="Camera">
+                                            <param id="0" name="Instance variable">IsAiming</param>
                                         </condition>
                                         <condition id="1" inverted="1" name="Is overlapping another object" sid="516672440655733" type="spr_Player">
                                             <param id="0" name="Object">tile_Ladder</param>
@@ -1630,6 +1744,9 @@
                                         <condition id="1" inverted="1" name="Is overlapping another object" sid="665138552076622" type="spr_Player">
                                             <param id="0" name="Object">tile_Ladder</param>
                                         </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="189089447423940" type="Camera">
+                                            <param id="0" name="Instance variable">IsAiming</param>
+                                        </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
@@ -1637,7 +1754,7 @@
                                             <conditions>
                                                 <condition id="5" name="Compare axis" sid="847323092857246" type="Gamepad">
                                                     <param id="0" name="Gamepad">0</param>
-                                                    <param id="1" name="Axis">1</param>
+                                                    <param id="1" name="Axis">3</param>
                                                     <param id="2" name="Comparison">4</param>
                                                     <param id="3" name="Value">50</param>
                                                 </condition>
@@ -2224,7 +2341,7 @@
                             <conditions>
                                 <condition id="6" name="On button pressed" sid="477275704435921" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Button">3</param>
+                                    <param id="1" name="Button">7</param>
                                 </condition>
                                 <condition id="0" name="On key pressed" sid="364324449392048" type="Keyboard">
                                     <param id="0" name="Key">52</param>
@@ -2494,6 +2611,14 @@
                                             <param id="0" name="Instance variable">Planté</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
+                                        <action id="-13" name="Set boolean" sid="163935329045109" type="spr_Shield">
+                                            <param id="0" name="Instance variable">TombeAuSol</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="236637621773400" type="spr_Shield">
+                                            <param id="0" name="Instance variable">DistanceJoueur</param>
+                                            <param id="1" name="Value">100</param>
+                                        </action>
                                         <action id="4" name="Set animation" sid="103303799320496" type="spr_Player">
                                             <param id="0" name="Animation">&quot;Default&quot;</param>
                                             <param id="1" name="From">1</param>
@@ -2552,6 +2677,108 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>Récupère le bouclier quand le joueur marche à côté - si pas planté</comment>
+                        <event-block sid="805083762322750">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="299980700058674" type="spr_Player">
+                                    <param id="0" name="Instance variable">playerState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;throw&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="355386802623783" type="spr_Shield">
+                                    <param id="0" name="Instance variable">TombeAuSol</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="195636631069681">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="831766696975840" type="spr_Shield">
+                                            <param id="0" name="Instance variable">DistanceJoueur</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">30</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="2" name="Set gravity" sid="478258169929596" type="spr_Shield">
+                                            <param id="0" name="Gravity">0</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="586845487416432" type="spr_Shield">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="Solid" id="0" name="Set enabled" sid="364965490921926" type="spr_Shield">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="189132926722045" type="spr_Shield">
+                                            <param id="0" name="Instance variable">Planté</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="694942478091751" type="spr_Shield">
+                                            <param id="0" name="Instance variable">TombeAuSol</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="179907815971089" type="spr_Shield">
+                                            <param id="0" name="Instance variable">DistanceJoueur</param>
+                                            <param id="1" name="Value">100</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="935151964661596" type="spr_Player">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="201998037790851" type="spr_Player">
+                                            <param id="0" name="Instance variable">canDash</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="678409264567306" type="spr_Player">
+                                            <param id="0" name="Instance variable">playerState</param>
+                                            <param id="1" name="Value">&quot;idle&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="655775720397916" type="spr_Player">
+                                            <param id="0" name="Instance variable">imagepointBras</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="357842319668966" type="spr_Shield">
+                                            <param id="0" name="Angle">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="898421257703603" type="System">
+                                            <param id="0" name="Variable">ThrowCooldownOver</param>
+                                            <param id="1" name="Value">&quot;false&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <comment>Le tourne dans la bonne direction lorsqu&apos;on le récupère</comment>
+                                        <event-block sid="547030933020719">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="419427156964960" type="spr_Player">
+                                                    <param id="0" name="Instance variable">playerSens</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;droite&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="172268038051230" type="spr_Shield">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="883437832861544">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="953710405690015" type="spr_Player">
+                                                    <param id="0" name="Instance variable">playerSens</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;gauche&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="814878372587532" type="spr_Shield">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="312219113174538">
                             <conditions>
                                 <condition behavior="Timer" id="0" name="On timer" sid="539969880372851" type="spr_Player">
@@ -2589,25 +2816,44 @@
                                 <action behavior="Solid" id="0" name="Set enabled" sid="639577434277496" type="spr_Shield">
                                     <param id="0" name="State">1</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="854463562331401" type="spr_Shield">
-                                    <param id="0" name="Instance variable">Planté</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action disabled="1" id="0" name="Play" sid="834354535346445" type="Audio">
-                                    <param id="0" name="Audio file">Bouclier planté</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="202513122823004" type="spr_Shield">
-                                    <param id="0" name="Object">particle_mur</param>
-                                    <param id="1" name="Layer">&quot;Game&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="110009240154596" type="particle_mur">
-                                    <param id="0" name="Angle">spr_Shield.Angle -90</param>
-                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="650576520243919">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="575704313024276" type="spr_Shield">
+                                            <param id="0" name="Instance variable">TombeAuSol</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                                <event-block sid="436553223242274">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="249182500681335" type="spr_Shield">
+                                            <param id="0" name="Instance variable">TombeAuSol</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="854463562331401" type="spr_Shield">
+                                            <param id="0" name="Instance variable">Planté</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action disabled="1" id="0" name="Play" sid="834354535346445" type="Audio">
+                                            <param id="0" name="Audio file">Bouclier planté</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="202513122823004" type="spr_Shield">
+                                            <param id="0" name="Object">particle_mur</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="110009240154596" type="particle_mur">
+                                            <param id="0" name="Angle">spr_Shield.Angle -90</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="564336578594189">
                             <conditions>
@@ -2675,7 +2921,11 @@
                                 <action behavior="Bullet" id="2" name="Set gravity" sid="353865629669262" type="spr_Shield">
                                     <param id="0" name="Gravity">2500</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="463021971728901" type="spr_Lever">
+                                <action id="-13" name="Set boolean" sid="744580526242565" type="spr_Shield">
+                                    <param id="0" name="Instance variable">TombeAuSol</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="463021971728901" type="Interactif">
                                     <param id="0" name="Instance variable">IsTriggered</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -2751,6 +3001,22 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="778450250302312">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="697193257458804" type="spr_chandelier">
+                                    <param id="0" name="Instance variable">IsTriggered</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="130008162623188" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Move to layer" sid="907457441429321" type="spr_chandelier">
+                                    <param id="0" name="Layer">&quot;Game&quot;</param>
+                                </action>
+                                <action behavior="Physics" id="27" name="Set enabled" sid="885274323036405" type="spr_chandelier">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
             </sub-events>
@@ -2765,24 +3031,29 @@
                                 <condition id="0" name="On collision with another object" sid="973249621696857" type="spr_Fireball">
                                     <param id="0" name="Object">spr_Shield</param>
                                 </condition>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="451183112615795" type="spr_Player">
+                                    <param id="0" name="Instance variable">playerState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;throw&quot;</param>
+                                </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="162636168790465" type="spr_Fireball">
+                                    <param id="0" name="Angle">spr_Fireball.Bullet.AngleOfMotion + 180</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="690134467411999" type="spr_Fireball">
+                                    <param id="0" name="Instance variable">isFriendly</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block sid="677382666041729">
+                                <event-block disabled="1" sid="677382666041729">
                                     <conditions>
                                         <condition id="2" name="Is playing" sid="532402318260663" type="spr_Shield">
                                             <param id="0" name="Animation">&quot;Parry&quot;</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="162636168790465" type="spr_Fireball">
-                                            <param id="0" name="Angle">spr_Fireball.Bullet.AngleOfMotion + 180</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="690134467411999" type="spr_Fireball">
-                                            <param id="0" name="Instance variable">isFriendly</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -2791,6 +3062,11 @@
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="931469252496148" type="spr_Arrow">
                                     <param id="0" name="Object">spr_Shield</param>
+                                </condition>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="460707881378412" type="spr_Player">
+                                    <param id="0" name="Instance variable">playerState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;throw&quot;</param>
                                 </condition>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="735881008693118" type="spr_Arrow">
                                     <param id="0" name="Instance variable">isFriendly</param>
@@ -3335,6 +3611,81 @@
                                         </action>
                                     </actions>
                                     <sub-events>
+                                        <event-block sid="726224515189471">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="270816107838723" type="Ennemies">
+                                                    <param id="0" name="Comparison">5</param>
+                                                    <param id="1" name="X co-ordinate">spr_Player.X</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform2" id="8" name="Set vector X" sid="619599035466404" type="Ennemies">
+                                                    <param id="0" name="Vector X">900</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="442509922214706" type="System">
+                                                    <param id="0" name="Seconds">1.0</param>
+                                                </action>
+                                                <action behavior="Platform2" id="1" name="Set max speed" sid="663704310489892" type="Ennemies">
+                                                    <param id="0" name="Max Speed">300</param>
+                                                </action>
+                                                <action behavior="Platform2" id="0" name="Set ignoring input" sid="583415324497096" type="Ennemies">
+                                                    <param id="0" name="Input">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="645116169364186">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="429479019049028" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform2" id="8" name="Set vector X" sid="988132314480521" type="Ennemies">
+                                                    <param id="0" name="Vector X">-900</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="411789956775555" type="System">
+                                                    <param id="0" name="Seconds">1.0</param>
+                                                </action>
+                                                <action behavior="Platform2" id="1" name="Set max speed" sid="366174329397592" type="Ennemies">
+                                                    <param id="0" name="Max Speed">300</param>
+                                                </action>
+                                                <action behavior="Platform2" id="0" name="Set ignoring input" sid="322086642577931" type="Ennemies">
+                                                    <param id="0" name="Input">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>L&apos;ennemi est repoussé quand le joueur lui surfe dessus</comment>
+                                <event-block sid="611989458961276">
+                                    <conditions>
+                                        <condition id="9" name="Is overlapping at offset" sid="900577340663057" type="Ennemies">
+                                            <param id="0" name="Object">spr_Shield</param>
+                                            <param id="1" name="Offset X">15</param>
+                                            <param id="2" name="Offset Y">15</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="326660355805910" type="spr_Player">
+                                            <param id="0" name="Instance variable">playerState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;surf&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="0" name="Play" sid="666969450884496" type="Audio">
+                                            <param id="0" name="Audio file">Gobelin dégât</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-5</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action behavior="Platform2" id="0" name="Set ignoring input" sid="924079168916410" type="Ennemies">
+                                            <param id="0" name="Input">1</param>
+                                        </action>
+                                        <action behavior="Platform2" id="1" name="Set max speed" sid="809212720532149" type="Ennemies">
+                                            <param id="0" name="Max Speed">1000</param>
+                                        </action>
+                                        <action behavior="Platform2" id="9" name="Set vector Y" sid="224682886653088" type="Ennemies">
+                                            <param id="0" name="Vector Y">-200</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
                                         <event-block sid="225956694026922">
                                             <conditions>
                                                 <condition id="-1" name="Compare X" sid="494970899891170" type="Ennemies">
@@ -3378,50 +3729,6 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <comment>L&apos;ennemi est repoussé quand le joueur lui surfe dessus</comment>
-                                <event-block sid="611989458961276">
-                                    <conditions>
-                                        <condition id="9" name="Is overlapping at offset" sid="900577340663057" type="Ennemies">
-                                            <param id="0" name="Object">spr_Shield</param>
-                                            <param id="1" name="Offset X">15</param>
-                                            <param id="2" name="Offset Y">15</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="326660355805910" type="spr_Player">
-                                            <param id="0" name="Instance variable">playerState</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;surf&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action disabled="1" id="0" name="Play" sid="666969450884496" type="Audio">
-                                            <param id="0" name="Audio file">Gobelin dégât</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">-5</param>
-                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                        </action>
-                                        <action behavior="Platform2" id="0" name="Set ignoring input" sid="924079168916410" type="Ennemies">
-                                            <param id="0" name="Input">1</param>
-                                        </action>
-                                        <action behavior="Platform2" id="1" name="Set max speed" sid="809212720532149" type="Ennemies">
-                                            <param id="0" name="Max Speed">1000</param>
-                                        </action>
-                                        <action behavior="Platform2" id="9" name="Set vector Y" sid="224682886653088" type="Ennemies">
-                                            <param id="0" name="Vector Y">-200</param>
-                                        </action>
-                                        <action behavior="Platform2" id="8" name="Set vector X" sid="438339831030321" type="Ennemies">
-                                            <param id="0" name="Vector X">spr_Player.Platform.VectorX * 1.50</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="128287273002115" type="System">
-                                            <param id="0" name="Seconds">1.0</param>
-                                        </action>
-                                        <action behavior="Platform2" id="1" name="Set max speed" sid="737030379801890" type="Ennemies">
-                                            <param id="0" name="Max Speed">300</param>
-                                        </action>
-                                        <action behavior="Platform2" id="0" name="Set ignoring input" sid="544830424325067" type="Ennemies">
-                                            <param id="0" name="Input">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
                                 <comment>L&apos;ennemi est repoussé quand il se prend le bouclier lors d&apos;un lancer</comment>
                                 <event-block sid="794919798918362">
                                     <conditions>
@@ -3433,6 +3740,10 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;throw&quot;</param>
                                         </condition>
+                                        <condition behavior="Bullet" id="0" name="Compare speed" sid="891173153178041" type="spr_Shield">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Speed">100</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action disabled="1" id="0" name="Play" sid="353741525928778" type="Audio">
@@ -3440,6 +3751,10 @@
                                             <param id="2" name="Loop">0</param>
                                             <param id="3" name="Volume">-5</param>
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="936348869932549" type="spr_Shield">
+                                            <param id="0" name="Instance variable">TombeAuSol</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                         <action behavior="Bullet" id="2" name="Set gravity" sid="267383191608614" type="spr_Shield">
                                             <param id="0" name="Gravity">2500</param>
@@ -3720,38 +4035,71 @@
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-13" name="Set time scale" sid="999642687165735" type="System">
-                                    <param id="0" name="Time scale">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="798911579065279" type="fnt_text">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
-                                <event-block any="1" sid="304532146894413">
+                                <comment>Reset les stats du joueur et -1 bouclier s&apos;il en a au moins 1 en stock</comment>
+                                <event-block sid="977563425523198">
                                     <conditions>
-                                        <condition id="6" name="On button pressed" sid="978756198191336" type="Gamepad">
-                                            <param id="0" name="Gamepad">0</param>
-                                            <param id="1" name="Button">0</param>
+                                        <condition id="-7" name="Compare instance variable" sid="872511251509132" type="spr_Player">
+                                            <param id="0" name="Instance variable">QuantityShield</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
                                         </condition>
-                                        <condition id="2" name="Key is down" sid="400438340046416" type="Keyboard">
-                                            <param id="0" name="Key">49</param>
-                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="502726477902781" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-2" name="Go to layout" sid="215143704188602" type="System">
-                                            <param id="0" name="Layout">Main menu</param>
+                                        <action id="-10" name="Set value" sid="827672109012588" type="spr_Player">
+                                            <param id="0" name="Instance variable">QuantityShield</param>
+                                            <param id="1" name="Value">spr_Player.QuantityShield -1</param>
                                         </action>
-                                        <action id="-13" name="Set time scale" sid="281360858063805" type="System">
-                                            <param id="0" name="Time scale">1.0</param>
+                                        <action id="-10" name="Set value" sid="498212754183141" type="spr_Player">
+                                            <param id="0" name="Instance variable">vieJoueur</param>
+                                            <param id="1" name="Value">4</param>
                                         </action>
-                                        <action behavior="ScrollTo" id="0" name="Shake" sid="374456407557889" type="Camera">
-                                            <param id="0" name="Magnitude">0</param>
-                                            <param id="1" name="Duration">0.1</param>
-                                            <param id="2" name="Mode">0</param>
+                                        <action id="-10" name="Set value" sid="703162611538609" type="spr_Player">
+                                            <param id="0" name="Instance variable">Blessures</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                                <event-block sid="351718502411528">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="272049953811193" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set time scale" sid="999642687165735" type="System">
+                                            <param id="0" name="Time scale">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="798911579065279" type="fnt_text">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block any="1" sid="304532146894413">
+                                            <conditions>
+                                                <condition id="6" name="On button pressed" sid="978756198191336" type="Gamepad">
+                                                    <param id="0" name="Gamepad">0</param>
+                                                    <param id="1" name="Button">0</param>
+                                                </condition>
+                                                <condition id="2" name="Key is down" sid="400438340046416" type="Keyboard">
+                                                    <param id="0" name="Key">65</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-2" name="Go to layout" sid="215143704188602" type="System">
+                                                    <param id="0" name="Layout">Main menu</param>
+                                                </action>
+                                                <action id="-13" name="Set time scale" sid="281360858063805" type="System">
+                                                    <param id="0" name="Time scale">1.0</param>
+                                                </action>
+                                                <action behavior="ScrollTo" id="0" name="Shake" sid="374456407557889" type="Camera">
+                                                    <param id="0" name="Magnitude">0</param>
+                                                    <param id="1" name="Duration">0.1</param>
+                                                    <param id="2" name="Mode">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -3765,7 +4113,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="279244721177210" type="spr_Player">
                                     <param id="0" name="Instance variable">vieJoueur</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">10</param>
+                                    <param id="2" name="Value">4</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -3779,7 +4127,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="198017655283351" type="spr_Player">
                                     <param id="0" name="Instance variable">vieJoueur</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">8</param>
+                                    <param id="2" name="Value">3</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -3793,7 +4141,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="104605658008672" type="spr_Player">
                                     <param id="0" name="Instance variable">vieJoueur</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">6</param>
+                                    <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -3807,7 +4155,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="937000373366024" type="spr_Player">
                                     <param id="0" name="Instance variable">vieJoueur</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -3821,7 +4169,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="347496197031882" type="spr_Player">
                                     <param id="0" name="Instance variable">vieJoueur</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>

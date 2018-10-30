@@ -189,7 +189,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <vieJoueur>10</vieJoueur>
+                        <vieJoueur>4</vieJoueur>
                         <playerState>idle</playerState>
                         <playerSens>droite</playerSens>
                         <canDash>true</canDash>
@@ -197,6 +197,7 @@
                         <isParrying>false</isParrying>
                         <Blessures>0</Blessures>
                         <Invincible>false</Invincible>
+                        <QuantityShield>2</QuantityShield>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -430,6 +431,8 @@
                     <instance-variables>
                         <BouclierSens>&quot;&quot;</BouclierSens>
                         <Planté>false</Planté>
+                        <TombeAuSol>false</TombeAuSol>
+                        <DistanceJoueur>100</DistanceJoueur>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -2884,7 +2887,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="text_Test2" uid="390">
+                <instance type="text_QuantityShield" uid="390">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -2988,6 +2991,7 @@
                     </properties>
                     <instance-variables>
                         <DirectionCamera>centre</DirectionCamera>
+                        <IsAiming>false</IsAiming>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">
