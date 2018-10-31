@@ -1823,13 +1823,16 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <BouclierSens>&quot;&quot;</BouclierSens>
+                        <SensBouclier></SensBouclier>
+                        <PlayerDistance>100</PlayerDistance>
                         <Planté>false</Planté>
-                        <TombeAuSol>false</TombeAuSol>
-                        <DistanceJoueur>100</DistanceJoueur>
+                        <OnGround>false</OnGround>
+                        <DamageResistance>4</DamageResistance>
+                        <InUse>false</InUse>
+                        <Broken>false</Broken>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Bullet">
+                        <behavior-instance type="Bullet2">
                             <properties>
                                 <speed>400</speed>
                                 <acceleration>0</acceleration>
@@ -1839,7 +1842,7 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Solid">
+                        <behavior-instance type="Solid2">
                             <properties>
                                 <initial-state>Disabled</initial-state>
                             </properties>
@@ -2921,6 +2924,7 @@
                     </properties>
                     <instance-variables>
                         <isFriendly>false</isFriendly>
+                        <XSpeed>0</XSpeed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -3020,25 +3024,28 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <BouclierSens></BouclierSens>
+                        <SensBouclier></SensBouclier>
+                        <PlayerDistance>100</PlayerDistance>
                         <Planté>false</Planté>
-                        <TombeAuSol>false</TombeAuSol>
-                        <DistanceJoueur>0</DistanceJoueur>
+                        <OnGround>false</OnGround>
+                        <DamageResistance>4</DamageResistance>
+                        <InUse>false</InUse>
+                        <Broken>false</Broken>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Bullet">
+                        <behavior-instance type="Bullet2">
                             <properties>
                                 <speed>400</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
-                                <initial-state>Enabled</initial-state>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Solid">
+                        <behavior-instance type="Solid2">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -3065,25 +3072,28 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <BouclierSens></BouclierSens>
+                        <SensBouclier></SensBouclier>
+                        <PlayerDistance>100</PlayerDistance>
                         <Planté>false</Planté>
-                        <TombeAuSol>false</TombeAuSol>
-                        <DistanceJoueur>0</DistanceJoueur>
+                        <OnGround>false</OnGround>
+                        <DamageResistance>4</DamageResistance>
+                        <InUse>false</InUse>
+                        <Broken>false</Broken>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Bullet">
+                        <behavior-instance type="Bullet2">
                             <properties>
                                 <speed>400</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
-                                <initial-state>Enabled</initial-state>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Solid">
+                        <behavior-instance type="Solid2">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>

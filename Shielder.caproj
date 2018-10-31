@@ -2,7 +2,7 @@
 <c2project>
     <name>Shielder</name>
     <description></description>
-    <version>0.7.5</version>
+    <version>0.7.6</version>
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
@@ -63,7 +63,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">NW.js</prop>
+        <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -476,6 +476,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable comment="Can hurt the player ?" name="isFriendly" sid="745470672297274" type="boolean" />
+                    <instance-variable comment="Horizontal speed" name="XSpeed" sid="145333242845924" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Bullet" sid="124934269224475">
@@ -1074,20 +1075,6 @@
             </object-type>
             <object-type name="spr_Shield" sid="733277861352517">
                 <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable comment="Quel direction le bouclier fait face" name="BouclierSens" sid="544673509665469" type="string" />
-                    <instance-variable comment="Est-ce que le bouclier est planté dans un mur ?" name="Planté" sid="947790328595444" type="boolean" />
-                    <instance-variable comment="Est-ce que le bouclier est tombé sur le sol ?" name="TombeAuSol" sid="602311112641764" type="boolean" />
-                    <instance-variable comment="La distance entre le bouclier et le joueur" name="DistanceJoueur" sid="595027603686121" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Bullet" sid="457540433747848">
-                        <behavior id="Bullet" />
-                    </behavior-type>
-                    <behavior-type name="Solid" sid="976057938871453">
-                        <behavior id="solid" />
-                    </behavior-type>
-                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="602268716821830" speed="5">
                         <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier 4 bleu.png">
@@ -1143,20 +1130,6 @@
             </object-type>
             <object-type name="spr_Shield2" sid="737481592574202">
                 <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable comment="Quel direction le bouclier fait face" name="BouclierSens" sid="764040421488953" type="string" />
-                    <instance-variable comment="Est-ce que le bouclier est planté dans un mur ?" name="Planté" sid="109212443184054" type="boolean" />
-                    <instance-variable comment="Est-ce que le bouclier est tombé sur le sol ?" name="TombeAuSol" sid="802833005927271" type="boolean" />
-                    <instance-variable comment="La distance entre le bouclier et le joueur" name="DistanceJoueur" sid="876411472110655" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Bullet" sid="340506131488072">
-                        <behavior id="Bullet" />
-                    </behavior-type>
-                    <behavior-type name="Solid" sid="645930190301044">
-                        <behavior id="solid" />
-                    </behavior-type>
-                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903511524469780" speed="5">
                         <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier bois.png">
@@ -1204,20 +1177,6 @@
             </object-type>
             <object-type name="spr_Shield3" sid="394107205469035">
                 <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable comment="Quel direction le bouclier fait face" name="BouclierSens" sid="805767889134486" type="string" />
-                    <instance-variable comment="Est-ce que le bouclier est planté dans un mur ?" name="Planté" sid="392315529115653" type="boolean" />
-                    <instance-variable comment="Est-ce que le bouclier est tombé sur le sol ?" name="TombeAuSol" sid="620254133310454" type="boolean" />
-                    <instance-variable comment="La distance entre le bouclier et le joueur" name="DistanceJoueur" sid="590760499146185" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Bullet" sid="291186192532288">
-                        <behavior id="Bullet" />
-                    </behavior-type>
-                    <behavior-type name="Solid" sid="422512059976141">
-                        <behavior id="solid" />
-                    </behavior-type>
-                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="692208263173310" speed="5">
                         <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier 3.png">
@@ -1258,6 +1217,25 @@
                                 <point x="0.473684" y="1" />
                                 <point x="0.210526" y="0.875" />
                                 <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pickupBouclier" sid="866517581642073">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262598268449218" speed="5">
+                        <frame duration="1" hotspotX="0.52" hotspotY="0.52" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\pickup bouclier.png">
+                            <collision-poly>
+                                <point x="0.12" y="0.12" />
+                                <point x="0.48" y="0" />
+                                <point x="0.88" y="0.12" />
+                                <point x="0.88" y="0.48" />
+                                <point x="0.76" y="0.76" />
+                                <point x="0.48" y="1" />
+                                <point x="0.24" y="0.76" />
+                                <point x="0.12" y="0.48" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1308,25 +1286,6 @@
         <object-type name="Audio" sid="517501936451574">
             <plugin id="Audio" />
         </object-type>
-        <object-type name="pickupBouclier" sid="866517581642073">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262598268449218" speed="5">
-                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\pickup bouclier.png">
-                        <collision-poly>
-                            <point x="0.12" y="0.12" />
-                            <point x="0.48" y="0" />
-                            <point x="0.88" y="0.12" />
-                            <point x="0.88" y="0.48" />
-                            <point x="0.76" y="0.76" />
-                            <point x="0.48" y="1" />
-                            <point x="0.24" y="0.76" />
-                            <point x="0.12" y="0.48" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="Ennemies" plugin-id="Sprite" sid="402308118130530">
@@ -1373,6 +1332,23 @@
                 <member>spr_Shield2</member>
                 <member>spr_Shield3</member>
             </members>
+            <instance-variables>
+                <instance-variable comment="Donne le sens du bouclier" name="SensBouclier" sid="593390063098221" type="string" />
+                <instance-variable comment="Donne la distance entre le bouclier et le joueur quand il tombe au sol" name="PlayerDistance" sid="151717091590006" type="number" />
+                <instance-variable comment="Est-ce que le bouclier est planté dans un mur ?" name="Planté" sid="213136798035312" type="boolean" />
+                <instance-variable comment="Est-ce que le bouclier a chuté au sol ?" name="OnGround" sid="377511031045537" type="boolean" />
+                <instance-variable comment="A quel point le bouclier est pété ?" name="DamageResistance" sid="802943888153398" type="number" />
+                <instance-variable comment="Tell which shield is in use" name="InUse" sid="487728866949022" type="boolean" />
+                <instance-variable comment="True when shield is not usable anymore" name="Broken" sid="695258605805856" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet2" sid="510984963117309">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Solid2" sid="808596352320673">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>
