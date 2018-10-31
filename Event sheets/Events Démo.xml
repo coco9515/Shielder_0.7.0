@@ -3046,6 +3046,43 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-group description="Gère la reparation des boucliers" sid="585875262973198" title="Player Control : Repair">
+                    <sub-events>
+                        <comment>Répare le bouclier avec un marteau et le supprime</comment>
+                        <event-block sid="425334805356434">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="691433013641822" type="Shields">
+                                    <param id="0" name="Object">Marteaux</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="427117184266575" type="Shields">
+                                    <param id="0" name="Instance variable">DamageResistance</param>
+                                    <param id="1" name="Value">Shields.DamageResistance + Marteaux.RepairValue</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="900250621532320" type="Marteaux" />
+                            </actions>
+                            <sub-events>
+                                <comment>En cas de surplus, il est supprimé</comment>
+                                <event-block sid="175743903932131">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="591911876497456" type="Shields">
+                                            <param id="0" name="Instance variable">DamageResistance</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="806996483859552" type="Shields">
+                                            <param id="0" name="Instance variable">DamageResistance</param>
+                                            <param id="1" name="Value">4</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="Comportement des ennemis" sid="668973839686201" title="Enemy behavior">
@@ -3110,34 +3147,58 @@
                                     <param id="0" name="Instance variable">isFriendly</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="834984569122353" type="spr_Arrow">
-                                    <param id="0" name="Speed">460</param>
-                                </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="485980340144579">
+                                <comment>Si le bouclier parry, elle est renvoyé</comment>
+                                <event-block sid="849916500115734">
                                     <conditions>
-                                        <condition id="-1" name="Compare X" sid="510426470179845" type="spr_Arrow">
-                                            <param id="0" name="Comparison">4</param>
-                                            <param id="1" name="X co-ordinate">spr_Player.X</param>
+                                        <condition id="-7" name="Compare instance variable" sid="560996933831438" type="spr_Player">
+                                            <param id="0" name="Instance variable">playerState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;parry&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="228261426244495" type="spr_Arrow">
-                                            <param id="0" name="Angle">0</param>
+                                        <action behavior="Bullet" id="0" name="Set speed" sid="814559033323849" type="spr_Arrow">
+                                            <param id="0" name="Speed">560</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="130233223292650">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="111480704009769" type="spr_Arrow">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="X co-ordinate">spr_Player.X</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="592119484662647" type="spr_Arrow">
+                                                    <param id="0" name="Angle">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="533102979846930">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="296226122203281" type="spr_Arrow">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="X co-ordinate">spr_Player.X</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="980728560272824" type="spr_Arrow">
+                                                    <param id="0" name="Angle">180</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
-                                <event-block sid="116299734366060">
+                                <event-block sid="138621495317802">
                                     <conditions>
-                                        <condition id="-1" name="Compare X" sid="102972849545405" type="spr_Arrow">
-                                            <param id="0" name="Comparison">2</param>
-                                            <param id="1" name="X co-ordinate">spr_Player.X</param>
-                                        </condition>
+                                        <condition id="-22" name="Else" sid="796064356949248" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="451403358463822" type="spr_Arrow">
-                                            <param id="0" name="Angle">180</param>
+                                        <action behavior="Bullet" id="4" name="Bounce off object" sid="834984569122353" type="spr_Arrow">
+                                            <param id="0" name="Object">Shields</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -3243,7 +3304,7 @@
                                             <param id="0" name="Input">1</param>
                                         </action>
                                         <action behavior="Platform2" id="1" name="Set max speed" sid="809647053049604" type="Ennemies">
-                                            <param id="0" name="Max Speed">1000</param>
+                                            <param id="0" name="Max Speed">600</param>
                                         </action>
                                         <action behavior="Platform2" id="9" name="Set vector Y" sid="874592356871105" type="Ennemies">
                                             <param id="0" name="Vector Y">-400</param>
@@ -3259,7 +3320,7 @@
                                             </conditions>
                                             <actions>
                                                 <action behavior="Platform2" id="8" name="Set vector X" sid="696630482946662" type="Ennemies">
-                                                    <param id="0" name="Vector X">spr_Arrow.Bullet.Speed * 2</param>
+                                                    <param id="0" name="Vector X">spr_Arrow.Bullet.Speed * 1.5</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="487299429021018" type="System">
                                                     <param id="0" name="Seconds">1.0</param>
@@ -3278,7 +3339,7 @@
                                             </conditions>
                                             <actions>
                                                 <action behavior="Platform2" id="8" name="Set vector X" sid="535480116239887" type="Ennemies">
-                                                    <param id="0" name="Vector X">-spr_Arrow.Bullet.Speed * 2</param>
+                                                    <param id="0" name="Vector X">-spr_Arrow.Bullet.Speed * 1.5</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="535498304253460" type="System">
                                                     <param id="0" name="Seconds">1.0</param>
@@ -4131,16 +4192,16 @@
                                     <param id="0" name="Instance variable">InUse</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action disabled="1" id="11" name="Set collisions enabled" sid="874619216454457" type="Shields">
+                                <action id="11" name="Set collisions enabled" sid="874619216454457" type="Shields">
                                     <param id="0" name="Collisions">0</param>
                                 </action>
-                                <action behavior="Bullet2" disabled="1" id="5" name="Set enabled" sid="629991852807374" type="Shields">
+                                <action behavior="Bullet2" id="5" name="Set enabled" sid="629991852807374" type="Shields">
                                     <param id="0" name="State">0</param>
                                 </action>
-                                <action behavior="Solid2" disabled="1" id="0" name="Set enabled" sid="822096618896157" type="Shields">
+                                <action behavior="Solid2" id="0" name="Set enabled" sid="822096618896157" type="Shields">
                                     <param id="0" name="State">0</param>
                                 </action>
-                                <action disabled="1" id="-15" name="Set visible" sid="294969034575750" type="Shields">
+                                <action id="-15" name="Set visible" sid="294969034575750" type="Shields">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="827672109012588" type="spr_Player">
