@@ -63,7 +63,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -1090,21 +1090,21 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="602268716821830" speed="5">
-                        <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier wip.png">
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier 4 bleu.png">
                             <collision-poly>
                                 <point x="0.210526" y="0.125" />
                                 <point x="0.473684" y="0" />
-                                <point x="0.789474" y="0.125" />
-                                <point x="0.947368" y="0.5" />
-                                <point x="0.684211" y="0.8125" />
-                                <point x="0.473684" y="0.9375" />
+                                <point x="0.842105" y="0.09375" />
+                                <point x="1" y="0.5" />
+                                <point x="0.789474" y="0.875" />
+                                <point x="0.473684" y="1" />
                                 <point x="0.210526" y="0.875" />
                                 <point x="0" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Dash" pingpong="0" repeatcount="1" repeatto="0" sid="834414656538265" speed="5">
-                        <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier vert.png">
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier 4 vert.png">
                             <collision-poly>
                                 <point x="0.210526" y="0.125" />
                                 <point x="0.473684" y="0" />
@@ -1118,7 +1118,18 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Parry" pingpong="0" repeatcount="1" repeatto="0" sid="859887427204494" speed="5">
-                        <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\bouclier rouge wip-export.png" />
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier 4 rouge.png">
+                            <collision-poly>
+                                <point x="0.210526" y="0.125" />
+                                <point x="0.473684" y="0" />
+                                <point x="0.789474" y="0.125" />
+                                <point x="1" y="0.5" />
+                                <point x="0.789474" y="0.875" />
+                                <point x="0.473684" y="1" />
+                                <point x="0.210526" y="0.875" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1127,6 +1138,128 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="664515936257622" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spr_Shield2" sid="737481592574202">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Quel direction le bouclier fait face" name="BouclierSens" sid="764040421488953" type="string" />
+                    <instance-variable comment="Est-ce que le bouclier est planté dans un mur ?" name="Planté" sid="109212443184054" type="boolean" />
+                    <instance-variable comment="Est-ce que le bouclier est tombé sur le sol ?" name="TombeAuSol" sid="802833005927271" type="boolean" />
+                    <instance-variable comment="La distance entre le bouclier et le joueur" name="DistanceJoueur" sid="876411472110655" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="340506131488072">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Solid" sid="645930190301044">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903511524469780" speed="5">
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier bois.png">
+                            <collision-poly>
+                                <point x="0.210526" y="0.125" />
+                                <point x="0.473684" y="0" />
+                                <point x="0.789474" y="0.125" />
+                                <point x="0.947368" y="0.5" />
+                                <point x="0.684211" y="0.8125" />
+                                <point x="0.473684" y="0.9375" />
+                                <point x="0.210526" y="0.875" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Dash" pingpong="0" repeatcount="1" repeatto="0" sid="558403561419966" speed="5">
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier bois_vert.png">
+                            <collision-poly>
+                                <point x="0.210526" y="0.125" />
+                                <point x="0.473684" y="0" />
+                                <point x="0.789474" y="0.125" />
+                                <point x="0.947368" y="0.5" />
+                                <point x="0.684211" y="0.8125" />
+                                <point x="0.473684" y="0.9375" />
+                                <point x="0.210526" y="0.875" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Parry" pingpong="0" repeatcount="1" repeatto="0" sid="616632676853265" speed="5">
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier bois_rouge.png">
+                            <collision-poly>
+                                <point x="0.210526" y="0.125" />
+                                <point x="0.473684" y="0" />
+                                <point x="0.789474" y="0.125" />
+                                <point x="1" y="0.5" />
+                                <point x="0.789474" y="0.875" />
+                                <point x="0.473684" y="1" />
+                                <point x="0.210526" y="0.875" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spr_Shield3" sid="394107205469035">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Quel direction le bouclier fait face" name="BouclierSens" sid="805767889134486" type="string" />
+                    <instance-variable comment="Est-ce que le bouclier est planté dans un mur ?" name="Planté" sid="392315529115653" type="boolean" />
+                    <instance-variable comment="Est-ce que le bouclier est tombé sur le sol ?" name="TombeAuSol" sid="620254133310454" type="boolean" />
+                    <instance-variable comment="La distance entre le bouclier et le joueur" name="DistanceJoueur" sid="590760499146185" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="291186192532288">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Solid" sid="422512059976141">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="692208263173310" speed="5">
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier 3.png">
+                            <collision-poly>
+                                <point x="0.210526" y="0.125" />
+                                <point x="0.473684" y="0" />
+                                <point x="0.789474" y="0.125" />
+                                <point x="0.947368" y="0.5" />
+                                <point x="0.684211" y="0.8125" />
+                                <point x="0.473684" y="0.9375" />
+                                <point x="0.210526" y="0.875" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Dash" pingpong="0" repeatcount="1" repeatto="0" sid="156974653291075" speed="5">
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier 3_vert.png">
+                            <collision-poly>
+                                <point x="0.210526" y="0.125" />
+                                <point x="0.473684" y="0" />
+                                <point x="0.789474" y="0.125" />
+                                <point x="0.947368" y="0.5" />
+                                <point x="0.684211" y="0.8125" />
+                                <point x="0.473684" y="0.9375" />
+                                <point x="0.210526" y="0.875" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Parry" pingpong="0" repeatcount="1" repeatto="0" sid="335087402433569" speed="5">
+                        <frame duration="1" hotspotX="0.526316" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier 3_rouge.png">
+                            <collision-poly>
+                                <point x="0.210526" y="0.125" />
+                                <point x="0.473684" y="0" />
+                                <point x="0.789474" y="0.125" />
+                                <point x="1" y="0.5" />
+                                <point x="0.789474" y="0.875" />
+                                <point x="0.473684" y="1" />
+                                <point x="0.210526" y="0.875" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1175,6 +1308,25 @@
         <object-type name="Audio" sid="517501936451574">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="pickupBouclier" sid="866517581642073">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262598268449218" speed="5">
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\pickup bouclier.png">
+                        <collision-poly>
+                            <point x="0.12" y="0.12" />
+                            <point x="0.48" y="0" />
+                            <point x="0.88" y="0.12" />
+                            <point x="0.88" y="0.48" />
+                            <point x="0.76" y="0.76" />
+                            <point x="0.48" y="1" />
+                            <point x="0.24" y="0.76" />
+                            <point x="0.12" y="0.48" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Ennemies" plugin-id="Sprite" sid="402308118130530">
@@ -1218,6 +1370,8 @@
         <family name="Shields" plugin-id="Sprite" sid="583031045162670">
             <members>
                 <member>spr_Shield</member>
+                <member>spr_Shield2</member>
+                <member>spr_Shield3</member>
             </members>
         </family>
     </families>
