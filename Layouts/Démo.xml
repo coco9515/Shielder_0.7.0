@@ -191,7 +191,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1216</x>
+                        <x>1792</x>
                         <y>736</y>
                         <z>0</z>
                         <width>64</width>
@@ -213,7 +213,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>960</x>
+                        <x>1568</x>
                         <y>736</y>
                         <z>0</z>
                         <width>64</width>
@@ -450,7 +450,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1040.155639648</x>
+                        <x>1632</x>
                         <y>800</y>
                         <z>0</z>
                         <width>96</width>
@@ -623,7 +623,7 @@
                         <x>0</x>
                         <y>864</y>
                         <z>0</z>
-                        <width>1408</width>
+                        <width>1984</width>
                         <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -688,7 +688,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>896</x>
+                        <x>1472</x>
                         <y>800</y>
                         <z>0</z>
                         <width>384</width>
@@ -722,7 +722,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>864</x>
+                        <x>1440</x>
                         <y>832</y>
                         <z>0</z>
                         <width>32</width>
@@ -756,7 +756,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1280</x>
+                        <x>1856</x>
                         <y>832</y>
                         <z>0</z>
                         <width>32</width>
@@ -790,7 +790,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1408</x>
+                        <x>1984</x>
                         <y>608</y>
                         <z>0</z>
                         <width>96</width>
@@ -1878,7 +1878,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform2">
                             <properties>
-                                <max-speed>50</max-speed>
+                                <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>3000</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -1929,7 +1929,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform2">
                             <properties>
-                                <max-speed>50</max-speed>
+                                <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>3000</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -2294,7 +2294,7 @@
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
                         <ShootTimer>0.1</ShootTimer>
-                        <AmmoType>arrow</AmmoType>
+                        <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2321,7 +2321,7 @@
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
                         <ShootTimer>0.2</ShootTimer>
-                        <AmmoType>arrow</AmmoType>
+                        <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2348,7 +2348,7 @@
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
                         <ShootTimer>0.3</ShootTimer>
-                        <AmmoType>arrow</AmmoType>
+                        <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2375,7 +2375,7 @@
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
                         <ShootTimer>0.3</ShootTimer>
-                        <AmmoType>arrow</AmmoType>
+                        <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2402,7 +2402,7 @@
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
                         <ShootTimer>0.2</ShootTimer>
-                        <AmmoType>arrow</AmmoType>
+                        <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2429,7 +2429,7 @@
                     <instance-variables>
                         <AngleOfAttack>0</AngleOfAttack>
                         <ShootTimer>0.1</ShootTimer>
-                        <AmmoType>arrow</AmmoType>
+                        <AmmoType>fireball</AmmoType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2606,7 +2606,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform2">
                             <properties>
-                                <max-speed>50</max-speed>
+                                <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>3000</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -2704,7 +2704,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>864</x>
+                        <x>1440</x>
                         <y>864</y>
                         <z>0</z>
                         <width>-32</width>
@@ -2733,7 +2733,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>896</x>
+                        <x>1472</x>
                         <y>832</y>
                         <z>0</z>
                         <width>-32</width>
@@ -2762,7 +2762,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1280</x>
+                        <x>1856</x>
                         <y>832</y>
                         <z>0</z>
                         <width>32</width>
@@ -2791,7 +2791,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1312</x>
+                        <x>1888</x>
                         <y>864</y>
                         <z>0</z>
                         <width>32</width>
@@ -2818,7 +2818,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1344</x>
+                        <x>1920</x>
                         <y>640</y>
                         <z>0</z>
                         <width>32</width>
@@ -2845,7 +2845,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>800</x>
+                        <x>1376</x>
                         <y>640</y>
                         <z>0</z>
                         <width>32</width>
@@ -2975,43 +2975,13 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>256</x>
-                        <y>864</y>
+                        <y>800</y>
                         <z>0</z>
                         <width>32</width>
-                        <height>128</height>
+                        <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="tile_porte" uid="91">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                    </properties>
-                    <instance-variables>
-                        <IsTriggerActive>0</IsTriggerActive>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>272.007110596</x>
-                        <y>805.899902344</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>160</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -3122,6 +3092,21 @@
                     <instance-variables>
                         <RepairValue>1</RepairValue>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3147,6 +3132,21 @@
                     <instance-variables>
                         <RepairValue>2</RepairValue>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3158,6 +3158,685 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_Lever" uid="93">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <IsTriggered>false</IsTriggered>
+                        <NumeroPorte>1</NumeroPorte>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>160</x>
+                        <y>704</y>
+                        <z>0</z>
+                        <width>-32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="tile_WallHitbox" uid="2">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1216</x>
+                        <y>672</y>
+                        <z>0</z>
+                        <width>96</width>
+                        <height>192</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="tile_WallHitbox" uid="91">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>736</x>
+                        <y>608</y>
+                        <z>0</z>
+                        <width>256</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_Lever" uid="620">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <IsTriggered>false</IsTriggered>
+                        <NumeroPorte>2</NumeroPorte>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>608</x>
+                        <y>704</y>
+                        <z>0</z>
+                        <width>-32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_Porte" uid="623">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <IsTriggerActive>2</IsTriggerActive>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>832</x>
+                        <y>800</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_DamagedPlatform" uid="625">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1152</x>
+                        <y>832</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_DamagedPlatform" uid="626">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1056</x>
+                        <y>768</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="pickupBouclier" uid="627">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1024</x>
+                        <y>704</y>
+                        <z>0</z>
+                        <width>25</width>
+                        <height>25</height>
+                        <depth>0</depth>
+                        <hotspotX>0.519999981</hotspotX>
+                        <hotspotY>0.519999981</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="tile_WallHitbox" uid="628">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>928</x>
+                        <y>736</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="pickupMarteauPetit" uid="629">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <RepairValue>1</RepairValue>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>256</x>
+                        <y>448</y>
+                        <z>0</z>
+                        <width>22</width>
+                        <height>22</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="pickupMarteauPetit" uid="630">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <RepairValue>1</RepairValue>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>192</x>
+                        <y>448</y>
+                        <z>0</z>
+                        <width>22</width>
+                        <height>22</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="pickupMarteauPetit" uid="631">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <RepairValue>1</RepairValue>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>128</x>
+                        <y>448</y>
+                        <z>0</z>
+                        <width>22</width>
+                        <height>22</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="tile_WallHitbox" uid="632">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>288</x>
+                        <y>352</y>
+                        <z>0</z>
+                        <width>96</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="tile_WallHitbox" uid="633">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>864</x>
+                        <y>352</y>
+                        <z>0</z>
+                        <width>96</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="tile_WallHitbox" uid="634">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1696</x>
+                        <y>352</y>
+                        <z>0</z>
+                        <width>96</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_Spikes" uid="635">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1760</x>
+                        <y>352</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_Spikes" uid="636">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1728</x>
+                        <y>352</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_Spikes" uid="637">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1696</x>
+                        <y>352</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_Spikes" uid="638">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>928</x>
+                        <y>352</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_Spikes" uid="639">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>896</x>
+                        <y>352</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_Spikes" uid="640">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>864</x>
+                        <y>352</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -3210,7 +3889,7 @@
                         <height>58</height>
                         <max-width>130</max-width>
                         <max-height>58</max-height>
-                        <data>26,38,26,38,26,38,6,18,30,42,30,42,30,42,30,42,30,42,54,66,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,7,19,31,43,31,43,31,43,31,43,31,43,55,67,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,0,12,24,36,24,36,24,36,24,36,48,60,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,26,38,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,1,13,25,37,25,37,25,37,25,37,49,61,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,10,22,24,36,48,60,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,11,23,25,37,49,61,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,30,42,52,64,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,31,43,53,65,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,30,42,30,42,30,42,54,66,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,31,43,31,43,31,43,55,67,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,6,18,28,40,52,64,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,7,19,29,41,53,65,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,34,46,48,60,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,49,59,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,35,47,49,61,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,26,38,26,38,26,38,26,38,10,22,34,46,48,60,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,11,23,35,47,49,61,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,6,18,30,42,52,64,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,7,19,31,43,53,65,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,70,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,59,71,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,70,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,59,71,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,28,40,52,64,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,19,29,41,53,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,10,22,34,46,48,60,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,11,23,35,47,49,61,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,6,18,28,40,52,64,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,7,19,29,41,53,65,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,30,42,52,64,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,31,43,53,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,70,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,59,71,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,34,46,48,60,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,35,47,49,61,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,19,53,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,22,48,60,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,54,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,10,22,34,46,48,60,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,11,23,35,47,49,61,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,6,18,28,40,52,64,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,7,19,29,41,53,65,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,39,27,19,53,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,59,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,38,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,1,13,27,39,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,0,12,58,42,54,66,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,5,17,31,43,55,67,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,27,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,10,22,24,36,24,36,24,36,24,36,24,36,24,36,24,36,24,36,58,70,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,11,23,25,37,25,37,25,37,25,37,25,37,25,37,25,37,25,37,59,71,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,22,48,60,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,28,40,28,40,28,40,28,40,28,40,28,40,28,40,28,40,28,40,28,40,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,19,29,41,29,41,29,41,29,41,29,41,29,41,29,41,29,41,29,41,29,41,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,10,22,48,60,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,11,23,49,61,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,30,42,30,42,52,64,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,31,43,31,43,53,65,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,24,36,48,60,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,25,37,49,61,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,10,22,34,46,48,60,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,66,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,11,23,35,47,49,61,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,67,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,6,18,28,40,52,64,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,56,68,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,7,19,29,41,53,65,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,57,69,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,54,66,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,56,68,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,67,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,57,69,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,56,68,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,57,69,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,64,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,56,68,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,57,69,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,34,46,58,70,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,35,47,59,71,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,26,38,26,38,10,22,24,36,24,36,24,36,24,36,24,36,24,36,24,36,24,36,24,36,34,46,58,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,27,39,27,39,11,23,25,37,25,37,25,37,25,37,25,37,25,37,25,37,25,37,25,37,35,47,27,39,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1</data>
+                        <data>26,38,26,38,26,38,6,18,30,42,30,42,30,42,30,42,30,42,54,66,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,7,19,31,43,31,43,31,43,31,43,31,43,55,67,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,0,12,24,36,24,36,24,36,24,36,48,60,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,26,38,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,1,13,25,37,25,37,25,37,25,37,49,61,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,10,22,24,36,48,60,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,11,23,25,37,49,61,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,30,42,52,62,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,31,43,55,63,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,62,-1,-1,-1,-1,-1,-1,4,16,30,42,30,42,30,42,54,66,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,63,-1,-1,-1,-1,-1,-1,5,17,31,43,31,43,31,43,55,67,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,6,18,28,40,52,64,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,7,19,29,41,53,65,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,34,46,58,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,49,59,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,35,47,49,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,26,38,26,38,26,38,26,38,10,22,34,46,48,60,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,11,23,35,47,49,61,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,6,18,30,42,52,64,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,7,19,31,43,53,65,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,70,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,59,71,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,70,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,59,71,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,10,22,34,46,48,60,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,22,24,36,48,60,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,11,23,35,47,49,61,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,25,37,49,61,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,6,18,28,40,52,64,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,26,20,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,7,19,29,41,53,65,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,27,21,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,26,20,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,27,21,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,30,42,52,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,26,20,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,31,43,55,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,27,21,-1,-1,-1,-1,-1,-1,-1,-1,2,14,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,26,20,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,27,21,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,26,20,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,27,21,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,10,22,48,60,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,11,23,49,61,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,34,46,58,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,30,42,30,42,30,42,28,40,54,62,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,35,47,49,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,19,31,43,31,43,31,43,29,41,55,63,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,2,62,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,19,53,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,3,63,-1,-1,-1,-1,-1,-1,3,15,26,38,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,4,64,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,5,65,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,22,48,60,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,54,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,10,22,34,46,48,60,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,11,23,35,47,49,61,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,6,18,28,40,52,64,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,20,-1,-1,-1,-1,0,12,24,36,24,36,24,36,24,36,24,36,58,38,26,38,27,39,27,39,27,39,7,19,29,41,53,65,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,21,-1,-1,-1,-1,1,13,25,37,25,37,25,37,25,37,25,37,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,20,-1,-1,-1,-1,2,14,26,38,26,38,26,38,26,38,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,21,-1,-1,-1,-1,3,15,27,39,27,39,27,39,27,39,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,62,-1,-1,-1,-1,4,16,28,40,28,40,28,40,28,40,28,40,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,63,-1,-1,-1,-1,5,17,29,41,29,41,29,41,29,41,29,41,55,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,39,27,19,53,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,59,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,38,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,1,13,27,39,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,0,12,58,42,54,66,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,5,17,31,43,55,67,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,27,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,10,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,11,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,22,48,60,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,70,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,59,71,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,10,22,48,60,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,11,23,49,61,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,30,42,30,18,52,64,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,31,43,55,19,53,65,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,56,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,57,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,56,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,57,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,56,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,57,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,24,36,58,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,25,37,49,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,27,39,27,39,26,38,26,38,26,38,10,22,34,46,48,60,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,66,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,26,38,26,38,26,38,27,39,27,39,27,39,11,23,35,47,49,61,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,67,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,39,26,38,27,39,26,38,26,38,26,38,6,18,28,40,52,64,-1,-1,-1,-1,-1,-1,2,14,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,56,68,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,26,38,26,38,27,39,27,39,27,39,7,19,29,41,53,65,-1,-1,-1,-1,-1,-1,3,15,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,57,69,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,54,66,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,56,68,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,67,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,57,69,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,56,68,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,57,69,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,64,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,56,68,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,57,69,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,34,46,58,70,26,22,24,36,24,36,24,36,24,36,24,36,24,36,24,36,24,36,58,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,35,47,59,71,27,39,25,37,25,37,25,37,25,37,25,37,25,37,25,37,25,37,27,39,27,39,26,38,26,38,26,38,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,27,39,27,39,27,39,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,26,38,26,38,26,38,10,22,24,36,24,36,24,36,24,36,24,36,24,36,24,36,24,36,24,36,34,46,58,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,26,38,27,39,27,39,27,39,11,23,25,37,25,37,25,37,25,37,25,37,25,37,25,37,25,37,25,37,35,47,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39,27,39</data>
                     </tilemap-data>
                 </instance>
                 <instance type="MurInvisiblePourMob" uid="104">
@@ -3755,32 +4434,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="spr_Lever" uid="93">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <IsTriggered>false</IsTriggered>
-                        <NumeroPorte>1</NumeroPorte>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>160</x>
-                        <y>704</y>
-                        <z>0</z>
-                        <width>-32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="spr_chandelier" uid="417">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -3899,7 +4552,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>928</x>
+                        <x>1824</x>
                         <y>608</y>
                         <z>0</z>
                         <width>64</width>
@@ -3964,7 +4617,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1248</x>
+                        <x>1504</x>
                         <y>608</y>
                         <z>0</z>
                         <width>64</width>
@@ -4037,6 +4690,68 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="tile_Chains" uid="621">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>492.483764648</x>
+                        <y>672.54699707</y>
+                        <z>0</z>
+                        <width>14.406921387</width>
+                        <height>63.842895508</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="tile_Chains" uid="622">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>409.537231445</x>
+                        <y>672.54699707</y>
+                        <z>0</z>
+                        <width>14.406921387</width>
+                        <height>63.827133179</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="infobulle_aim" uid="624">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>458.906768799</x>
+                        <y>736.684936523</y>
+                        <z>0</z>
+                        <width>111</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504504502</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

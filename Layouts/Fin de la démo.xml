@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Main menu</name>
-    <sid>770117606242900</sid>
-    <event-sheet>Events Menu</event-sheet>
+    <name>Fin de la démo</name>
+    <sid>913527481120567</sid>
+    <event-sheet></event-sheet>
     <size>
         <width>768</width>
         <height>432</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Background" sid="425541596225179">
+        <layer name="Background" sid="925971831536120">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="tile_BrickBlack" uid="96">
+                <instance type="tile_BrickBlack" uid="678">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -52,7 +52,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Game" sid="157397882973679">
+        <layer name="Game" sid="602760637949530">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -68,7 +68,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="tilemap_WallMenu" uid="36">
+                <instance type="tilemap_WallMenu" uid="706">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <tile-width>32</tile-width>
@@ -103,7 +103,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="HUD" sid="128177888910223">
+        <layer name="HUD" sid="715578587694476">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -119,7 +119,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="tile_Chains" uid="98">
+                <instance type="tile_Chains" uid="707">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -139,7 +139,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="tile_Chains" uid="111">
+                <instance type="tile_Chains" uid="708">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -159,7 +159,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SousTitreJeu" uid="97">
+                <instance type="SousTitreJeu" uid="709">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -181,7 +181,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="spr_Shield" uid="102">
+                <instance type="spr_Shield" uid="710">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -217,8 +217,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>544</x>
-                        <y>330.718719482</y>
+                        <x>590.438659668</x>
+                        <y>294.152832031</y>
                         <z>0</z>
                         <width>34.871189117</width>
                         <height>58.730426788</height>
@@ -229,7 +229,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="spr_Shield" uid="103">
+                <instance type="spr_Shield" uid="711">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -265,8 +265,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>224</x>
-                        <y>330.718719482</y>
+                        <x>172.953918457</x>
+                        <y>295.394714355</y>
                         <z>0</z>
                         <width>-34.870998383</width>
                         <height>58.729999542</height>
@@ -277,7 +277,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TitreJeu" uid="110">
+                <instance type="TitreJeu" uid="712">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -299,13 +299,13 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="fnt_text" uid="95">
+                <instance type="fnt_text" uid="713">
                     <properties>
                         <character-width>34</character-width>
                         <character-height>34</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-?!&apos;&quot;</character-set>
-                        <text>Press A to start</text>
-                        <scale>0.5</scale>
+                        <text>Thanks for playing !</text>
+                        <scale>0.6</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -318,9 +318,9 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>384</x>
-                        <y>320</y>
+                        <y>294.658569336</y>
                         <z>0</z>
-                        <width>279.571411133</width>
+                        <width>480</width>
                         <height>154</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>

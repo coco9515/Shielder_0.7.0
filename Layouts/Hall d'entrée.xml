@@ -4,7 +4,7 @@
     <sid>752987973660957</sid>
     <event-sheet>Events Démo</event-sheet>
     <size>
-        <width>2816</width>
+        <width>2688</width>
         <height>1248</height>
     </size>
     <margins>
@@ -40,7 +40,7 @@
                         <x>0</x>
                         <y>0</y>
                         <z>0</z>
-                        <width>2816</width>
+                        <width>2688</width>
                         <height>1248</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -2247,7 +2247,7 @@
                         <x>2528</x>
                         <y>0</y>
                         <z>0</z>
-                        <width>288</width>
+                        <width>160</width>
                         <height>608</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -3464,6 +3464,21 @@
                     <instance-variables>
                         <RepairValue>1</RepairValue>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3625,6 +3640,21 @@
                     <instance-variables>
                         <RepairValue>1</RepairValue>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3733,7 +3763,7 @@
                         <x>2592</x>
                         <y>608</y>
                         <z>0</z>
-                        <width>224</width>
+                        <width>96</width>
                         <height>512</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -4609,6 +4639,21 @@
                     <instance-variables>
                         <RepairValue>1</RepairValue>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -4669,7 +4714,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform2">
                             <properties>
-                                <max-speed>50</max-speed>
+                                <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>3000</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -4720,7 +4765,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform2">
                             <properties>
-                                <max-speed>50</max-speed>
+                                <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>3000</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -4980,6 +5025,21 @@
                     <instance-variables>
                         <RepairValue>2</RepairValue>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -5199,7 +5259,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <IsTriggerActive>2</IsTriggerActive>
+                        <IsTriggerActive>1</IsTriggerActive>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -5316,7 +5376,7 @@
                         <x>2432</x>
                         <y>1120</y>
                         <z>0</z>
-                        <width>384</width>
+                        <width>256</width>
                         <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -5340,7 +5400,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform2">
                             <properties>
-                                <max-speed>50</max-speed>
+                                <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>3000</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -5766,7 +5826,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform2">
                             <properties>
-                                <max-speed>50</max-speed>
+                                <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>3000</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -6161,6 +6221,21 @@
                     <instance-variables>
                         <RepairValue>1</RepairValue>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -6353,7 +6428,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform2">
                             <properties>
-                                <max-speed>50</max-speed>
+                                <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>3000</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -6701,10 +6776,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>640</x>
+                        <x>672</x>
                         <y>640</y>
                         <z>0</z>
-                        <width>256</width>
+                        <width>224</width>
                         <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -6827,11 +6902,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>544</x>
-                        <y>800</y>
+                        <x>704</x>
+                        <y>736</y>
                         <z>0</z>
                         <width>32</width>
-                        <height>96</height>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>1</hotspotY>
@@ -6854,7 +6929,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>608</x>
+                        <x>640</x>
                         <y>576</y>
                         <z>0</z>
                         <width>32</width>
@@ -6891,7 +6966,7 @@
                         <x>512</x>
                         <y>640</y>
                         <z>0</z>
-                        <width>96</width>
+                        <width>128</width>
                         <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -6925,7 +7000,7 @@
                         <x>928</x>
                         <y>640</y>
                         <z>0</z>
-                        <width>96</width>
+                        <width>128</width>
                         <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -7063,7 +7138,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform2">
                             <properties>
-                                <max-speed>50</max-speed>
+                                <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>3000</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -7106,6 +7181,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -7131,10 +7221,25 @@
                     <instance-variables>
                         <RepairValue>1</RepairValue>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>689</x>
+                        <x>992</x>
                         <y>768</y>
                         <z>0</z>
                         <width>22</width>
@@ -7215,7 +7320,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1024</x>
+                        <x>1056</x>
                         <y>576</y>
                         <z>0</z>
                         <width>32</width>
@@ -7249,10 +7354,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1056</x>
+                        <x>1088</x>
                         <y>640</y>
                         <z>0</z>
-                        <width>96</width>
+                        <width>64</width>
                         <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -7363,7 +7468,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform2">
                             <properties>
-                                <max-speed>50</max-speed>
+                                <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>3000</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -7501,7 +7606,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform2">
                             <properties>
-                                <max-speed>50</max-speed>
+                                <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>3000</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -7581,6 +7686,21 @@
                     <instance-variables>
                         <RepairValue>2</RepairValue>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -7611,7 +7731,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform2">
                             <properties>
-                                <max-speed>50</max-speed>
+                                <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>3000</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -7657,6 +7777,21 @@
                     <instance-variables>
                         <RepairValue>1</RepairValue>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -7669,6 +7804,144 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_Spikes" uid="617">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1056</x>
+                        <y>704</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_GoblinWalk" uid="446">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>GobelinQuiMarche</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <PV>1</PV>
+                        <SensMarche>gauche</SensMarche>
+                        <Dégâts>1</Dégâts>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform2">
+                            <properties>
+                                <max-speed>100</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>3000</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>608</x>
+                        <y>768</y>
+                        <z>0</z>
+                        <width>31.222555161</width>
+                        <height>32.796802521</height>
+                        <depth>0</depth>
+                        <hotspotX>0.50420171</hotspotX>
+                        <hotspotY>0.504000008</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_Spikes" uid="618">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>416</x>
+                        <y>736</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_Spikes" uid="619">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>416</x>
+                        <y>768</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>1.570796371</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -7730,35 +8003,169 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="fnt_text" uid="446">
+                <instance type="MurInvisiblePourMob" uid="449">
                     <properties>
-                        <character-width>34</character-width>
-                        <character-height>34</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-?!&apos;&quot;</character-set>
-                        <text>Niveau en construction</text>
-                        <scale>0.3</scale>
                         <initial-visibility>Invisible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>-1</character-spacing>
-                        <line-height>15</line-height>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2304</x>
+                        <x>1856</x>
                         <y>672</y>
                         <z>0</z>
-                        <width>192</width>
-                        <height>128</height>
+                        <width>32</width>
+                        <height>166.739654541</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
+                </instance>
+                <instance type="MurInvisiblePourMob" uid="641">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2112</x>
+                        <y>672</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>166.739654541</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MurInvisiblePourMob" uid="642">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2009</x>
+                        <y>1044</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>166.739654541</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MurInvisiblePourMob" uid="643">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2240</x>
+                        <y>896</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>166.739654541</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MurInvisiblePourMob" uid="644">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>704</x>
+                        <y>736</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>166.739654541</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MurInvisiblePourMob" uid="645">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>480</x>
+                        <y>736</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>166.739654541</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="tilemap_Wall" uid="646">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <tile-width>16</tile-width>
+                        <tile-height>16</tile-height>
+                        <tile-x-offset>0</tile-x-offset>
+                        <tile-y-offset>0</tile-y-offset>
+                        <tile-x-spacing>0</tile-x-spacing>
+                        <tile-y-spacing>0</tile-y-spacing>
+                        <seamless-mode>On</seamless-mode>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>2688</width>
+                        <height>1248</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                    <tilemap-data>
+                        <width>168</width>
+                        <height>78</height>
+                        <max-width>170</max-width>
+                        <max-height>78</max-height>
+                        <data>-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,28,40,28,40,28,40,28,40,28,40,28,40,28,40,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,28,40,28,40,28,40,-1,-1,-1,-1,28,40,28,40,28,40,28,40,28,40,28,40,28,40,28,40,28,40,28,40,28,40,28,40,28,40,28,40,28,40,-1,-1,-1,-1,-1,-1,-1,19,29,41,29,41,29,41,29,41,29,41,29,41,29,41,55,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,19,29,41,29,41,29,41,55,-1,-1,19,29,41,29,41,29,41,29,41,29,41,29,41,29,41,29,41,29,41,29,41,29,41,29,41,29,41,29,41,29,41,55,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,8,20,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,21,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,8,20,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,21,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,8,20,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,9,21,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,26,38,8,20,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,-1,-1,-1,-1,-1,-1,-1,-1,0,12,48,60,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,27,39,9,21,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,-1,-1,-1,-1,-1,-1,-1,1,13,49,61,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,4,16,52,64,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,34,46,34,46,34,46,34,46,58,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,5,17,53,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,35,47,35,47,35,47,35,47,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,-1,28,40,28,40,28,40,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,19,29,41,29,41,29,41,55,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,-1,50,62,-1,-1,-1,-1,-1,-1,4,16,28,40,52,64,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,-1,51,63,-1,-1,-1,-1,-1,-1,5,17,29,41,53,65,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,34,46,58,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,35,47,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,0,12,34,46,34,46,58,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,1,13,35,47,35,47,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,28,40,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,29,41,55,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,4,16,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,28,40,52,64,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,-1,29,41,53,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,24,36,24,36,58,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,25,37,25,37,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,0,12,48,60,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,1,13,49,61,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,4,16,52,64,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,5,17,53,65,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,52,64,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,19,53,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,24,36,48,60,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,0,12,48,60,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,34,46,34,46,58,70,-1,-1,-1,-1,-1,-1,29,41,53,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,1,13,49,61,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,35,47,35,47,59,71,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,22,24,36,24,36,24,36,58,-1,50,62,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,25,37,25,37,25,37,-1,-1,51,63,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,28,40,40,40,28,40,-1,-1,50,62,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,19,29,41,41,41,29,41,55,-1,51,63,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,2,14,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,-1,-1,-1,-1,-1,-1,-1,-1,-1,24,36,24,36,48,60,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,4,16,52,64,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,25,37,25,37,49,61,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,5,17,53,65,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,0,12,48,60,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,1,13,49,61,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,28,40,28,40,52,64,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,29,41,29,41,53,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,4,16,52,64,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,28,40,28,40,28,40,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,5,17,53,65,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,29,41,29,41,29,41,55,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,56,68,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,57,69,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,0,12,48,60,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,56,68,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,1,13,49,61,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,57,69,24,36,48,60,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,4,16,52,64,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,56,68,25,37,49,61,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,5,17,53,65,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,57,69,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,56,68,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,57,69,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,34,46,34,46,34,46,58,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,35,47,35,47,35,47,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,0,12,48,60,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,1,13,49,61,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,2,14,-1,22,34,46,34,46,48,60,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,3,15,-1,-1,35,47,35,47,49,61,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,22,24,36,24,36,48,60,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,22,24,36,24,36,24,36,58,-1,-1,22,24,36,24,36,24,36,58,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,25,37,25,37,49,61,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,25,37,25,37,25,37,-1,-1,-1,-1,25,37,25,37,25,37,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,28,40,28,40,52,64,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,19,29,41,29,41,53,65,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,28,40,52,64,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,19,29,41,53,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,0,12,34,46,34,46,58,70,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,1,13,35,47,35,47,59,71,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,28,40,28,40,28,40,28,40,52,64,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,29,41,29,41,29,41,29,41,53,65,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,28,40,28,40,28,40,28,40,28,40,28,40,28,40,28,40,28,40,28,40,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,19,29,41,29,41,29,41,29,41,29,41,29,41,29,41,29,41,29,41,29,41,55,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,8,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,9,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,8,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,9,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,8,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,28,40,28,40,28,40,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,9,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,29,41,29,41,29,41,55,-1,-1,-1,-1,-1,-1,-1,-1,-1,24,36,24,36,48,60,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,8,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,25,37,25,37,49,61,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,9,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,8,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,60,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,9,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,61,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,28,40,28,40,52,64,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,8,20,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,29,41,29,41,53,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,9,21,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,8,20,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,9,21,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,8,20,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,9,21,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,8,20,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,22,24,36,24,36,24,36,24,36,24,36,24,36,48,60,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,9,21,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,25,37,25,37,25,37,25,37,25,37,25,19,53,65,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,8,20,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,52,64,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,9,21,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,19,53,65,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,8,20,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,52,64,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,9,21,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,19,53,65,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,8,20,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,28,40,28,40,52,64,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,9,21,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,19,29,41,29,41,53,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,28,40,52,64,-1,-1,-1,-1,-1,-1,-1,-1,4,16,28,40,52,64,-1,-1,-1,-1,-1,-1,-1,-1,4,16,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,29,41,53,65,-1,-1,-1,-1,-1,-1,-1,-1,5,17,29,41,53,65,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,24,36,24,36,24,36,24,36,48,60,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,25,37,25,37,25,37,25,37,49,61,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,28,40,28,40,28,40,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,29,41,29,41,29,41,55,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,0,12,34,46,48,60,-1,-1,-1,-1,-1,-1,-1,-1,0,12,34,46,48,60,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,1,13,35,47,49,61,-1,-1,-1,-1,-1,-1,-1,-1,1,13,35,47,49,61,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,52,64,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,4,16,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,53,65,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,22,34,46,48,60,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,35,47,49,61,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,16,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,17,55,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,64,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,4,16,28,40,28,40,-1,-1,52,64,-1,-1,-1,-1,-1,-1,-1,-1,4,16,28,40,28,40,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,65,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,5,17,29,41,29,41,55,19,53,65,-1,-1,-1,-1,-1,-1,-1,-1,5,17,29,41,29,41,55,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,48,60,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,64,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,49,61,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,65,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,12,58,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,13,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,34,46,34,46,34,46,34,46,34,46,58,-1,-1,22,34,46,34,46,34,46,34,46,34,46,34,46,34,46,58,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,35,47,35,47,35,47,35,47,35,47,-1,-1,-1,-1,35,47,35,47,35,47,35,47,35,47,35,47,35,47,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,50,62,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,14,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,51,63,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,24,36,24,36,24,36,24,36,24,36,24,36,24,36,24,36,24,36,24,36,24,36,24,36,24,36,24,36,24,36,24,36,58,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,25,37,25,37,25,37,25,37,25,37,25,37,25,37,25,37,25,37,25,37,25,37,25,37,25,37,25,37,25,37,25,37,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1</data>
+                    </tilemap-data>
                 </instance>
             </instances>
             <effects />

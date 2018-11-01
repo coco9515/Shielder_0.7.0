@@ -63,7 +63,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -325,7 +325,7 @@
                                 <image-point name="Imagepoint 1" x="0" y="0.5" />
                             </frame>
                         </animation>
-                        <animation framecount="6" loop="0" name="GobelinQuiMarche" pingpong="0" repeatcount="1" repeatto="0" sid="233146478692116" speed="5">
+                        <animation framecount="6" loop="1" name="GobelinQuiMarche" pingpong="0" repeatcount="1" repeatto="0" sid="233146478692116" speed="8">
                             <frame duration="1" hotspotX="0.504202" hotspotY="0.504">
                                 <collision-poly>
                                     <point x="0.781511" y="1" />
@@ -643,7 +643,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="455493165983524" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\infobulle_throw.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\infobulle_throw2.png">
                                 <collision-poly>
                                     <point x="0.0348837" y="0.09375" />
                                     <point x="0.5" y="0" />
@@ -805,7 +805,7 @@
                         <behavior id="shadowcaster" />
                     </behavior-type>
                 </behaviors>
-                <texture original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bg wip light.png" />
+                <texture original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\mur raccord tilemap.png" />
             </object-type>
             <object-type name="tile_Chains" sid="662209199867869">
                 <plugin id="TiledBg" />
@@ -1227,6 +1227,11 @@
             </object-type>
             <object-type name="pickupBouclier" sid="866517581642073">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="648501094323048">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262598268449218" speed="5">
                         <frame duration="1" hotspotX="0.52" hotspotY="0.52" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\pickup bouclier.png">
@@ -1327,6 +1332,25 @@
         <object-type name="Audio" sid="517501936451574">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="infobulle_aim" sid="653171046364873">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="270435252998786" speed="5">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\infobulle_aim.png">
+                        <collision-poly>
+                            <point x="0.027027" y="0.09375" />
+                            <point x="0.495495" y="0" />
+                            <point x="0.972973" y="0.09375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.963964" y="0.875" />
+                            <point x="0.495495" y="1" />
+                            <point x="0.036036" y="0.875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Ennemies" plugin-id="Sprite" sid="402308118130530">
@@ -1399,14 +1423,20 @@
             <instance-variables>
                 <instance-variable comment="Combien de points de réparation cela donne" name="RepairValue" sid="277328691443939" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="131228661062417">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>
+        <layout>Main menu.xml</layout>
         <layout>Démo.xml</layout>
         <layout>Stage 1.xml</layout>
-        <layout>Hall d&apos;entrée.xml</layout>
         <layout>Stage 2.xml</layout>
-        <layout>Main menu.xml</layout>
+        <layout>Hall d&apos;entrée.xml</layout>
+        <layout>Fin de la démo.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Events Démo.xml</event-sheet>
