@@ -955,7 +955,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform2">
                             <properties>
-                                <max-speed>300</max-speed>
+                                <max-speed>50</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>3000</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -1278,7 +1278,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform2">
                             <properties>
-                                <max-speed>300</max-speed>
+                                <max-speed>50</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>3000</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -1819,7 +1819,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform2">
                             <properties>
-                                <max-speed>300</max-speed>
+                                <max-speed>50</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>3000</deceleration>
                                 <jump-strength>650</jump-strength>
@@ -2410,7 +2410,7 @@
                     <behavior-instances>
                         <behavior-instance type="Platform2">
                             <properties>
-                                <max-speed>300</max-speed>
+                                <max-speed>50</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>3000</deceleration>
                                 <jump-strength>650</jump-strength>
