@@ -190,12 +190,13 @@
                     </properties>
                     <instance-variables>
                         <SensBouclier></SensBouclier>
-                        <PlayerDistance>100</PlayerDistance>
+                        <PlayerDistanceX>100</PlayerDistanceX>
                         <Planté>false</Planté>
                         <OnGround>false</OnGround>
                         <DamageResistance>4</DamageResistance>
                         <InUse>false</InUse>
                         <Broken>false</Broken>
+                        <PlayerDistanceY>0</PlayerDistanceY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet2">
@@ -238,12 +239,13 @@
                     </properties>
                     <instance-variables>
                         <SensBouclier></SensBouclier>
-                        <PlayerDistance>100</PlayerDistance>
+                        <PlayerDistanceX>100</PlayerDistanceX>
                         <Planté>false</Planté>
                         <OnGround>false</OnGround>
                         <DamageResistance>4</DamageResistance>
                         <InUse>false</InUse>
                         <Broken>false</Broken>
+                        <PlayerDistanceY>0</PlayerDistanceY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet2">

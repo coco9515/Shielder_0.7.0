@@ -1803,8 +1803,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
-                        <y>256</y>
+                        <x>992</x>
+                        <y>480</y>
                         <z>0</z>
                         <width>40</width>
                         <height>60</height>
@@ -1824,12 +1824,13 @@
                     </properties>
                     <instance-variables>
                         <SensBouclier></SensBouclier>
-                        <PlayerDistance>100</PlayerDistance>
+                        <PlayerDistanceX>100</PlayerDistanceX>
                         <Planté>false</Planté>
                         <OnGround>false</OnGround>
                         <DamageResistance>4</DamageResistance>
                         <InUse>false</InUse>
                         <Broken>false</Broken>
+                        <PlayerDistanceY>0</PlayerDistanceY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet2">
@@ -2962,7 +2963,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <IsTriggerActive>1</IsTriggerActive>
+                        <NumeroPorte>1</NumeroPorte>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2995,12 +2996,13 @@
                     </properties>
                     <instance-variables>
                         <SensBouclier></SensBouclier>
-                        <PlayerDistance>100</PlayerDistance>
+                        <PlayerDistanceX>100</PlayerDistanceX>
                         <Planté>false</Planté>
                         <OnGround>false</OnGround>
                         <DamageResistance>4</DamageResistance>
                         <InUse>false</InUse>
                         <Broken>false</Broken>
+                        <PlayerDistanceY>0</PlayerDistanceY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet2">
@@ -3043,12 +3045,13 @@
                     </properties>
                     <instance-variables>
                         <SensBouclier></SensBouclier>
-                        <PlayerDistance>100</PlayerDistance>
+                        <PlayerDistanceX>100</PlayerDistanceX>
                         <Planté>false</Planté>
                         <OnGround>false</OnGround>
                         <DamageResistance>4</DamageResistance>
                         <InUse>false</InUse>
                         <Broken>false</Broken>
+                        <PlayerDistanceY>0</PlayerDistanceY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet2">
@@ -3171,6 +3174,7 @@
                     </properties>
                     <instance-variables>
                         <IsTriggered>false</IsTriggered>
+                        <HasBeenActivated>false</HasBeenActivated>
                         <NumeroPorte>1</NumeroPorte>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -3265,6 +3269,7 @@
                     </properties>
                     <instance-variables>
                         <IsTriggered>false</IsTriggered>
+                        <HasBeenActivated>false</HasBeenActivated>
                         <NumeroPorte>2</NumeroPorte>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -3290,7 +3295,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <IsTriggerActive>2</IsTriggerActive>
+                        <NumeroPorte>2</NumeroPorte>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -3381,6 +3386,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <RepairValue>10</RepairValue>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
                             <properties>
@@ -4443,6 +4451,7 @@
                     </properties>
                     <instance-variables>
                         <IsTriggered>false</IsTriggered>
+                        <HasBeenActivated>false</HasBeenActivated>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -4508,6 +4517,7 @@
                     </properties>
                     <instance-variables>
                         <IsTriggered>false</IsTriggered>
+                        <HasBeenActivated>false</HasBeenActivated>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -4573,6 +4583,7 @@
                     </properties>
                     <instance-variables>
                         <IsTriggered>false</IsTriggered>
+                        <HasBeenActivated>false</HasBeenActivated>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -4638,6 +4649,7 @@
                     </properties>
                     <instance-variables>
                         <IsTriggered>false</IsTriggered>
+                        <HasBeenActivated>false</HasBeenActivated>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">

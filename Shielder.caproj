@@ -2,7 +2,7 @@
 <c2project>
     <name>Shielder</name>
     <description></description>
-    <version>0.7.7</version>
+    <version>0.7.8</version>
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
@@ -63,7 +63,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">NW.js</prop>
+        <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -503,6 +503,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="spr_Deadzone" sid="675933871190545">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="664515936257622" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Décor">
             <object-folder name="Tuto">
@@ -652,6 +660,25 @@
                                     <point x="0.953488" y="0.875" />
                                     <point x="0.5" y="1" />
                                     <point x="0.0465116" y="0.875" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="infobulle_aim" sid="653171046364873">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="270435252998786" speed="5">
+                            <frame duration="1" hotspotX="0.504505" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\infobulle_aim.png">
+                                <collision-poly>
+                                    <point x="0.027027" y="0.09375" />
+                                    <point x="0.495495" y="0" />
+                                    <point x="0.972973" y="0.09375" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.963964" y="0.875" />
+                                    <point x="0.495495" y="1" />
+                                    <point x="0.036036" y="0.875" />
                                     <point x="0" y="0.5" />
                                 </collision-poly>
                             </frame>
@@ -912,7 +939,7 @@
             <object-type name="spr_Porte" sid="705875883807903">
                 <plugin id="Sprite" />
                 <instance-variables>
-                    <instance-variable comment="Open when the trigger is active" name="IsTriggerActive" sid="652659229874344" type="number" />
+                    <instance-variable comment="Open when the trigger is active" name="NumeroPorte" sid="652659229874344" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="868289098896268">
@@ -991,6 +1018,65 @@
             </object-type>
         </object-folder>
         <object-folder name="Joueur">
+            <object-folder name="Boost">
+                <object-type name="pickupBouclier" sid="866517581642073">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262598268449218" speed="5">
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.52" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\pickup bouclier.png">
+                                <collision-poly>
+                                    <point x="0.12" y="0.12" />
+                                    <point x="0.48" y="0" />
+                                    <point x="0.88" y="0.12" />
+                                    <point x="0.88" y="0.48" />
+                                    <point x="0.76" y="0.76" />
+                                    <point x="0.48" y="1" />
+                                    <point x="0.24" y="0.76" />
+                                    <point x="0.12" y="0.48" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="pickupMarteauGros" sid="840838953041962">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="518888171532521" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\pickup marteau gros.png">
+                                <collision-poly>
+                                    <point x="0.15625" y="0.15625" />
+                                    <point x="0.5" y="0.03125" />
+                                    <point x="0.9375" y="0.0625" />
+                                    <point x="0.59375" y="0.5" />
+                                    <point x="0.59375" y="0.59375" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.40625" y="0.59375" />
+                                    <point x="0.40625" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="pickupMarteauPetit" sid="162484652162349">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974583434695982" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\pickup marteau petit.png">
+                                <collision-poly>
+                                    <point x="0.1875" y="0.1875" />
+                                    <point x="0.5" y="0.0625" />
+                                    <point x="0.90625" y="0.09375" />
+                                    <point x="0.59375" y="0.5" />
+                                    <point x="0.59375" y="0.59375" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.4375" y="0.5625" />
+                                    <point x="0.4375" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
             <object-type name="spr_Player" sid="153239440205090">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -1123,14 +1209,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="spr_Deadzone" sid="675933871190545">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="664515936257622" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="spr_Shield2" sid="737481592574202">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -1225,68 +1303,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="pickupBouclier" sid="866517581642073">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Sine" sid="648501094323048">
-                        <behavior id="Sin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262598268449218" speed="5">
-                        <frame duration="1" hotspotX="0.52" hotspotY="0.52" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\pickup bouclier.png">
-                            <collision-poly>
-                                <point x="0.12" y="0.12" />
-                                <point x="0.48" y="0" />
-                                <point x="0.88" y="0.12" />
-                                <point x="0.88" y="0.48" />
-                                <point x="0.76" y="0.76" />
-                                <point x="0.48" y="1" />
-                                <point x="0.24" y="0.76" />
-                                <point x="0.12" y="0.48" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="pickupMarteauGros" sid="840838953041962">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="518888171532521" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\pickup marteau gros.png">
-                            <collision-poly>
-                                <point x="0.15625" y="0.15625" />
-                                <point x="0.5" y="0.03125" />
-                                <point x="0.9375" y="0.0625" />
-                                <point x="0.59375" y="0.5" />
-                                <point x="0.59375" y="0.59375" />
-                                <point x="0.5" y="1" />
-                                <point x="0.40625" y="0.59375" />
-                                <point x="0.40625" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="pickupMarteauPetit" sid="162484652162349">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974583434695982" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\pickup marteau petit.png">
-                            <collision-poly>
-                                <point x="0.1875" y="0.1875" />
-                                <point x="0.5" y="0.0625" />
-                                <point x="0.90625" y="0.09375" />
-                                <point x="0.59375" y="0.5" />
-                                <point x="0.59375" y="0.59375" />
-                                <point x="0.5" y="1" />
-                                <point x="0.4375" y="0.5625" />
-                                <point x="0.4375" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
         </object-folder>
         <object-folder name="Camera">
             <object-type name="CameraVertical" sid="485147451187593">
@@ -1332,25 +1348,6 @@
         <object-type name="Audio" sid="517501936451574">
             <plugin id="Audio" />
         </object-type>
-        <object-type name="infobulle_aim" sid="653171046364873">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="270435252998786" speed="5">
-                    <frame duration="1" hotspotX="0.504505" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\infobulle_aim.png">
-                        <collision-poly>
-                            <point x="0.027027" y="0.09375" />
-                            <point x="0.495495" y="0" />
-                            <point x="0.972973" y="0.09375" />
-                            <point x="1" y="0.5" />
-                            <point x="0.963964" y="0.875" />
-                            <point x="0.495495" y="1" />
-                            <point x="0.036036" y="0.875" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="Ennemies" plugin-id="Sprite" sid="402308118130530">
@@ -1389,6 +1386,7 @@
             </members>
             <instance-variables>
                 <instance-variable comment="Est-ce que l&apos;objet a été activé ?" name="IsTriggered" sid="408185039428134" type="boolean" />
+                <instance-variable comment="Est-ce que le levier a fini son travail ? " name="HasBeenActivated" sid="822842927695194" type="boolean" />
             </instance-variables>
         </family>
         <family name="Shields" plugin-id="Sprite" sid="583031045162670">
@@ -1399,12 +1397,13 @@
             </members>
             <instance-variables>
                 <instance-variable comment="Donne le sens du bouclier" name="SensBouclier" sid="593390063098221" type="string" />
-                <instance-variable comment="Donne la distance entre le bouclier et le joueur quand il tombe au sol" name="PlayerDistance" sid="151717091590006" type="number" />
+                <instance-variable comment="Donne la distance entre le bouclier et le joueur quand il tombe au sol" name="PlayerDistanceX" sid="151717091590006" type="number" />
                 <instance-variable comment="Est-ce que le bouclier est planté dans un mur ?" name="Planté" sid="213136798035312" type="boolean" />
                 <instance-variable comment="Est-ce que le bouclier a chuté au sol ?" name="OnGround" sid="377511031045537" type="boolean" />
                 <instance-variable comment="A quel point le bouclier est pété ?" name="DamageResistance" sid="802943888153398" type="number" />
                 <instance-variable comment="Tell which shield is in use" name="InUse" sid="487728866949022" type="boolean" />
                 <instance-variable comment="True when shield is not usable anymore" name="Broken" sid="695258605805856" type="boolean" />
+                <instance-variable comment="Donne la distance entre le bouclier et le joueur quand il tombe au sol" name="PlayerDistanceY" sid="513986682372787" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet2" sid="510984963117309">
@@ -1415,8 +1414,9 @@
                 </behavior-type>
             </behaviors>
         </family>
-        <family name="Marteaux" plugin-id="Sprite" sid="684616891461412">
+        <family name="Boost" plugin-id="Sprite" sid="684616891461412">
             <members>
+                <member>pickupBouclier</member>
                 <member>pickupMarteauGros</member>
                 <member>pickupMarteauPetit</member>
             </members>

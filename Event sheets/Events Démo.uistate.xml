@@ -4,7 +4,7 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <show-addaction-links>1</show-addaction-links>
-    <scroll-pos>0</scroll-pos>
+    <scroll-pos>400</scroll-pos>
     <conditions-column>465</conditions-column>
     <actions-namecolumn>145</actions-namecolumn>
     <condition-namecolumns>
@@ -31,7 +31,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event collapsed="1" sid="375291330009329" />
         <event collapsed="1" sid="950372626065643" />
         <event collapsed="1" sid="748261819039429" />
-        <event collapsed="1" sid="863548543877063" />
         <event collapsed="1" sid="408166394414880" />
         <event collapsed="1" sid="171897515026906" />
         <event collapsed="1" sid="166641974902625" />
@@ -76,9 +75,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event collapsed="1" sid="602782995638467" />
         <event collapsed="1" sid="564336578594189" />
         <event collapsed="1" sid="179841615082282" />
-        <event collapsed="1" sid="822551488719269" />
         <event collapsed="1" sid="585875262973198" />
         <event collapsed="1" sid="425334805356434" />
+        <event collapsed="1" sid="668973839686201" />
         <event collapsed="1" sid="155517316812625" />
         <event collapsed="1" sid="551628898772250" />
         <event collapsed="1" sid="111751983670123" />
@@ -94,12 +93,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event collapsed="1" sid="908906534290390" />
         <event collapsed="1" sid="784783767533523" />
         <event collapsed="1" sid="905586278203015" />
+        <event collapsed="1" sid="842945329820558" />
         <event collapsed="1" sid="107979408110373" />
         <event collapsed="1" sid="611989458961276" />
         <event collapsed="1" sid="794919798918362" />
         <event collapsed="1" sid="653005749911396" />
         <event collapsed="1" sid="994237132611224" />
-        <event collapsed="1" sid="417078643282953" />
         <event collapsed="1" sid="277001443276665" />
         <event collapsed="1" sid="118690445484564" />
         <event collapsed="1" sid="417331714414367" />

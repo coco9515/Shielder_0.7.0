@@ -1025,12 +1025,13 @@
                     </properties>
                     <instance-variables>
                         <SensBouclier></SensBouclier>
-                        <PlayerDistance>100</PlayerDistance>
+                        <PlayerDistanceX>100</PlayerDistanceX>
                         <Planté>false</Planté>
                         <OnGround>false</OnGround>
                         <DamageResistance>4</DamageResistance>
                         <InUse>false</InUse>
                         <Broken>false</Broken>
+                        <PlayerDistanceY>0</PlayerDistanceY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet2">
@@ -2211,6 +2212,7 @@
                     </properties>
                     <instance-variables>
                         <IsTriggered>false</IsTriggered>
+                        <HasBeenActivated>false</HasBeenActivated>
                         <NumeroPorte>3</NumeroPorte>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -2236,7 +2238,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <IsTriggerActive>3</IsTriggerActive>
+                        <NumeroPorte>3</NumeroPorte>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2733,7 +2735,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <IsTriggerActive>4</IsTriggerActive>
+                        <NumeroPorte>4</NumeroPorte>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2766,6 +2768,7 @@
                     </properties>
                     <instance-variables>
                         <IsTriggered>false</IsTriggered>
+                        <HasBeenActivated>false</HasBeenActivated>
                         <NumeroPorte>4</NumeroPorte>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -3852,12 +3855,13 @@
                     </properties>
                     <instance-variables>
                         <SensBouclier></SensBouclier>
-                        <PlayerDistance>100</PlayerDistance>
+                        <PlayerDistanceX>100</PlayerDistanceX>
                         <Planté>false</Planté>
                         <OnGround>false</OnGround>
                         <DamageResistance>4</DamageResistance>
                         <InUse>false</InUse>
                         <Broken>false</Broken>
+                        <PlayerDistanceY>0</PlayerDistanceY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet2">
@@ -3900,12 +3904,13 @@
                     </properties>
                     <instance-variables>
                         <SensBouclier></SensBouclier>
-                        <PlayerDistance>100</PlayerDistance>
+                        <PlayerDistanceX>100</PlayerDistanceX>
                         <Planté>false</Planté>
                         <OnGround>false</OnGround>
                         <DamageResistance>4</DamageResistance>
                         <InUse>false</InUse>
                         <Broken>false</Broken>
+                        <PlayerDistanceY>0</PlayerDistanceY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet2">
@@ -4299,6 +4304,7 @@
                     </properties>
                     <instance-variables>
                         <IsTriggered>false</IsTriggered>
+                        <HasBeenActivated>false</HasBeenActivated>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -4364,6 +4370,7 @@
                     </properties>
                     <instance-variables>
                         <IsTriggered>false</IsTriggered>
+                        <HasBeenActivated>false</HasBeenActivated>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -4429,6 +4436,7 @@
                     </properties>
                     <instance-variables>
                         <IsTriggered>false</IsTriggered>
+                        <HasBeenActivated>false</HasBeenActivated>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">

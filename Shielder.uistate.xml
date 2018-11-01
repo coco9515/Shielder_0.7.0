@@ -13,11 +13,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="0">Main menu</layout>
         <layout order="2">Démo</layout>
         <layout order="4">Stage 1</layout>
-        <layout active="1" order="5">Stage 2</layout>
+        <layout order="5">Stage 2</layout>
         <layout order="6">Hall d&apos;entrée</layout>
         <layout order="7">Fin de la démo</layout>
+        <event-sheet active="1" order="3">Events Démo</event-sheet>
         <event-sheet order="1">Events Menu</event-sheet>
-        <event-sheet order="3">Events Démo</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -30,7 +30,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="Décors" />
         <family expanded="0" name="Interactif" />
         <family expanded="0" name="Shields" />
-        <family expanded="1" name="Marteaux" />
+        <family expanded="0" name="Boost" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -41,7 +41,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Décor/" />
         <folder expanded="0" path="object-folder/Décor/Tuto/" />
         <folder expanded="0" path="object-folder/Décor/Effets/" />
-        <folder expanded="0" path="object-folder/Joueur/" />
+        <folder expanded="1" path="object-folder/Joueur/" />
+        <folder expanded="1" path="object-folder/Joueur/Boost/" />
         <folder expanded="0" path="object-folder/Camera/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
@@ -60,6 +61,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/spr_Fireball/" />
         <folder expanded="1" path="animation-folder/MurInvisiblePourMob/" />
         <folder expanded="1" path="animation-folder/spr_Arrow/" />
+        <folder expanded="1" path="animation-folder/spr_Deadzone/" />
         <folder expanded="1" path="animation-folder/infobulle_turn/" />
         <folder expanded="1" path="animation-folder/infobulle_move/" />
         <folder expanded="1" path="animation-folder/infobulle_shelter/" />
@@ -68,6 +70,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/infobulle_parry/" />
         <folder expanded="1" path="animation-folder/infobulle_dash/" />
         <folder expanded="1" path="animation-folder/infobulle_throw/" />
+        <folder expanded="1" path="animation-folder/infobulle_aim/" />
         <folder expanded="1" path="animation-folder/fx_Smoke/" />
         <folder expanded="1" path="animation-folder/spr_torch_halo/" />
         <folder expanded="1" path="animation-folder/spr_point_light/" />
@@ -81,17 +84,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/spr_Porte/" />
         <folder expanded="1" path="animation-folder/spr_ExitLevel/" />
         <folder expanded="1" path="animation-folder/spr_chandelier/" />
-        <folder expanded="1" path="animation-folder/spr_Player/" />
-        <folder expanded="1" path="animation-folder/spr_Shield/" />
-        <folder expanded="1" path="animation-folder/spr_Deadzone/" />
-        <folder expanded="1" path="animation-folder/spr_Shield2/" />
-        <folder expanded="1" path="animation-folder/spr_Shield3/" />
         <folder expanded="1" path="animation-folder/pickupBouclier/" />
         <folder expanded="1" path="animation-folder/pickupMarteauGros/" />
         <folder expanded="1" path="animation-folder/pickupMarteauPetit/" />
+        <folder expanded="1" path="animation-folder/spr_Player/" />
+        <folder expanded="1" path="animation-folder/spr_Shield/" />
+        <folder expanded="1" path="animation-folder/spr_Shield2/" />
+        <folder expanded="1" path="animation-folder/spr_Shield3/" />
         <folder expanded="1" path="animation-folder/CameraVertical/" />
         <folder expanded="1" path="animation-folder/Camera/" />
         <folder expanded="1" path="animation-folder/CameraScroll/" />
-        <folder expanded="1" path="animation-folder/infobulle_aim/" />
     </folders-expanded>
 </c2uistate>
