@@ -1,0 +1,2 @@
+[1101/151240.885:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name metrics_client_id, discarding value 8e2ec0bce2974784ba5d41ed635e28ce
+[1101/151240.889:ERROR:http_transport_win.cc(175)] WinHttpCrackUrl: LÅfURL nÅfutilise pas un protocole reconnu (0x2ee6)

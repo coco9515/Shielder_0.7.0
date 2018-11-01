@@ -1098,7 +1098,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-group description="Le déplacement &amp; saut du joueur" sid="650652338705128" title="Player control : Run &amp; Jump">
+                <event-group description="Le déplacement &amp; saut du joueur" sid="650652338705128" title="Player Control : Run &amp; Jump">
                     <sub-events>
                         <comment>Les controles claviers sont fait automatiquement</comment>
                         <comment>Déplacement gauche/droite avec le stick gauche</comment>
@@ -1341,7 +1341,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="Le dash du joueur" sid="515423028842029" title="Player control : Dash">
+                <event-group description="Le dash du joueur" sid="515423028842029" title="Player Control : Dash">
                     <sub-events>
                         <comment>Dash sur X, pendant 0.7s à l&apos;appui, avec 0.1s de cooldown</comment>
                         <event-block sid="693042559730083">
@@ -1556,7 +1556,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="L&apos;abri bouclier du joueur" sid="628983490665557" title="Player control : Shelter">
+                <event-group description="L&apos;abri bouclier du joueur" sid="628983490665557" title="Player Control : Shelter">
                     <sub-events>
                         <comment>Quand le stick droit est vers le haut, le bouclier se déplace en haut, et le joueur ralentit</comment>
                         <event-block any="1" sid="900915132919431">
@@ -1721,7 +1721,7 @@
                                 </condition>
                                 <condition id="5" inverted="1" name="Compare axis" sid="680333031750884" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Axis">1</param>
+                                    <param id="1" name="Axis">2</param>
                                     <param id="2" name="Comparison">2</param>
                                     <param id="3" name="Value">-75</param>
                                 </condition>
@@ -1756,7 +1756,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="Le surf sur bouclier du joueur" sid="208649146730810" title="Player control : Surf">
+                <event-group description="Le surf sur bouclier du joueur" sid="208649146730810" title="Player Control : Surf">
                     <sub-events>
                         <comment>Si le joueur est en l&apos;air et le stick droit vers le bas, le bouclier se déplace en bas</comment>
                         <event-block any="1" sid="488218357886858">
@@ -1959,7 +1959,7 @@
                                             <conditions>
                                                 <condition id="5" name="Compare axis" sid="756485470781502" type="Gamepad">
                                                     <param id="0" name="Gamepad">0</param>
-                                                    <param id="1" name="Axis">1</param>
+                                                    <param id="1" name="Axis">3</param>
                                                     <param id="2" name="Comparison">4</param>
                                                     <param id="3" name="Value">50</param>
                                                 </condition>
@@ -2916,6 +2916,7 @@
                                 <event-block sid="107330037621097">
                                     <conditions>
                                         <condition behavior="Solid" id="0" inverted="1" name="Is enabled" sid="739735717848377" type="spr_Porte" />
+                                        <condition behavior="Solid" id="0" inverted="1" name="Is enabled" sid="354483344254703" type="tile_porte" />
                                     </conditions>
                                     <actions>
                                         <action behavior="Bullet2" id="5" name="Set enabled" sid="288966140221032" type="Shields">
@@ -2999,11 +3000,12 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Solid" id="0" name="Set enabled" sid="708453374150284" type="spr_Porte">
-                                            <param id="0" name="State">0</param>
+                                        <action id="-9" name="Destroy" sid="708453374150284" type="spr_Porte" />
+                                        <action id="-16" name="Set opacity" sid="895584747633633" type="tile_porte">
+                                            <param id="0" name="Opacity">30</param>
                                         </action>
-                                        <action id="-16" name="Set opacity" sid="895584747633633" type="spr_Porte">
-                                            <param id="0" name="Opacity">20</param>
+                                        <action behavior="Solid" id="0" name="Set enabled" sid="311688930145710" type="tile_porte">
+                                            <param id="0" name="State">0</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -3028,6 +3030,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>Le levier active le chandelier qui tombe</comment>
                         <event-block sid="778450250302312">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="697193257458804" type="spr_chandelier">
@@ -3606,6 +3609,48 @@
                     <sub-events>
                         <event-group description="Gobelin pour l&apos;instant mais tous les ennemis devraient être affecté." sid="842945329820558" title="Generic">
                             <sub-events>
+                                <comment>Orientation de l&apos;ennemi qui s&apos;inverse après le mur invisible</comment>
+                                <event-block sid="507708789057704">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="301616515383007" type="Ennemies">
+                                            <param id="0" name="Object">MurInvisiblePourMob</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="895721810030055">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="851886886735161" type="Ennemies">
+                                                    <param id="0" name="Instance variable">SensMarche</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;gauche&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="498323610354713" type="Ennemies">
+                                                    <param id="0" name="Instance variable">SensMarche</param>
+                                                    <param id="1" name="Value">&quot;droite&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="571466005315097">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="693356184486720" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="919992082589377" type="Ennemies">
+                                                    <param id="0" name="Instance variable">SensMarche</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;droite&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="778995878394131" type="Ennemies">
+                                                    <param id="0" name="Instance variable">SensMarche</param>
+                                                    <param id="1" name="Value">&quot;gauche&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                                 <comment>Déplacement ennemis</comment>
                                 <event-block sid="219709631658268">
                                     <conditions>
@@ -3669,48 +3714,6 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <comment>Orientation de l&apos;ennemi qui s&apos;inverse après le mur invisible</comment>
-                                <event-block sid="507708789057704">
-                                    <conditions>
-                                        <condition id="0" name="On collision with another object" sid="301616515383007" type="Ennemies">
-                                            <param id="0" name="Object">MurInvisiblePourMob</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="895721810030055">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="851886886735161" type="Ennemies">
-                                                    <param id="0" name="Instance variable">SensMarche</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;gauche&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="498323610354713" type="Ennemies">
-                                                    <param id="0" name="Instance variable">SensMarche</param>
-                                                    <param id="1" name="Value">&quot;droite&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="571466005315097">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="693356184486720" type="System" />
-                                                <condition id="-7" name="Compare instance variable" sid="919992082589377" type="Ennemies">
-                                                    <param id="0" name="Instance variable">SensMarche</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;droite&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="778995878394131" type="Ennemies">
-                                                    <param id="0" name="Instance variable">SensMarche</param>
-                                                    <param id="1" name="Value">&quot;gauche&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
                                 <comment>L&apos;ennemi est repoussé quand le joueur lui dash dessus</comment>
                                 <event-block sid="107979408110373">
                                     <conditions>
@@ -3763,7 +3766,7 @@
                                                     <param id="0" name="Seconds">1.0</param>
                                                 </action>
                                                 <action behavior="Platform2" id="1" name="Set max speed" sid="663704310489892" type="Ennemies">
-                                                    <param id="0" name="Max Speed">300</param>
+                                                    <param id="0" name="Max Speed">50</param>
                                                 </action>
                                                 <action behavior="Platform2" id="0" name="Set ignoring input" sid="583415324497096" type="Ennemies">
                                                     <param id="0" name="Input">0</param>
@@ -3782,7 +3785,7 @@
                                                     <param id="0" name="Seconds">1.0</param>
                                                 </action>
                                                 <action behavior="Platform2" id="1" name="Set max speed" sid="366174329397592" type="Ennemies">
-                                                    <param id="0" name="Max Speed">300</param>
+                                                    <param id="0" name="Max Speed">50</param>
                                                 </action>
                                                 <action behavior="Platform2" id="0" name="Set ignoring input" sid="322086642577931" type="Ennemies">
                                                     <param id="0" name="Input">0</param>
@@ -3838,7 +3841,7 @@
                                                     <param id="0" name="Seconds">1.0</param>
                                                 </action>
                                                 <action behavior="Platform2" id="1" name="Set max speed" sid="286882639006121" type="Ennemies">
-                                                    <param id="0" name="Max Speed">300</param>
+                                                    <param id="0" name="Max Speed">50</param>
                                                 </action>
                                                 <action behavior="Platform2" id="0" name="Set ignoring input" sid="128480838013022" type="Ennemies">
                                                     <param id="0" name="Input">0</param>
@@ -3857,7 +3860,7 @@
                                                     <param id="0" name="Seconds">1.0</param>
                                                 </action>
                                                 <action behavior="Platform2" id="1" name="Set max speed" sid="664664438002211" type="Ennemies">
-                                                    <param id="0" name="Max Speed">300</param>
+                                                    <param id="0" name="Max Speed">50</param>
                                                 </action>
                                                 <action behavior="Platform2" id="0" name="Set ignoring input" sid="147838353788008" type="Ennemies">
                                                     <param id="0" name="Input">0</param>
@@ -3926,7 +3929,7 @@
                                                     <param id="0" name="Gravity">0</param>
                                                 </action>
                                                 <action behavior="Platform2" id="1" name="Set max speed" sid="670007730694528" type="Ennemies">
-                                                    <param id="0" name="Max Speed">300</param>
+                                                    <param id="0" name="Max Speed">50</param>
                                                 </action>
                                                 <action behavior="Platform2" id="0" name="Set ignoring input" sid="724566504629673" type="Ennemies">
                                                     <param id="0" name="Input">0</param>
@@ -3934,6 +3937,27 @@
                                             </actions>
                                         </event-block>
                                     </sub-events>
+                                </event-block>
+                                <comment>L&apos;ennemi qui se prend un chandelier meurt</comment>
+                                <event-block sid="865805183640821">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="244368860196250" type="Ennemies">
+                                            <param id="0" name="Object">spr_chandelier</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="0" name="Play" sid="605979378990381" type="Audio">
+                                            <param id="0" name="Audio file">Gobelin dégât</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-5</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="182171322733204" type="spr_chandelier" />
+                                        <action id="-10" name="Set value" sid="126227361750903" type="Ennemies">
+                                            <param id="0" name="Instance variable">PV</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                                 <comment>Le joueur se blesse en collision avec un ennemi (hors dash)</comment>
                                 <event-block sid="124206040334034">

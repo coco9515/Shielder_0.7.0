@@ -63,7 +63,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">NW.js</prop>
+        <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -955,6 +955,9 @@
                     </behavior-type>
                     <behavior-type name="Physics" sid="446028025402401">
                         <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="822736008701166">
+                        <behavior id="destroy" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
