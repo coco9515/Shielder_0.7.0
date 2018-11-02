@@ -1803,8 +1803,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>832</y>
+                        <x>128</x>
+                        <y>256</y>
                         <z>0</z>
                         <width>40</width>
                         <height>60</height>
