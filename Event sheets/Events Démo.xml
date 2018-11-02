@@ -1337,16 +1337,51 @@
                                 <condition behavior="Timer" id="0" name="On timer" sid="519606176652304" type="spr_DamagedPlatform">
                                     <param id="0" name="Tag">&quot;Réaparition&quot;</param>
                                 </condition>
-                                <condition id="1" inverted="1" name="Is overlapping another object" sid="141225110390901" type="spr_Player">
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="494955992001683">
+                                    <conditions>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="141225110390901" type="spr_Player">
+                                            <param id="0" name="Object">spr_DamagedPlatform</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Solid" id="0" name="Set enabled" sid="449476145027327" type="spr_DamagedPlatform">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="805002251532595" type="spr_DamagedPlatform">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="526186864151923">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="286576821100519" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-41" name="Wait for signal" sid="319172097538888" type="System">
+                                            <param id="0" name="Tag">&quot;JoueurSurPlateforme&quot;</param>
+                                        </action>
+                                        <action behavior="Solid" id="0" name="Set enabled" sid="668487861648708" type="spr_DamagedPlatform">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="506522435023266" type="spr_DamagedPlatform">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="577529551045312">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="635247020986646" type="spr_Player">
                                     <param id="0" name="Object">spr_DamagedPlatform</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Solid" id="0" name="Set enabled" sid="449476145027327" type="spr_DamagedPlatform">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="805002251532595" type="spr_DamagedPlatform">
-                                    <param id="0" name="Opacity">100</param>
+                                <action id="-42" name="Signal" sid="320417021131449" type="System">
+                                    <param id="0" name="Tag">&quot;JoueurSurPlateforme&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
