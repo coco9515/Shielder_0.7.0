@@ -197,6 +197,7 @@
                         <InUse>false</InUse>
                         <Broken>false</Broken>
                         <PlayerDistanceY>0</PlayerDistanceY>
+                        <SpriteName>spr_Shield</SpriteName>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet2">
@@ -246,6 +247,7 @@
                         <InUse>false</InUse>
                         <Broken>false</Broken>
                         <PlayerDistanceY>0</PlayerDistanceY>
+                        <SpriteName>spr_Shield</SpriteName>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet2">

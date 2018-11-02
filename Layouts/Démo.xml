@@ -1803,8 +1803,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
-                        <y>256</y>
+                        <x>896</x>
+                        <y>512</y>
                         <z>0</z>
                         <width>40</width>
                         <height>60</height>
@@ -1831,6 +1831,7 @@
                         <InUse>false</InUse>
                         <Broken>false</Broken>
                         <PlayerDistanceY>0</PlayerDistanceY>
+                        <SpriteName>spr_Shield</SpriteName>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet2">
@@ -3003,6 +3004,7 @@
                         <InUse>false</InUse>
                         <Broken>false</Broken>
                         <PlayerDistanceY>0</PlayerDistanceY>
+                        <SpriteName>spr_Shield2</SpriteName>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet2">
@@ -3052,6 +3054,7 @@
                         <InUse>false</InUse>
                         <Broken>false</Broken>
                         <PlayerDistanceY>0</PlayerDistanceY>
+                        <SpriteName>spr_Shield3</SpriteName>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet2">
@@ -4487,6 +4490,13 @@
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -5109,8 +5119,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>30.199615479</x>
-                        <y>37.382133484</y>
+                        <x>30.200000763</x>
+                        <y>37.381999969</y>
                         <z>0</z>
                         <width>54.800384521</width>
                         <height>30</height>

@@ -2,7 +2,7 @@
 <c2project>
     <name>Shielder</name>
     <description></description>
-    <version>0.7.8</version>
+    <version>0.8.0</version>
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
@@ -32,6 +32,7 @@
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -431,6 +432,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable comment="le projectile est-il friendly ?" name="isFriendly" sid="448983847688887" type="boolean" />
+                    <instance-variable comment="Est-ce un tir vertical ou horizontal ?" name="Direction" sid="546147497256270" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Bullet" sid="472736732515842">
@@ -854,6 +856,11 @@
             </object-type>
             <object-type name="tile_Ladder" sid="945391222703820">
                 <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Jumpthru" sid="161314109146762">
+                        <behavior id="jumpthru" />
+                    </behavior-type>
+                </behaviors>
                 <texture original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\tile_Ladder.png" />
             </object-type>
             <object-type name="spr_Lever" sid="616212241916582">
@@ -1404,6 +1411,7 @@
                 <instance-variable comment="Tell which shield is in use" name="InUse" sid="487728866949022" type="boolean" />
                 <instance-variable comment="True when shield is not usable anymore" name="Broken" sid="695258605805856" type="boolean" />
                 <instance-variable comment="Donne la distance entre le bouclier et le joueur quand il tombe au sol" name="PlayerDistanceY" sid="513986682372787" type="number" />
+                <instance-variable comment="Le nom du sprite" name="SpriteName" sid="959206953116594" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet2" sid="510984963117309">

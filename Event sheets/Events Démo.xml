@@ -4,11 +4,12 @@
     <name>Events Démo</name>
     <events>
         <variable comment="Quand un shield pête, ça s&apos;active" constant="0" name="AShieldBroke" sid="152627776031349" static="0" type="number">0</variable>
+        <variable comment="Turn on when the first shield is selected" constant="0" name="FirstShield" sid="328874446184526" static="0" type="text">false</variable>
         <variable comment="Remembers which way the player is moving" constant="0" name="PlayerDirection" sid="893716178524945" static="0" type="text"></variable>
         <variable comment="Est ce que le joueur est en train de surfer" constant="0" name="Surfing" sid="654270264021959" static="0" type="text">false</variable>
         <variable comment="Est-ce que le joueur est en cooldown après un lancer ?" constant="0" name="ThrowCooldownOver" sid="174410280027121" static="0" type="text">false</variable>
         <variable comment="Activate triggers one the time (by lever)" constant="0" name="TriggerActivated" sid="449663709120851" static="0" type="number">0</variable>
-        <comment>A chaque tick, la barre de vie track les PV du joueur, et le bouclier est repositionné sur le joueur, à l&apos;imagepoint correspondant au playerState en cours. 2 variables de test sont également affichées pour le débug.</comment>
+        <comment>Au début d&apos;un layout, prend un bouclier aléatoire ou réutilise le même que les layout précédent</comment>
         <event-block sid="697599510780903">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="603368706029885" type="System" />
@@ -21,6 +22,11 @@
             <sub-events>
                 <event-block sid="467039077596529">
                     <conditions>
+                        <condition id="-14" name="Compare variable" sid="952510842768123" type="System">
+                            <param id="0" name="Variable">FirstShield</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;false&quot;</param>
+                        </condition>
                         <condition id="-16" name="Pick random instance" sid="726246728529390" type="System">
                             <param id="0" name="Object">Shields</param>
                         </condition>
@@ -30,10 +36,48 @@
                             <param id="0" name="Instance variable">InUse</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="264758196416342" type="System">
+                            <param id="0" name="Variable">FirstShield</param>
+                            <param id="1" name="Value">&quot;true&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="460429083324095">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="544440681569866" type="System" />
+                        <condition id="-33" name="Pick by comparison" sid="584659153725586" type="System">
+                            <param id="0" name="Object">Shields</param>
+                            <param id="1" name="Expression">FirstShield</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Shields.SpriteName</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="178325556108797" type="Shields">
+                            <param id="0" name="Instance variable">InUse</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="116781135960765">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="839954705835355" type="System">
+                            <param id="0" name="Object">Shields</param>
+                            <param id="1" name="Expression">&quot;InUse&quot;</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">&quot;true&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="413450129504388" type="Shields">
+                            <param id="0" name="Object">spr_Player</param>
+                            <param id="1" name="Image point (optional)">spr_Player.imagepointBras</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>A chaque tick, la barre de vie track les PV du joueur, et le bouclier est repositionné sur le joueur, à l&apos;imagepoint correspondant au playerState en cours. 2 variables de test sont également affichées pour le débug.</comment>
         <event-block sid="671549788024059">
             <conditions>
                 <condition id="-1" name="Every tick" sid="442983732058727" type="System" />
@@ -1074,6 +1118,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Pour sortir du niveau, appuies vers le haut</comment>
                 <event-block sid="557534949583156">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="409834813847742" type="spr_Player">
@@ -1082,6 +1127,20 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="192262991512158">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="902436968743539" type="Shields">
+                                    <param id="0" name="Instance variable">InUse</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="365774610122140" type="System" />
+                            </conditions>
+                            <actions>
+                                <action breakpoint="1" id="-9" name="Set value" sid="725315621777761" type="System">
+                                    <param id="0" name="Variable">FirstShield</param>
+                                    <param id="1" name="Value">Shields.SpriteName</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block any="1" sid="739347869432800">
                             <conditions>
                                 <condition id="5" name="Compare axis" sid="629025340610283" type="Gamepad">
@@ -1256,6 +1315,99 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Permet de sauter depuis le haut de l&apos;echelle mais aussi d&apos;y descendre</comment>
+                        <event-block sid="827647175385695">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="137843420013325" type="System" />
+                                <condition id="9" name="Is overlapping at offset" sid="540365643136695" type="spr_Player">
+                                    <param id="0" name="Object">tile_Ladder</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="5" name="Set gravity" sid="691299818775881" type="spr_Player">
+                                    <param id="0" name="Gravity">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="408984601577718" type="spr_Player">
+                                    <param id="0" name="Vector Y">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Permet de sauter de l&apos;echelle depuis le haut</comment>
+                                <event-block any="1" sid="943486433697899">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="904271752349490" type="Keyboard">
+                                            <param id="0" name="Key">38</param>
+                                        </condition>
+                                        <condition id="3" name="Is button down" sid="687290253204684" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="964387608194757">
+                                            <conditions>
+                                                <condition id="-2" name="Compare Y" sid="790957179638370" type="spr_Player">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Y co-ordinate">tile_Ladder.Y </param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="635385986510849" type="tile_Ladder">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Permet de descendre de l&apos;echelle depuis le haut</comment>
+                                <event-block any="1" sid="675322162938539">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="276748264056773" type="Keyboard">
+                                            <param id="0" name="Key">40</param>
+                                        </condition>
+                                        <condition id="5" name="Compare axis" sid="394255695997809" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Axis">1</param>
+                                            <param id="2" name="Comparison">4</param>
+                                            <param id="3" name="Value">50</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="446014693114541">
+                                            <conditions>
+                                                <condition id="-2" name="Compare Y" sid="293112291464046" type="spr_Player">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Y co-ordinate">tile_Ladder.Y </param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="633576713928847" type="tile_Ladder">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action behavior="Platform" id="9" name="Set vector Y" sid="470652888566934" type="spr_Player">
+                                                    <param id="0" name="Vector Y">200</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Permet d&apos;empecher de se bloquer en &quot;falling&quot; au dessus de l&apos;echelle</comment>
+                                <event-block sid="498318368930261">
+                                    <conditions>
+                                        <condition behavior="Platform" id="4" name="Is falling" sid="219084518778610" type="spr_Player" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="453451642591372" type="tile_Ladder">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <comment>Rend la gravité normal hors échelle</comment>
                         <event-block sid="468460670074625">
                             <conditions>
@@ -1332,6 +1484,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Elles ne réaparaissent que si le joueur n&apos;est pas dans la platform</comment>
                         <event-block sid="718853391168821">
                             <conditions>
                                 <condition behavior="Timer" id="0" name="On timer" sid="519606176652304" type="spr_DamagedPlatform">
@@ -3251,7 +3404,7 @@
             <sub-events>
                 <event-group description="Comportement des projectiles" sid="155517316812625" title="Enemy : Projectile">
                     <sub-events>
-                        <comment>Quand la Fireball touche le bouclier en mode parry, il est renvoyé et devient amical.</comment>
+                        <comment>Quand la Fireball touche le bouclier, il est renvoyé et devient amical.</comment>
                         <event-block sid="551628898772250">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="973249621696857" type="spr_Fireball">
@@ -3263,23 +3416,105 @@
                                     <param id="2" name="Value">&quot;throw&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="162636168790465" type="spr_Fireball">
-                                    <param id="0" name="Angle">spr_Fireball.Bullet.AngleOfMotion + 180</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="690134467411999" type="spr_Fireball">
-                                    <param id="0" name="Instance variable">isFriendly</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
-                                <event-block disabled="1" sid="677382666041729">
+                                <event-block any="1" sid="677382666041729">
                                     <conditions>
-                                        <condition id="2" name="Is playing" sid="532402318260663" type="Shields">
-                                            <param id="0" name="Animation">&quot;Parry&quot;</param>
+                                        <condition id="-7" name="Compare instance variable" sid="365116262474057" type="spr_Fireball">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">90</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="496978161188962" type="spr_Fireball">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">270</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="690134467411999" type="spr_Fireball">
+                                            <param id="0" name="Instance variable">isFriendly</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block any="1" sid="253913285117950">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="257427444578933" type="spr_Player">
+                                                    <param id="0" name="Instance variable">playerState</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;shelter&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="273299278618143" type="spr_Player">
+                                                    <param id="0" name="Instance variable">playerState</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;surf&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="380613620892865" type="spr_Fireball">
+                                                    <param id="0" name="Angle">spr_Fireball.Bullet.AngleOfMotion + 180</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>Sinon, face au joueur horizontallement</comment>
+                                        <event-block sid="982883397317763">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="590485547524793" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="202186916723067">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="834642762008932" type="spr_Player">
+                                                            <param id="0" name="Instance variable">playerSens</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;droite&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="162636168790465" type="spr_Fireball">
+                                                            <param id="0" name="Angle">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="432786918621857">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="283561586978833" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="515427558829327" type="spr_Fireball">
+                                                            <param id="0" name="Angle">180</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Renvoie les boules horizontal à 180°</comment>
+                                <event-block any="1" sid="588182446364494">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="482496424279990" type="spr_Fireball">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="563156824886143" type="spr_Fireball">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="279876506578883" type="spr_Fireball">
+                                            <param id="0" name="Angle">spr_Fireball.Bullet.AngleOfMotion + 180</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="522038075890135" type="spr_Fireball">
+                                            <param id="0" name="Instance variable">isFriendly</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -3665,6 +3900,10 @@
                                                 </action>
                                                 <action id="-8" name="Set angle" sid="375852337265680" type="spr_Fireball">
                                                     <param id="0" name="Angle">spr_TurretVertical.AngleOfAttack</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="325707642673022" type="spr_Fireball">
+                                                    <param id="0" name="Instance variable">Direction</param>
+                                                    <param id="1" name="Value">spr_Fireball.Angle</param>
                                                 </action>
                                             </actions>
                                             <sub-events>

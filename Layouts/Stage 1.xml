@@ -1299,6 +1299,7 @@
                     </properties>
                     <instance-variables>
                         <isFriendly>false</isFriendly>
+                        <Direction>0</Direction>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -1356,6 +1357,7 @@
                         <InUse>false</InUse>
                         <Broken>false</Broken>
                         <PlayerDistanceY>0</PlayerDistanceY>
+                        <SpriteName>spr_Shield</SpriteName>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet2">
@@ -2756,6 +2758,13 @@
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3027,6 +3036,7 @@
                         <InUse>false</InUse>
                         <Broken>false</Broken>
                         <PlayerDistanceY>0</PlayerDistanceY>
+                        <SpriteName>spr_Shield2</SpriteName>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet2">
@@ -3076,6 +3086,7 @@
                         <InUse>false</InUse>
                         <Broken>false</Broken>
                         <PlayerDistanceY>0</PlayerDistanceY>
+                        <SpriteName>spr_Shield3</SpriteName>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet2">
@@ -3747,7 +3758,7 @@
                 <instance type="Lifebar" uid="242">
                     <properties>
                         <value>0</value>
-                        <maximum>10</maximum>
+                        <maximum>4</maximum>
                         <tooltip></tooltip>
                         <initial-visibility>Visible</initial-visibility>
                         <id-optional></id-optional>
@@ -3807,8 +3818,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>25</x>
-                        <y>37.382133484</y>
+                        <x>30.200000763</x>
+                        <y>37.381999969</y>
                         <z>0</z>
                         <width>60</width>
                         <height>30</height>
