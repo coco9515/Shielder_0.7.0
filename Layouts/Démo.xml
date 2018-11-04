@@ -1805,7 +1805,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
+                        <x>1248</x>
                         <y>256</y>
                         <z>0</z>
                         <width>40</width>
@@ -5030,10 +5030,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>108.107170105</x>
+                        <x>76.703674316</x>
                         <y>22.801103592</y>
                         <z>0</z>
-                        <width>144.880706787</width>
+                        <width>82.07371521</width>
                         <height>16.188610077</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -5054,9 +5054,9 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>50.713432312</x>
-                        <y>15.657073021</y>
+                        <y>15.657073975</y>
                         <z>0</z>
-                        <width>125.984970093</width>
+                        <width>64</width>
                         <height>14.380279541</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -5078,8 +5078,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>109</x>
-                        <y>37.57383728</y>
+                        <x>54.680686951</x>
+                        <y>38.847038269</y>
                         <z>0</z>
                         <width>110</width>
                         <height>30</height>
@@ -5105,8 +5105,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>30.200000763</x>
-                        <y>37.381999969</y>
+                        <x>123.059036255</x>
+                        <y>7.911750793</y>
                         <z>0</z>
                         <width>54.800384521</width>
                         <height>30</height>

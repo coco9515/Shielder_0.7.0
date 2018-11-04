@@ -65,7 +65,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -1446,7 +1446,7 @@
         <layout>Démo.xml</layout>
         <layout>Stage 1.xml</layout>
         <layout>Stage 2.xml</layout>
-        <layout>Hall d&apos;entrée.xml</layout>
+        <layout>Stage 3.xml</layout>
         <layout>Fin de la démo.xml</layout>
     </layout-folder>
     <event-folder>
