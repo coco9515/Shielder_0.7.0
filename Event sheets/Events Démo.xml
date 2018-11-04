@@ -1024,7 +1024,7 @@
                 <comment>Trigger de l&apos;état &quot;idle&quot; du joueur, si aucune action n&apos;est en train d&apos;être effectuée - réinitialise toutes les animations et positions du jouer / bouclier</comment>
                 <event-block sid="573481003065115">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="697705638322250" type="spr_Player">
+                        <condition disabled="1" id="-8" name="Is boolean instance variable set" sid="697705638322250" type="spr_Player">
                             <param id="0" name="Instance variable">canDash</param>
                         </condition>
                         <condition id="3" inverted="1" name="Is button down" sid="770814740459463" type="Gamepad">
@@ -1042,6 +1042,11 @@
                             <param id="0" name="Instance variable">playerState</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;throw&quot;</param>
+                        </condition>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="514528684795174" type="spr_Player">
+                            <param id="0" name="Instance variable">playerState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;dash&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1135,7 +1140,7 @@
                                 <condition id="-4" name="Trigger once while true" sid="365774610122140" type="System" />
                             </conditions>
                             <actions>
-                                <action breakpoint="1" id="-9" name="Set value" sid="725315621777761" type="System">
+                                <action id="-9" name="Set value" sid="725315621777761" type="System">
                                     <param id="0" name="Variable">FirstShield</param>
                                     <param id="1" name="Value">Shields.SpriteName</param>
                                 </action>
@@ -1542,7 +1547,7 @@
                 </event-group>
                 <event-group description="Le dash du joueur" sid="515423028842029" title="Player Control : Dash">
                     <sub-events>
-                        <comment>Dash sur X, pendant 0.7s à l&apos;appui, avec 0.1s de cooldown</comment>
+                        <comment>Dash sur X, pendant 0.8s à l&apos;appui, avec 0.5s de cooldown</comment>
                         <event-block sid="693042559730083">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="930779290570335" type="spr_Player">
@@ -1563,6 +1568,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
+                                        <comment>Applique les effets du dash</comment>
                                         <event-block sid="254826095659732">
                                             <conditions>
                                                 <condition id="-7" inverted="1" name="Compare instance variable" sid="227115726501585" type="spr_Player">
@@ -1601,11 +1607,11 @@
                                                     <param id="1" name="Value">0</param>
                                                 </action>
                                                 <action id="-13" name="Set boolean" sid="345930939082635" type="spr_Player">
-                                                    <param id="0" name="Instance variable">Invincible</param>
+                                                    <param id="0" name="Instance variable">DashInvincible</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
                                                 <action behavior="Timer" id="0" name="Start timer" sid="785681032651016" type="spr_Player">
-                                                    <param id="0" name="Duration">0.8</param>
+                                                    <param id="0" name="Duration">0.7</param>
                                                     <param id="1" name="Type">0</param>
                                                     <param id="2" name="Tag">&quot;Durée du dash&quot;</param>
                                                 </action>
@@ -1615,19 +1621,27 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="495610575349518">
+                        <comment>Retire les effets du dash à la fin du chrono</comment>
+                        <event-block any="1" sid="495610575349518">
                             <conditions>
                                 <condition behavior="Timer" id="0" name="On timer" sid="340690535504107" type="spr_Player">
                                     <param id="0" name="Tag">&quot;Durée du dash&quot;</param>
                                 </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="776728572620178" type="spr_Player">
+                                    <param id="0" name="Instance variable">ForceStopDashing</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="750119065327158" type="spr_Player">
-                                    <param id="0" name="Instance variable">playerState</param>
-                                    <param id="1" name="Value">&quot;idle&quot;</param>
-                                </action>
                                 <action id="-13" name="Set boolean" sid="143478134887722" type="spr_Player">
-                                    <param id="0" name="Instance variable">Invincible</param>
+                                    <param id="0" name="Instance variable">DashInvincible</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="884568672835674" type="spr_Player">
+                                    <param id="0" name="Instance variable">canDash</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="608511851229144" type="spr_Player">
+                                    <param id="0" name="Instance variable">ForceStopDashing</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action behavior="Platform" id="1" name="Set max speed" sid="113642029402272" type="spr_Player">
@@ -1648,21 +1662,83 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action behavior="Timer" id="0" name="Start timer" sid="646986143670907" type="spr_Player">
-                                    <param id="0" name="Duration">0.1</param>
+                                    <param id="0" name="Duration">0.5</param>
                                     <param id="1" name="Type">0</param>
                                     <param id="2" name="Tag">&quot;Cooldown du dash&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Redonne la possibilité de dash à la fin du chrono</comment>
                         <event-block sid="761804311706610">
                             <conditions>
                                 <condition behavior="Timer" id="0" name="On timer" sid="258740496698531" type="spr_Player">
                                     <param id="0" name="Tag">&quot;Cooldown du dash&quot;</param>
                                 </condition>
+                                <condition id="-7" name="Compare instance variable" sid="763431271314219" type="spr_Player">
+                                    <param id="0" name="Instance variable">playerState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;dash&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
+                                <action id="-10" name="Set value" sid="750119065327158" type="spr_Player">
+                                    <param id="0" name="Instance variable">playerState</param>
+                                    <param id="1" name="Value">&quot;idle&quot;</param>
+                                </action>
                                 <action id="-13" name="Set boolean" sid="285056878160474" type="spr_Player">
                                     <param id="0" name="Instance variable">canDash</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Arrête le dash si le joueur fonce dans le mur</comment>
+                        <event-block sid="265921763741641">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="728609364486321" type="Shields">
+                                    <param id="0" name="Object">tile_WallHitbox</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="378546400464017" type="spr_Player">
+                                    <param id="0" name="Instance variable">playerState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;dash&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Play" sid="454014472534745" type="Audio">
+                                    <param id="0" name="Audio file">Gobelin dégât</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="183454155435395" type="spr_Player">
+                                    <param id="0" name="Instance variable">playerState</param>
+                                    <param id="1" name="Value">&quot;idle&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="569803688247472" type="spr_Player">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="716180112183192" type="Shields">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="377600998917944" type="spr_Player">
+                                    <param id="0" name="Vector X">0</param>
+                                </action>
+                                <action behavior="Platform" id="0" name="Set ignoring input" sid="626137549079211" type="Ennemies">
+                                    <param id="0" name="Input">1</param>
+                                </action>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="782933001614972" type="Ennemies">
+                                    <param id="0" name="Max Speed">1000</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="290807951184225" type="Ennemies">
+                                    <param id="0" name="Vector Y">-200</param>
+                                </action>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="817484709843806" type="spr_Player">
+                                    <param id="0" name="Tag">&quot;Durée du dash&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="866645610469077" type="spr_Player">
+                                    <param id="0" name="Instance variable">ForceStopDashing</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
@@ -2599,10 +2675,10 @@
                                             <param id="0" name="Instance variable">canDash</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
-                                        <action behavior="Bullet2" id="0" name="Set speed" sid="536731947464085" type="Shields">
+                                        <action behavior="Bullet" id="0" name="Set speed" sid="536731947464085" type="Shields">
                                             <param id="0" name="Speed">400</param>
                                         </action>
-                                        <action behavior="Bullet2" id="5" name="Set enabled" sid="710696755553309" type="Shields">
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="710696755553309" type="Shields">
                                             <param id="0" name="State">1</param>
                                         </action>
                                         <action behavior="Timer" id="0" name="Start timer" sid="626053253167017" type="spr_Player">
@@ -2641,7 +2717,7 @@
                                                         <action id="-8" name="Set angle" sid="899933714863228" type="Shields">
                                                             <param id="0" name="Angle">270</param>
                                                         </action>
-                                                        <action behavior="Bullet2" id="3" name="Set angle of motion" sid="739553299995404" type="Shields">
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="739553299995404" type="Shields">
                                                             <param id="0" name="Angle">0</param>
                                                         </action>
                                                     </actions>
@@ -2658,7 +2734,7 @@
                                                         <action id="-8" name="Set angle" sid="214271840421138" type="Shields">
                                                             <param id="0" name="Angle">90</param>
                                                         </action>
-                                                        <action behavior="Bullet2" id="3" name="Set angle of motion" sid="482322632206289" type="Shields">
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="482322632206289" type="Shields">
                                                             <param id="0" name="Angle">180</param>
                                                         </action>
                                                     </actions>
@@ -2684,7 +2760,7 @@
                                                         <action id="-8" name="Set angle" sid="112255338300450" type="Shields">
                                                             <param id="0" name="Angle">270</param>
                                                         </action>
-                                                        <action behavior="Bullet2" id="3" name="Set angle of motion" sid="329776341636886" type="Shields">
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="329776341636886" type="Shields">
                                                             <param id="0" name="Angle">0</param>
                                                         </action>
                                                     </actions>
@@ -2701,7 +2777,7 @@
                                                         <action id="-8" name="Set angle" sid="357975615972357" type="Shields">
                                                             <param id="0" name="Angle">225</param>
                                                         </action>
-                                                        <action behavior="Bullet2" id="3" name="Set angle of motion" sid="670966207437951" type="Shields">
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="670966207437951" type="Shields">
                                                             <param id="0" name="Angle">315</param>
                                                         </action>
                                                     </actions>
@@ -2718,7 +2794,7 @@
                                                         <action id="-8" name="Set angle" sid="260627814978731" type="Shields">
                                                             <param id="0" name="Angle">315</param>
                                                         </action>
-                                                        <action behavior="Bullet2" id="3" name="Set angle of motion" sid="160582515194312" type="Shields">
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="160582515194312" type="Shields">
                                                             <param id="0" name="Angle">45</param>
                                                         </action>
                                                     </actions>
@@ -2735,7 +2811,7 @@
                                                         <action id="-8" name="Set angle" sid="985482057822006" type="Shields">
                                                             <param id="0" name="Angle">90</param>
                                                         </action>
-                                                        <action behavior="Bullet2" id="3" name="Set angle of motion" sid="929067750644200" type="Shields">
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="929067750644200" type="Shields">
                                                             <param id="0" name="Angle">180</param>
                                                         </action>
                                                     </actions>
@@ -2752,7 +2828,7 @@
                                                         <action id="-8" name="Set angle" sid="445542336372602" type="Shields">
                                                             <param id="0" name="Angle">135</param>
                                                         </action>
-                                                        <action behavior="Bullet2" id="3" name="Set angle of motion" sid="652758381414468" type="Shields">
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="652758381414468" type="Shields">
                                                             <param id="0" name="Angle">225</param>
                                                         </action>
                                                     </actions>
@@ -2769,7 +2845,7 @@
                                                         <action id="-8" name="Set angle" sid="723491240123720" type="Shields">
                                                             <param id="0" name="Angle">45</param>
                                                         </action>
-                                                        <action behavior="Bullet2" id="3" name="Set angle of motion" sid="588776490987253" type="Shields">
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="588776490987253" type="Shields">
                                                             <param id="0" name="Angle">135</param>
                                                         </action>
                                                     </actions>
@@ -2786,7 +2862,7 @@
                                                         <action id="-8" name="Set angle" sid="841022257099393" type="Shields">
                                                             <param id="0" name="Angle">180</param>
                                                         </action>
-                                                        <action behavior="Bullet2" id="3" name="Set angle of motion" sid="627795622275471" type="Shields">
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="627795622275471" type="Shields">
                                                             <param id="0" name="Angle">270</param>
                                                         </action>
                                                     </actions>
@@ -2803,7 +2879,7 @@
                                                         <action id="-8" name="Set angle" sid="376051319696161" type="Shields">
                                                             <param id="0" name="Angle">0</param>
                                                         </action>
-                                                        <action behavior="Bullet2" id="3" name="Set angle of motion" sid="850574354324698" type="Shields">
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="850574354324698" type="Shields">
                                                             <param id="0" name="Angle">90</param>
                                                         </action>
                                                     </actions>
@@ -2827,13 +2903,13 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Bullet2" id="2" name="Set gravity" sid="901377894705434" type="Shields">
+                                        <action behavior="Bullet" id="2" name="Set gravity" sid="901377894705434" type="Shields">
                                             <param id="0" name="Gravity">0</param>
                                         </action>
-                                        <action behavior="Bullet2" id="5" name="Set enabled" sid="457537314774680" type="Shields">
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="457537314774680" type="Shields">
                                             <param id="0" name="State">0</param>
                                         </action>
-                                        <action behavior="Solid2" id="0" name="Set enabled" sid="323146054976568" type="Shields">
+                                        <action behavior="Solid" id="0" name="Set enabled" sid="323146054976568" type="Shields">
                                             <param id="0" name="State">0</param>
                                         </action>
                                         <action id="-13" name="Set boolean" sid="955417692330200" type="Shields">
@@ -2938,13 +3014,13 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Bullet2" id="2" name="Set gravity" sid="757134917661520" type="Shields">
+                                        <action behavior="Bullet" id="2" name="Set gravity" sid="757134917661520" type="Shields">
                                             <param id="0" name="Gravity">0</param>
                                         </action>
-                                        <action behavior="Bullet2" id="5" name="Set enabled" sid="140169278098233" type="Shields">
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="140169278098233" type="Shields">
                                             <param id="0" name="State">0</param>
                                         </action>
-                                        <action behavior="Solid2" id="0" name="Set enabled" sid="705447484300392" type="Shields">
+                                        <action behavior="Solid" id="0" name="Set enabled" sid="705447484300392" type="Shields">
                                             <param id="0" name="State">0</param>
                                         </action>
                                         <action id="-13" name="Set boolean" sid="897593480356819" type="Shields">
@@ -3052,10 +3128,10 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Bullet2" id="5" name="Set enabled" sid="974791154264192" type="Shields">
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="974791154264192" type="Shields">
                                     <param id="0" name="State">0</param>
                                 </action>
-                                <action behavior="Solid2" id="0" name="Set enabled" sid="706216273956930" type="Shields">
+                                <action behavior="Solid" id="0" name="Set enabled" sid="706216273956930" type="Shields">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -3109,10 +3185,10 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Bullet2" id="5" name="Set enabled" sid="839470237632463" type="Shields">
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="839470237632463" type="Shields">
                                     <param id="0" name="State">0</param>
                                 </action>
-                                <action behavior="Solid2" id="0" name="Set enabled" sid="720752806811246" type="Shields">
+                                <action behavior="Solid" id="0" name="Set enabled" sid="720752806811246" type="Shields">
                                     <param id="0" name="State">1</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="403823124234124" type="Shields">
@@ -3134,10 +3210,10 @@
                                         <condition behavior="Solid" id="0" inverted="1" name="Is enabled" sid="354483344254703" type="tile_porte" />
                                     </conditions>
                                     <actions>
-                                        <action behavior="Bullet2" id="5" name="Set enabled" sid="288966140221032" type="Shields">
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="288966140221032" type="Shields">
                                             <param id="0" name="State">1</param>
                                         </action>
-                                        <action behavior="Solid2" id="0" name="Set enabled" sid="224699026952903" type="Shields">
+                                        <action behavior="Solid" id="0" name="Set enabled" sid="224699026952903" type="Shields">
                                             <param id="0" name="State">0</param>
                                         </action>
                                         <action id="-13" name="Set boolean" sid="559361460834991" type="Shields">
@@ -3154,25 +3230,37 @@
                                 <condition id="0" name="On collision with another object" sid="305951230759021" type="Shields">
                                     <param id="0" name="Object">Interactif</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="912079434073031" type="spr_Player">
-                                    <param id="0" name="Instance variable">playerState</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;throw&quot;</param>
-                                </condition>
                             </conditions>
-                            <actions>
-                                <action behavior="Bullet2" id="2" name="Set gravity" sid="284315356205771" type="Shields">
-                                    <param id="0" name="Gravity">2500</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="622700626777604" type="Shields">
-                                    <param id="0" name="Instance variable">OnGround</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="463021971728901" type="Interactif">
-                                    <param id="0" name="Instance variable">IsTriggered</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="863347013205634">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="912079434073031" type="spr_Player">
+                                            <param id="0" name="Instance variable">playerState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;throw&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="296466252192379" type="spr_Player">
+                                            <param id="0" name="Instance variable">playerState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;dash&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="2" name="Set gravity" sid="284315356205771" type="Shields">
+                                            <param id="0" name="Gravity">2500</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="622700626777604" type="Shields">
+                                            <param id="0" name="Instance variable">OnGround</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="463021971728901" type="Interactif">
+                                            <param id="0" name="Instance variable">IsTriggered</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Animation du levier tant qu&apos;il n&apos;est pas activé</comment>
                         <event-block sid="823123331750717">
@@ -3241,23 +3329,37 @@
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="-9" name="Destroy" sid="708453374150284" type="spr_Porte" />
-                                        <action id="-16" name="Set opacity" sid="895584747633633" type="tile_porte">
-                                            <param id="0" name="Opacity">30</param>
-                                        </action>
-                                        <action behavior="Solid" id="0" name="Set enabled" sid="311688930145710" type="tile_porte">
-                                            <param id="0" name="State">0</param>
-                                        </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="287712962217821">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="348097634642063" type="tile_porte">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="X co-ordinate">spr_porte.X</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Set opacity" sid="895584747633633" type="tile_porte">
+                                                    <param id="0" name="Opacity">30</param>
+                                                </action>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="311688930145710" type="tile_porte">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Le levier active le chandelier qui tombe</comment>
+                        <comment>Le chandelier tombe quand activé</comment>
                         <event-block sid="778450250302312">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="697193257458804" type="spr_chandelier">
                                     <param id="0" name="Instance variable">IsTriggered</param>
                                 </condition>
-                                <condition id="-4" name="Trigger once while true" sid="130008162623188" type="System" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="192679061325458" type="spr_chandelier">
+                                    <param id="0" name="Instance variable">HasBeenActivated</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-26" name="Move to layer" sid="907457441429321" type="spr_chandelier">
@@ -3265,6 +3367,27 @@
                                 </action>
                                 <action behavior="Physics" id="27" name="Set enabled" sid="885274323036405" type="spr_chandelier">
                                     <param id="0" name="Mode">1</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="514729982206121" type="spr_chandelier">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Le chandelier s&apos;arrête sur le sol </comment>
+                        <event-block sid="121086102743869">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="201708717432154" type="spr_chandelier">
+                                    <param id="0" name="Object">tile_WallHitbox</param>
+                                </condition>
+                                <condition behavior="Physics" id="4" name="Is enabled" sid="647187111988978" type="spr_chandelier" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="776829488209161" type="spr_chandelier">
+                                    <param id="0" name="Instance variable">HasBeenActivated</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Physics" id="27" name="Set enabled" sid="639222281674392" type="spr_chandelier">
+                                    <param id="0" name="Mode">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3388,10 +3511,10 @@
                                 <action id="11" name="Set collisions enabled" sid="488541172211329" type="Shields">
                                     <param id="0" name="Collisions">1</param>
                                 </action>
-                                <action behavior="Bullet2" id="5" name="Set enabled" sid="547565585103513" type="Shields">
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="547565585103513" type="Shields">
                                     <param id="0" name="State">0</param>
                                 </action>
-                                <action behavior="Solid2" id="0" name="Set enabled" sid="891856581646934" type="Shields">
+                                <action behavior="Solid" id="0" name="Set enabled" sid="891856581646934" type="Shields">
                                     <param id="0" name="State">0</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="841336775311498" type="Shields">
@@ -3700,13 +3823,13 @@
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                         <action id="-9" name="Destroy" sid="655096067663847" type="spr_Arrow" />
-                                        <action behavior="Platform2" id="0" name="Set ignoring input" sid="297060661664497" type="Ennemies">
+                                        <action behavior="Platform" id="0" name="Set ignoring input" sid="297060661664497" type="Ennemies">
                                             <param id="0" name="Input">1</param>
                                         </action>
-                                        <action behavior="Platform2" id="1" name="Set max speed" sid="809647053049604" type="Ennemies">
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="809647053049604" type="Ennemies">
                                             <param id="0" name="Max Speed">600</param>
                                         </action>
-                                        <action behavior="Platform2" id="9" name="Set vector Y" sid="874592356871105" type="Ennemies">
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="874592356871105" type="Ennemies">
                                             <param id="0" name="Vector Y">-400</param>
                                         </action>
                                     </actions>
@@ -3719,16 +3842,16 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action behavior="Platform2" id="8" name="Set vector X" sid="696630482946662" type="Ennemies">
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="696630482946662" type="Ennemies">
                                                     <param id="0" name="Vector X">spr_Arrow.Bullet.Speed * 1.5</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="487299429021018" type="System">
                                                     <param id="0" name="Seconds">1.0</param>
                                                 </action>
-                                                <action behavior="Platform2" id="1" name="Set max speed" sid="142610017270148" type="Ennemies">
+                                                <action behavior="Platform" id="1" name="Set max speed" sid="142610017270148" type="Ennemies">
                                                     <param id="0" name="Max Speed">300</param>
                                                 </action>
-                                                <action behavior="Platform2" id="0" name="Set ignoring input" sid="328799495833465" type="Ennemies">
+                                                <action behavior="Platform" id="0" name="Set ignoring input" sid="328799495833465" type="Ennemies">
                                                     <param id="0" name="Input">0</param>
                                                 </action>
                                             </actions>
@@ -3738,16 +3861,16 @@
                                                 <condition id="-22" name="Else" sid="236361519654029" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action behavior="Platform2" id="8" name="Set vector X" sid="535480116239887" type="Ennemies">
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="535480116239887" type="Ennemies">
                                                     <param id="0" name="Vector X">-spr_Arrow.Bullet.Speed * 1.5</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="535498304253460" type="System">
                                                     <param id="0" name="Seconds">1.0</param>
                                                 </action>
-                                                <action behavior="Platform2" id="1" name="Set max speed" sid="371536537977971" type="Ennemies">
+                                                <action behavior="Platform" id="1" name="Set max speed" sid="371536537977971" type="Ennemies">
                                                     <param id="0" name="Max Speed">300</param>
                                                 </action>
-                                                <action behavior="Platform2" id="0" name="Set ignoring input" sid="566672816517135" type="Ennemies">
+                                                <action behavior="Platform" id="0" name="Set ignoring input" sid="566672816517135" type="Ennemies">
                                                     <param id="0" name="Input">0</param>
                                                 </action>
                                             </actions>
@@ -3768,6 +3891,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
+                                <comment>Ne détruit pas la fireball si elle touche la tourelle, à moins qu&apos;elle est renvoyé par le joueur</comment>
                                 <event-block sid="871113771165112">
                                     <conditions>
                                         <condition id="1" name="Is overlapping another object" sid="628152834569419" type="spr_Fireball">
@@ -3775,6 +3899,21 @@
                                         </condition>
                                     </conditions>
                                     <actions />
+                                    <sub-events>
+                                        <event-block sid="724346737882929">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="626126285512998" type="spr_Fireball">
+                                                    <param id="0" name="Instance variable">isFriendly</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="832269119876842" type="System">
+                                                    <param id="0" name="Seconds">0.2</param>
+                                                </action>
+                                                <action id="-9" name="Destroy" sid="853312865667793" type="spr_Fireball" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <comment>Quand la fireball touche une porte ouverte, elle continue son chemin</comment>
                                 <event-block sid="844937099503944">
@@ -4010,7 +4149,7 @@
                     <sub-events>
                         <event-group description="Gobelin pour l&apos;instant mais tous les ennemis devraient être affecté." sid="842945329820558" title="Generic">
                             <sub-events>
-                                <comment>Orientation de l&apos;ennemi qui s&apos;inverse après le mur invisible</comment>
+                                <comment>Orientation de l&apos;ennemi d&apos;après sa position par rapport au mur invisible</comment>
                                 <event-block sid="507708789057704">
                                     <conditions>
                                         <condition id="0" name="On collision with another object" sid="301616515383007" type="Ennemies">
@@ -4019,32 +4158,26 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="895721810030055">
+                                        <event-block sid="830581070714493">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="851886886735161" type="Ennemies">
-                                                    <param id="0" name="Instance variable">SensMarche</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;gauche&quot;</param>
+                                                <condition id="-1" name="Compare X" sid="429592674071378" type="MurInvisiblePourMob">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="X co-ordinate">Ennemies.X</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-10" name="Set value" sid="498323610354713" type="Ennemies">
+                                                <action id="-10" name="Set value" sid="248358140861482" type="Ennemies">
                                                     <param id="0" name="Instance variable">SensMarche</param>
                                                     <param id="1" name="Value">&quot;droite&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="571466005315097">
+                                        <event-block sid="551917172070712">
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="693356184486720" type="System" />
-                                                <condition id="-7" name="Compare instance variable" sid="919992082589377" type="Ennemies">
-                                                    <param id="0" name="Instance variable">SensMarche</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;droite&quot;</param>
-                                                </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-10" name="Set value" sid="778995878394131" type="Ennemies">
+                                                <action id="-10" name="Set value" sid="416011117269707" type="Ennemies">
                                                     <param id="0" name="Instance variable">SensMarche</param>
                                                     <param id="1" name="Value">&quot;gauche&quot;</param>
                                                 </action>
@@ -4063,7 +4196,7 @@
                                         <condition id="-3" name="Is on-screen" sid="784027259306200" type="Ennemies" />
                                     </conditions>
                                     <actions>
-                                        <action behavior="Platform2" id="7" name="Simulate control" sid="834230371862227" type="Ennemies">
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="834230371862227" type="Ennemies">
                                             <param id="0" name="Control">0</param>
                                         </action>
                                         <action id="7" name="Set mirrored" sid="403785898306839" type="Ennemies">
@@ -4081,7 +4214,7 @@
                                         <condition id="-3" name="Is on-screen" sid="287517750887328" type="Ennemies" />
                                     </conditions>
                                     <actions>
-                                        <action behavior="Platform2" id="7" name="Simulate control" sid="583549159212448" type="Ennemies">
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="583549159212448" type="Ennemies">
                                             <param id="0" name="Control">1</param>
                                         </action>
                                         <action id="7" name="Set mirrored" sid="663753398042531" type="Ennemies">
@@ -4091,7 +4224,7 @@
                                 </event-block>
                                 <event-block sid="529761777799338">
                                     <conditions>
-                                        <condition behavior="Platform2" id="10" name="Is by wall" sid="850818306648342" type="Ennemies">
+                                        <condition behavior="Platform" id="10" name="Is by wall" sid="850818306648342" type="Ennemies">
                                             <param id="0" name="Side">0</param>
                                         </condition>
                                     </conditions>
@@ -4104,7 +4237,7 @@
                                 </event-block>
                                 <event-block sid="633287171444940">
                                     <conditions>
-                                        <condition behavior="Platform2" id="10" name="Is by wall" sid="928248642536803" type="Ennemies">
+                                        <condition behavior="Platform" id="10" name="Is by wall" sid="928248642536803" type="Ennemies">
                                             <param id="0" name="Side">1</param>
                                         </condition>
                                     </conditions>
@@ -4141,14 +4274,18 @@
                                         <action behavior="Platform" id="8" name="Set vector X" sid="559900779998282" type="spr_Player">
                                             <param id="0" name="Vector X">0</param>
                                         </action>
-                                        <action behavior="Platform2" id="0" name="Set ignoring input" sid="243807638481625" type="Ennemies">
+                                        <action behavior="Platform" id="0" name="Set ignoring input" sid="243807638481625" type="Ennemies">
                                             <param id="0" name="Input">1</param>
                                         </action>
-                                        <action behavior="Platform2" id="1" name="Set max speed" sid="990153030083499" type="Ennemies">
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="990153030083499" type="Ennemies">
                                             <param id="0" name="Max Speed">1000</param>
                                         </action>
-                                        <action behavior="Platform2" id="9" name="Set vector Y" sid="885620117944164" type="Ennemies">
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="885620117944164" type="Ennemies">
                                             <param id="0" name="Vector Y">-200</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="267894197546594" type="spr_Player">
+                                            <param id="0" name="Instance variable">ForceStopDashing</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -4160,16 +4297,16 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action behavior="Platform2" id="8" name="Set vector X" sid="619599035466404" type="Ennemies">
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="619599035466404" type="Ennemies">
                                                     <param id="0" name="Vector X">900</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="442509922214706" type="System">
                                                     <param id="0" name="Seconds">1.0</param>
                                                 </action>
-                                                <action behavior="Platform2" id="1" name="Set max speed" sid="663704310489892" type="Ennemies">
+                                                <action behavior="Platform" id="1" name="Set max speed" sid="663704310489892" type="Ennemies">
                                                     <param id="0" name="Max Speed">50</param>
                                                 </action>
-                                                <action behavior="Platform2" id="0" name="Set ignoring input" sid="583415324497096" type="Ennemies">
+                                                <action behavior="Platform" id="0" name="Set ignoring input" sid="583415324497096" type="Ennemies">
                                                     <param id="0" name="Input">0</param>
                                                 </action>
                                             </actions>
@@ -4179,16 +4316,16 @@
                                                 <condition id="-22" name="Else" sid="429479019049028" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action behavior="Platform2" id="8" name="Set vector X" sid="988132314480521" type="Ennemies">
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="988132314480521" type="Ennemies">
                                                     <param id="0" name="Vector X">-900</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="411789956775555" type="System">
                                                     <param id="0" name="Seconds">1.0</param>
                                                 </action>
-                                                <action behavior="Platform2" id="1" name="Set max speed" sid="366174329397592" type="Ennemies">
+                                                <action behavior="Platform" id="1" name="Set max speed" sid="366174329397592" type="Ennemies">
                                                     <param id="0" name="Max Speed">50</param>
                                                 </action>
-                                                <action behavior="Platform2" id="0" name="Set ignoring input" sid="322086642577931" type="Ennemies">
+                                                <action behavior="Platform" id="0" name="Set ignoring input" sid="322086642577931" type="Ennemies">
                                                     <param id="0" name="Input">0</param>
                                                 </action>
                                             </actions>
@@ -4216,13 +4353,13 @@
                                             <param id="3" name="Volume">-5</param>
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
-                                        <action behavior="Platform2" id="0" name="Set ignoring input" sid="924079168916410" type="Ennemies">
+                                        <action behavior="Platform" id="0" name="Set ignoring input" sid="924079168916410" type="Ennemies">
                                             <param id="0" name="Input">1</param>
                                         </action>
-                                        <action behavior="Platform2" id="1" name="Set max speed" sid="809212720532149" type="Ennemies">
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="809212720532149" type="Ennemies">
                                             <param id="0" name="Max Speed">1000</param>
                                         </action>
-                                        <action behavior="Platform2" id="9" name="Set vector Y" sid="224682886653088" type="Ennemies">
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="224682886653088" type="Ennemies">
                                             <param id="0" name="Vector Y">-200</param>
                                         </action>
                                     </actions>
@@ -4235,16 +4372,16 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action behavior="Platform2" id="8" name="Set vector X" sid="527089063182960" type="Ennemies">
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="527089063182960" type="Ennemies">
                                                     <param id="0" name="Vector X">900</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="412505647222754" type="System">
                                                     <param id="0" name="Seconds">1.0</param>
                                                 </action>
-                                                <action behavior="Platform2" id="1" name="Set max speed" sid="286882639006121" type="Ennemies">
+                                                <action behavior="Platform" id="1" name="Set max speed" sid="286882639006121" type="Ennemies">
                                                     <param id="0" name="Max Speed">50</param>
                                                 </action>
-                                                <action behavior="Platform2" id="0" name="Set ignoring input" sid="128480838013022" type="Ennemies">
+                                                <action behavior="Platform" id="0" name="Set ignoring input" sid="128480838013022" type="Ennemies">
                                                     <param id="0" name="Input">0</param>
                                                 </action>
                                             </actions>
@@ -4254,23 +4391,23 @@
                                                 <condition id="-22" name="Else" sid="221412894318127" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action behavior="Platform2" id="8" name="Set vector X" sid="860016059436416" type="Ennemies">
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="860016059436416" type="Ennemies">
                                                     <param id="0" name="Vector X">-900</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="512028490351818" type="System">
                                                     <param id="0" name="Seconds">1.0</param>
                                                 </action>
-                                                <action behavior="Platform2" id="1" name="Set max speed" sid="664664438002211" type="Ennemies">
+                                                <action behavior="Platform" id="1" name="Set max speed" sid="664664438002211" type="Ennemies">
                                                     <param id="0" name="Max Speed">50</param>
                                                 </action>
-                                                <action behavior="Platform2" id="0" name="Set ignoring input" sid="147838353788008" type="Ennemies">
+                                                <action behavior="Platform" id="0" name="Set ignoring input" sid="147838353788008" type="Ennemies">
                                                     <param id="0" name="Input">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <comment>L&apos;ennemi est repoussé quand il se prend le bouclier lors d&apos;un lancer</comment>
+                                <comment>L&apos;ennemi est repoussé quand il se prend le bouclier lors d&apos;un lancer et le bouclier rebondit et ressent la gravité</comment>
                                 <event-block sid="794919798918362">
                                     <conditions>
                                         <condition id="0" name="On collision with another object" sid="250551884873116" type="Ennemies">
@@ -4281,7 +4418,7 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;throw&quot;</param>
                                         </condition>
-                                        <condition behavior="Bullet2" id="0" name="Compare speed" sid="891173153178041" type="Shields">
+                                        <condition behavior="Bullet" id="0" name="Compare speed" sid="891173153178041" type="Shields">
                                             <param id="0" name="Comparison">4</param>
                                             <param id="1" name="Speed">100</param>
                                         </condition>
@@ -4297,47 +4434,34 @@
                                             <param id="0" name="Instance variable">OnGround</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action behavior="Bullet2" id="2" name="Set gravity" sid="267383191608614" type="Shields">
+                                        <action behavior="Bullet" id="2" name="Set gravity" sid="267383191608614" type="Shields">
                                             <param id="0" name="Gravity">2500</param>
                                         </action>
-                                        <action behavior="Platform2" id="0" name="Set ignoring input" sid="423063782295802" type="Ennemies">
+                                        <action behavior="Bullet" id="4" name="Bounce off object" sid="169134752008691" type="Shields">
+                                            <param id="0" name="Object">Ennemies</param>
+                                        </action>
+                                        <action behavior="Platform" id="0" name="Set ignoring input" sid="423063782295802" type="Ennemies">
                                             <param id="0" name="Input">1</param>
                                         </action>
-                                        <action behavior="Platform2" id="1" name="Set max speed" sid="650191848376634" type="Ennemies">
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="650191848376634" type="Ennemies">
                                             <param id="0" name="Max Speed">1000</param>
                                         </action>
-                                        <action behavior="Platform2" id="9" name="Set vector Y" sid="578974384159022" type="Ennemies">
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="578974384159022" type="Ennemies">
                                             <param id="0" name="Vector Y">-200</param>
                                         </action>
-                                        <action behavior="Platform2" id="8" name="Set vector X" sid="716295871572549" type="Ennemies">
-                                            <param id="0" name="Vector X">Shields.Bullet2.Speed *0.75</param>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="716295871572549" type="Ennemies">
+                                            <param id="0" name="Vector X">Shields.Bullet.Speed *0.75</param>
                                         </action>
                                         <action id="-16" name="Wait" sid="443635908808031" type="System">
                                             <param id="0" name="Seconds">1.0</param>
                                         </action>
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="670007730694528" type="Ennemies">
+                                            <param id="0" name="Max Speed">50</param>
+                                        </action>
+                                        <action behavior="Platform" id="0" name="Set ignoring input" sid="724566504629673" type="Ennemies">
+                                            <param id="0" name="Input">0</param>
+                                        </action>
                                     </actions>
-                                    <sub-events>
-                                        <event-block sid="148188668341483">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="374738089270668" type="spr_Player">
-                                                    <param id="0" name="Instance variable">playerState</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;throw&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action behavior="Bullet2" id="2" name="Set gravity" sid="338594526310871" type="Shields">
-                                                    <param id="0" name="Gravity">0</param>
-                                                </action>
-                                                <action behavior="Platform2" id="1" name="Set max speed" sid="670007730694528" type="Ennemies">
-                                                    <param id="0" name="Max Speed">50</param>
-                                                </action>
-                                                <action behavior="Platform2" id="0" name="Set ignoring input" sid="724566504629673" type="Ennemies">
-                                                    <param id="0" name="Input">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
                                 </event-block>
                                 <comment>L&apos;ennemi qui se prend un chandelier meurt</comment>
                                 <event-block sid="865805183640821">
@@ -4345,6 +4469,7 @@
                                         <condition id="0" name="On collision with another object" sid="244368860196250" type="Ennemies">
                                             <param id="0" name="Object">spr_chandelier</param>
                                         </condition>
+                                        <condition behavior="Physics" id="4" name="Is enabled" sid="401395889762593" type="spr_chandelier" />
                                     </conditions>
                                     <actions>
                                         <action disabled="1" id="0" name="Play" sid="605979378990381" type="Audio">
@@ -4353,7 +4478,6 @@
                                             <param id="3" name="Volume">-5</param>
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
-                                        <action id="-9" name="Destroy" sid="182171322733204" type="spr_chandelier" />
                                         <action id="-10" name="Set value" sid="126227361750903" type="Ennemies">
                                             <param id="0" name="Instance variable">PV</param>
                                             <param id="1" name="Value">0</param>
@@ -4373,6 +4497,9 @@
                                         </condition>
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="921432240242443" type="spr_Player">
                                             <param id="0" name="Instance variable">Invincible</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="182422485310992" type="spr_Player">
+                                            <param id="0" name="Instance variable">DashInvincible</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -4486,6 +4613,10 @@
                                         </action>
                                         <action id="11" name="Set collisions enabled" sid="478342911343523" type="spr_Arrow">
                                             <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="522659598189748" type="spr_GoblinArcher">
+                                            <param id="0" name="Instance variable">SensMarche</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
                                         </action>
                                         <action disabled="1" id="25" name="Play at object" sid="499659163042338" type="Audio">
                                             <param id="0" name="Audio file">Arc - Tir</param>
@@ -4616,10 +4747,10 @@
                                 <action id="11" name="Set collisions enabled" sid="874619216454457" type="Shields">
                                     <param id="0" name="Collisions">0</param>
                                 </action>
-                                <action behavior="Bullet2" id="5" name="Set enabled" sid="629991852807374" type="Shields">
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="629991852807374" type="Shields">
                                     <param id="0" name="State">0</param>
                                 </action>
-                                <action behavior="Solid2" id="0" name="Set enabled" sid="822096618896157" type="Shields">
+                                <action behavior="Solid" id="0" name="Set enabled" sid="822096618896157" type="Shields">
                                     <param id="0" name="State">0</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="294969034575750" type="Shields">

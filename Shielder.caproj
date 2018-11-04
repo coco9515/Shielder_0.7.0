@@ -2,7 +2,7 @@
 <c2project>
     <name>Shielder</name>
     <description></description>
-    <version>0.8.0</version>
+    <version>0.8.1</version>
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
@@ -984,9 +984,6 @@
                     <behavior-type name="Sine" sid="260848201899799">
                         <behavior id="Sin" />
                     </behavior-type>
-                    <behavior-type name="Bullet" sid="172524341920753">
-                        <behavior id="Bullet" />
-                    </behavior-type>
                     <behavior-type name="Physics" sid="446028025402401">
                         <behavior id="Physics" />
                     </behavior-type>
@@ -1096,6 +1093,8 @@
                     <instance-variable comment="Compte le nombre de dégâts subit" name="Blessures" sid="109915060907728" type="number" />
                     <instance-variable comment="Rend le joueur invincible" name="Invincible" sid="422262055263968" type="boolean" />
                     <instance-variable comment="Combien de bouclier le joueur a en stock ?" name="QuantityShield" sid="144486089824002" type="number" />
+                    <instance-variable comment="Force the stop of the dash" name="ForceStopDashing" sid="647108499184579" type="boolean" />
+                    <instance-variable comment="Invincibilité durant le dash - uniquement pour les ennemies, pas les pièges" name="DashInvincible" sid="879202033820451" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="754739628599200">
@@ -1368,7 +1367,7 @@
                 <instance-variable comment="Quantité de dégâts qu&apos;il inflige au contact" name="Dégâts" sid="557002760894863" type="number" />
             </instance-variables>
             <behaviors>
-                <behavior-type name="Platform2" sid="497418359468558">
+                <behavior-type name="Platform" sid="497418359468558">
                     <behavior id="Platform" />
                 </behavior-type>
                 <behavior-type name="ShadowCaster" sid="974776196446421">
@@ -1414,10 +1413,10 @@
                 <instance-variable comment="Le nom du sprite" name="SpriteName" sid="959206953116594" type="string" />
             </instance-variables>
             <behaviors>
-                <behavior-type name="Bullet2" sid="510984963117309">
+                <behavior-type name="Bullet" sid="510984963117309">
                     <behavior id="Bullet" />
                 </behavior-type>
-                <behavior-type name="Solid2" sid="808596352320673">
+                <behavior-type name="Solid" sid="808596352320673">
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>

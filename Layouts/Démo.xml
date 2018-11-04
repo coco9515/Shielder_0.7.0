@@ -1771,6 +1771,8 @@
                         <Blessures>0</Blessures>
                         <Invincible>false</Invincible>
                         <QuantityShield>2</QuantityShield>
+                        <ForceStopDashing>false</ForceStopDashing>
+                        <DashInvincible>false</DashInvincible>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1834,7 +1836,7 @@
                         <SpriteName>spr_Shield</SpriteName>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Bullet2">
+                        <behavior-instance type="Bullet">
                             <properties>
                                 <speed>400</speed>
                                 <acceleration>0</acceleration>
@@ -1844,7 +1846,7 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Solid2">
+                        <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
                             </properties>
@@ -1878,7 +1880,7 @@
                         <Dégâts>1</Dégâts>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Platform2">
+                        <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
@@ -1929,7 +1931,7 @@
                         <Dégâts>1</Dégâts>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Platform2">
+                        <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
@@ -1955,8 +1957,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1664</x>
-                        <y>263</y>
+                        <x>1632</x>
+                        <y>256</y>
                         <z>0</z>
                         <width>51.343391418</width>
                         <height>39.888290405</height>
@@ -2606,7 +2608,7 @@
                         <Dégâts>1</Dégâts>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Platform2">
+                        <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
@@ -3007,7 +3009,7 @@
                         <SpriteName>spr_Shield2</SpriteName>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Bullet2">
+                        <behavior-instance type="Bullet">
                             <properties>
                                 <speed>400</speed>
                                 <acceleration>0</acceleration>
@@ -3017,7 +3019,7 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Solid2">
+                        <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
                             </properties>
@@ -3057,7 +3059,7 @@
                         <SpriteName>spr_Shield3</SpriteName>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Bullet2">
+                        <behavior-instance type="Bullet">
                             <properties>
                                 <speed>400</speed>
                                 <acceleration>0</acceleration>
@@ -3067,7 +3069,7 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Solid2">
+                        <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
                             </properties>
@@ -4537,16 +4539,6 @@
                                 <magnitude-random>0.5</magnitude-random>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>0</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>2500</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
-                                <initial-state>Disabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="Physics">
                             <properties>
                                 <immovable>No</immovable>
@@ -4601,16 +4593,6 @@
                                 <period-offset-random>0</period-offset-random>
                                 <magnitude>1</magnitude>
                                 <magnitude-random>0.5</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>0</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>2500</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
-                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Physics">
@@ -4669,16 +4651,6 @@
                                 <magnitude-random>0.5</magnitude-random>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>0</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>2500</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
-                                <initial-state>Disabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="Physics">
                             <properties>
                                 <immovable>No</immovable>
@@ -4733,16 +4705,6 @@
                                 <period-offset-random>0</period-offset-random>
                                 <magnitude>1</magnitude>
                                 <magnitude-random>0.5</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>0</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>2500</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
-                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Physics">

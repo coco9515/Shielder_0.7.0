@@ -10,14 +10,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">Main menu</layout>
-        <layout active="1" order="3">Démo</layout>
-        <layout order="5">Stage 1</layout>
-        <layout order="6">Stage 2</layout>
-        <layout order="7">Hall d&apos;entrée</layout>
-        <layout order="8">Fin de la démo</layout>
-        <event-sheet order="2">Events Menu</event-sheet>
-        <event-sheet order="4">Events Démo</event-sheet>
+        <layout order="0">Main menu</layout>
+        <layout active="1" order="2">Démo</layout>
+        <layout order="4">Stage 1</layout>
+        <layout order="5">Stage 2</layout>
+        <layout order="6">Hall d&apos;entrée</layout>
+        <layout order="7">Fin de la démo</layout>
+        <event-sheet order="1">Events Menu</event-sheet>
+        <event-sheet order="3">Events Démo</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -35,7 +35,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/HUD/" />
-        <folder expanded="0" path="object-folder/Dangers/" />
+        <folder expanded="1" path="object-folder/Dangers/" />
         <folder expanded="0" path="object-folder/Dangers/Ennemis/" />
         <folder expanded="0" path="object-folder/Dangers/Pièges/" />
         <folder expanded="0" path="object-folder/Décor/" />

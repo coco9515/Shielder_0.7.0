@@ -200,7 +200,7 @@
                         <SpriteName>spr_Shield</SpriteName>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Bullet2">
+                        <behavior-instance type="Bullet">
                             <properties>
                                 <speed>400</speed>
                                 <acceleration>0</acceleration>
@@ -210,7 +210,7 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Solid2">
+                        <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
                             </properties>
@@ -250,7 +250,7 @@
                         <SpriteName>spr_Shield</SpriteName>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Bullet2">
+                        <behavior-instance type="Bullet">
                             <properties>
                                 <speed>400</speed>
                                 <acceleration>0</acceleration>
@@ -260,7 +260,7 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Solid2">
+                        <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
                             </properties>
