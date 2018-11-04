@@ -4635,48 +4635,72 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <comment>Chaque fois que la frame ou le gobelin décoche passe, un projectile spawn</comment>
-                                <event-block sid="372291750154197">
+                                <comment>Quand il voit le joueur, il lance l&apos;animation de tir</comment>
+                                <event-block sid="439178511833011">
                                     <conditions>
-                                        <condition id="3" name="Compare frame" sid="642728183396686" type="spr_GoblinArcher">
-                                            <param id="0" name="Comparison">0</param>
-                                            <param id="1" name="Number">12</param>
-                                        </condition>
                                         <condition id="-3" name="Is on-screen" sid="394620179870444" type="spr_GoblinArcher" />
-                                        <condition id="-4" name="Trigger once while true" sid="745436695937473" type="System" />
+                                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="681571394299807" type="spr_GoblinArcher">
+                                            <param id="0" name="Object">spr_Player</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="585331691869312" type="spr_GoblinArcher">
-                                            <param id="0" name="Object">spr_Arrow</param>
-                                            <param id="1" name="Layer">0</param>
-                                            <param id="2" name="Image point">1</param>
+                                        <action id="4" name="Set animation" sid="895326902678914" type="spr_GoblinArcher">
+                                            <param id="0" name="Animation">&quot;GobelinQuiTire&quot;</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="762154245277060" type="spr_Arrow">
-                                            <param id="0" name="Angle">spr_GoblinArcher.Angle</param>
-                                        </action>
-                                        <action id="11" name="Set collisions enabled" sid="472715969019236" type="spr_Arrow">
-                                            <param id="0" name="Collisions">0</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="593707877331254" type="System">
-                                            <param id="0" name="Seconds">0.1</param>
-                                        </action>
-                                        <action id="11" name="Set collisions enabled" sid="478342911343523" type="spr_Arrow">
-                                            <param id="0" name="Collisions">1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="522659598189748" type="spr_GoblinArcher">
-                                            <param id="0" name="Instance variable">SensMarche</param>
-                                            <param id="1" name="Value">&quot;&quot;</param>
-                                        </action>
-                                        <action disabled="1" id="25" name="Play at object" sid="499659163042338" type="Audio">
-                                            <param id="0" name="Audio file">Arc - Tir</param>
-                                            <param id="1" name="Loop">0</param>
-                                            <param id="2" name="Volume">-10</param>
-                                            <param id="3" name="Object">spr_Arrow</param>
-                                            <param id="4" name="Inner angle">360</param>
-                                            <param id="5" name="Outer angle">360</param>
-                                            <param id="6" name="Outer gain">0</param>
-                                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
-                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <comment>Chaque fois que la frame ou le gobelin décoche passe, un projectile spawn</comment>
+                                        <event-block sid="372291750154197">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="642728183396686" type="spr_GoblinArcher">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">12</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="745436695937473" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="585331691869312" type="spr_GoblinArcher">
+                                                    <param id="0" name="Object">spr_Arrow</param>
+                                                    <param id="1" name="Layer">0</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="762154245277060" type="spr_Arrow">
+                                                    <param id="0" name="Angle">spr_GoblinArcher.Angle</param>
+                                                </action>
+                                                <action id="11" name="Set collisions enabled" sid="472715969019236" type="spr_Arrow">
+                                                    <param id="0" name="Collisions">0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="593707877331254" type="System">
+                                                    <param id="0" name="Seconds">0.1</param>
+                                                </action>
+                                                <action id="11" name="Set collisions enabled" sid="478342911343523" type="spr_Arrow">
+                                                    <param id="0" name="Collisions">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="522659598189748" type="spr_GoblinArcher">
+                                                    <param id="0" name="Instance variable">SensMarche</param>
+                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                </action>
+                                                <action disabled="1" id="25" name="Play at object" sid="499659163042338" type="Audio">
+                                                    <param id="0" name="Audio file">Arc - Tir</param>
+                                                    <param id="1" name="Loop">0</param>
+                                                    <param id="2" name="Volume">-10</param>
+                                                    <param id="3" name="Object">spr_Arrow</param>
+                                                    <param id="4" name="Inner angle">360</param>
+                                                    <param id="5" name="Outer angle">360</param>
+                                                    <param id="6" name="Outer gain">0</param>
+                                                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="100536099415618">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="118045263053533" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="2" name="Stop" sid="460452260773456" type="spr_GoblinArcher" />
                                     </actions>
                                 </event-block>
                             </sub-events>
