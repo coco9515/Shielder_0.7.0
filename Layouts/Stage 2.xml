@@ -1442,6 +1442,14 @@
                                 <tag></tag>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>1000</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
@@ -1763,6 +1771,14 @@
                                 <initial-state>Enabled</initial-state>
                                 <height>100</height>
                                 <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>1000</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -2312,6 +2328,14 @@
                                 <initial-state>Enabled</initial-state>
                                 <height>100</height>
                                 <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>1000</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -2904,6 +2928,14 @@
                                 <initial-state>Enabled</initial-state>
                                 <height>100</height>
                                 <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>1000</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="DestroyOutsideLayout" />

@@ -4185,70 +4185,117 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <comment>Déplacement ennemis</comment>
-                                <event-block sid="219709631658268">
+                                <event-block sid="589490988255520">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="875347407409436" type="Ennemies">
-                                            <param id="0" name="Instance variable">SensMarche</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;gauche&quot;</param>
-                                        </condition>
                                         <condition id="-3" name="Is on-screen" sid="941749051593744" type="spr_GoblinWalk" />
                                     </conditions>
-                                    <actions>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="834230371862227" type="Ennemies">
-                                            <param id="0" name="Control">0</param>
-                                        </action>
-                                        <action id="7" name="Set mirrored" sid="403785898306839" type="Ennemies">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="353071507512297">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="502953051487995" type="Ennemies">
-                                            <param id="0" name="Instance variable">SensMarche</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;droite&quot;</param>
-                                        </condition>
-                                        <condition id="-3" name="Is on-screen" sid="173693677317951" type="spr_GoblinWalk" />
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="583549159212448" type="Ennemies">
-                                            <param id="0" name="Control">1</param>
-                                        </action>
-                                        <action id="7" name="Set mirrored" sid="663753398042531" type="Ennemies">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="529761777799338">
-                                    <conditions>
-                                        <condition behavior="Platform" id="10" name="Is by wall" sid="850818306648342" type="Ennemies">
-                                            <param id="0" name="Side">0</param>
-                                        </condition>
-                                        <condition id="-3" name="Is on-screen" sid="505179976008073" type="spr_GoblinWalk" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="694458159485478" type="Ennemies">
-                                            <param id="0" name="Instance variable">SensMarche</param>
-                                            <param id="1" name="Value">&quot;droite&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="633287171444940">
-                                    <conditions>
-                                        <condition behavior="Platform" id="10" name="Is by wall" sid="928248642536803" type="Ennemies">
-                                            <param id="0" name="Side">1</param>
-                                        </condition>
-                                        <condition id="-3" name="Is on-screen" sid="480876548081615" type="spr_GoblinWalk" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="156369466681988" type="Ennemies">
-                                            <param id="0" name="Instance variable">SensMarche</param>
-                                            <param id="1" name="Value">&quot;gauche&quot;</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <comment>L&apos;ennemie va vers le joueur quand il le voit</comment>
+                                        <event-block sid="992382402580665">
+                                            <conditions>
+                                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="836188842701321" type="Ennemies">
+                                                    <param id="0" name="Object">spr_Player</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="892411557689584">
+                                                    <conditions>
+                                                        <condition id="-1" name="Compare X" sid="554677738953366" type="spr_GoblinWalk">
+                                                            <param id="0" name="Comparison">4</param>
+                                                            <param id="1" name="X co-ordinate">spr_Player.X</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Platform" id="7" name="Simulate control" sid="101734136776112" type="Ennemies">
+                                                            <param id="0" name="Control">0</param>
+                                                        </action>
+                                                        <action id="7" name="Set mirrored" sid="513772874080637" type="Ennemies">
+                                                            <param id="0" name="State">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="780954364725726">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="599039274285428" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Platform" id="7" name="Simulate control" sid="695986141949487" type="Ennemies">
+                                                            <param id="0" name="Control">1</param>
+                                                        </action>
+                                                        <action id="7" name="Set mirrored" sid="888007098405055" type="Ennemies">
+                                                            <param id="0" name="State">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <comment>Déplacement ennemis</comment>
+                                        <event-block sid="219709631658268">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="285229660957607" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="875347407409436" type="Ennemies">
+                                                    <param id="0" name="Instance variable">SensMarche</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;gauche&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="7" name="Simulate control" sid="834230371862227" type="Ennemies">
+                                                    <param id="0" name="Control">0</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="403785898306839" type="Ennemies">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="353071507512297">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="831610583205869" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="502953051487995" type="Ennemies">
+                                                    <param id="0" name="Instance variable">SensMarche</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;droite&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="7" name="Simulate control" sid="583549159212448" type="Ennemies">
+                                                    <param id="0" name="Control">1</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="663753398042531" type="Ennemies">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>Déplacement ennemis quand il touche un mur</comment>
+                                        <event-block sid="529761777799338">
+                                            <conditions>
+                                                <condition behavior="Platform" id="10" name="Is by wall" sid="850818306648342" type="Ennemies">
+                                                    <param id="0" name="Side">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="694458159485478" type="Ennemies">
+                                                    <param id="0" name="Instance variable">SensMarche</param>
+                                                    <param id="1" name="Value">&quot;droite&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="633287171444940">
+                                            <conditions>
+                                                <condition behavior="Platform" id="10" name="Is by wall" sid="928248642536803" type="Ennemies">
+                                                    <param id="0" name="Side">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="156369466681988" type="Ennemies">
+                                                    <param id="0" name="Instance variable">SensMarche</param>
+                                                    <param id="1" name="Value">&quot;gauche&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <comment>L&apos;ennemi est repoussé quand le joueur lui dash dessus</comment>
                                 <event-block sid="107979408110373">

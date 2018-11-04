@@ -26,6 +26,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
@@ -1372,6 +1373,9 @@
                 </behavior-type>
                 <behavior-type name="ShadowCaster" sid="974776196446421">
                     <behavior id="shadowcaster" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="536510820460977">
+                    <behavior id="LOS" />
                 </behavior-type>
             </behaviors>
         </family>
