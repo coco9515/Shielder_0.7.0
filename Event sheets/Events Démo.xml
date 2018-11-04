@@ -4193,7 +4193,7 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;gauche&quot;</param>
                                         </condition>
-                                        <condition id="-3" name="Is on-screen" sid="784027259306200" type="Ennemies" />
+                                        <condition id="-3" name="Is on-screen" sid="941749051593744" type="spr_GoblinWalk" />
                                     </conditions>
                                     <actions>
                                         <action behavior="Platform" id="7" name="Simulate control" sid="834230371862227" type="Ennemies">
@@ -4211,7 +4211,7 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;droite&quot;</param>
                                         </condition>
-                                        <condition id="-3" name="Is on-screen" sid="287517750887328" type="Ennemies" />
+                                        <condition id="-3" name="Is on-screen" sid="173693677317951" type="spr_GoblinWalk" />
                                     </conditions>
                                     <actions>
                                         <action behavior="Platform" id="7" name="Simulate control" sid="583549159212448" type="Ennemies">
@@ -4227,6 +4227,7 @@
                                         <condition behavior="Platform" id="10" name="Is by wall" sid="850818306648342" type="Ennemies">
                                             <param id="0" name="Side">0</param>
                                         </condition>
+                                        <condition id="-3" name="Is on-screen" sid="505179976008073" type="spr_GoblinWalk" />
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="694458159485478" type="Ennemies">
@@ -4240,6 +4241,7 @@
                                         <condition behavior="Platform" id="10" name="Is by wall" sid="928248642536803" type="Ennemies">
                                             <param id="0" name="Side">1</param>
                                         </condition>
+                                        <condition id="-3" name="Is on-screen" sid="480876548081615" type="spr_GoblinWalk" />
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="156369466681988" type="Ennemies">
