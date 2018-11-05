@@ -1805,7 +1805,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1248</x>
+                        <x>128</x>
                         <y>256</y>
                         <z>0</z>
                         <width>40</width>
