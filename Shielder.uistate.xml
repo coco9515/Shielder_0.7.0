@@ -35,8 +35,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/HUD/" />
-        <folder expanded="1" path="object-folder/Dangers/" />
-        <folder expanded="1" path="object-folder/Dangers/Ennemis/" />
+        <folder expanded="0" path="object-folder/Dangers/" />
+        <folder expanded="0" path="object-folder/Dangers/Ennemis/" />
         <folder expanded="0" path="object-folder/Dangers/Pièges/" />
         <folder expanded="0" path="object-folder/Décor/" />
         <folder expanded="0" path="object-folder/Décor/Tuto/" />

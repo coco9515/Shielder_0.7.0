@@ -2,7 +2,7 @@
 <c2project>
     <name>Shielder</name>
     <description></description>
-    <version>0.8.1</version>
+    <version>0.8.2</version>
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
@@ -1454,13 +1454,13 @@
         <event-sheet>Events Menu.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Gamepad" uid="14">
+        <global-instance type="Gamepad" uid="451">
             <properties>
                 <analog-deadzone>25</analog-deadzone>
             </properties>
         </global-instance>
-        <global-instance type="Keyboard" uid="451" />
-        <global-instance type="Audio" uid="452">
+        <global-instance type="Keyboard" uid="452" />
+        <global-instance type="Audio" uid="721">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
