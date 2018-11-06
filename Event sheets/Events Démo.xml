@@ -1704,12 +1704,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Play" sid="454014472534745" type="Audio">
-                                    <param id="0" name="Audio file">Gobelin dégât</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-5</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
                                 <action id="-10" name="Set value" sid="183454155435395" type="spr_Player">
                                     <param id="0" name="Instance variable">playerState</param>
                                     <param id="1" name="Value">&quot;idle&quot;</param>
@@ -1724,15 +1718,6 @@
                                 </action>
                                 <action behavior="Platform" id="8" name="Set vector X" sid="377600998917944" type="spr_Player">
                                     <param id="0" name="Vector X">0</param>
-                                </action>
-                                <action behavior="Platform" id="0" name="Set ignoring input" sid="626137549079211" type="Ennemies">
-                                    <param id="0" name="Input">1</param>
-                                </action>
-                                <action behavior="Platform" id="1" name="Set max speed" sid="782933001614972" type="Ennemies">
-                                    <param id="0" name="Max Speed">1000</param>
-                                </action>
-                                <action behavior="Platform" id="9" name="Set vector Y" sid="290807951184225" type="Ennemies">
-                                    <param id="0" name="Vector Y">-200</param>
                                 </action>
                                 <action behavior="Timer" id="1" name="Stop timer" sid="817484709843806" type="spr_Player">
                                     <param id="0" name="Tag">&quot;Durée du dash&quot;</param>
@@ -1877,7 +1862,7 @@
                                             <param id="1" name="Value">&quot;shelter&quot;</param>
                                         </action>
                                         <action behavior="Platform" id="1" name="Set max speed" sid="326158680410062" type="spr_Player">
-                                            <param id="0" name="Max Speed">50</param>
+                                            <param id="0" name="Max Speed">150</param>
                                         </action>
                                         <action id="-13" name="Set boolean" sid="929345182072521" type="spr_Player">
                                             <param id="0" name="Instance variable">canDash</param>
@@ -4498,19 +4483,50 @@
                                         <action behavior="Platform" id="9" name="Set vector Y" sid="578974384159022" type="Ennemies">
                                             <param id="0" name="Vector Y">-200</param>
                                         </action>
-                                        <action behavior="Platform" id="8" name="Set vector X" sid="716295871572549" type="Ennemies">
-                                            <param id="0" name="Vector X">Shields.Bullet.Speed *0.75</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="443635908808031" type="System">
-                                            <param id="0" name="Seconds">1.0</param>
-                                        </action>
-                                        <action behavior="Platform" id="1" name="Set max speed" sid="670007730694528" type="Ennemies">
-                                            <param id="0" name="Max Speed">50</param>
-                                        </action>
-                                        <action behavior="Platform" id="0" name="Set ignoring input" sid="724566504629673" type="Ennemies">
-                                            <param id="0" name="Input">0</param>
-                                        </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="578506159922918">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="406437121385058" type="Ennemies">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="X co-ordinate">Shields.X</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="716295871572549" type="Ennemies">
+                                                    <param id="0" name="Vector X">Shields.Bullet.Speed *0.75</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="786044645869010" type="System">
+                                                    <param id="0" name="Seconds">1.0</param>
+                                                </action>
+                                                <action behavior="Platform" id="1" name="Set max speed" sid="804512178850971" type="Ennemies">
+                                                    <param id="0" name="Max Speed">50</param>
+                                                </action>
+                                                <action behavior="Platform" id="0" name="Set ignoring input" sid="302670515104100" type="Ennemies">
+                                                    <param id="0" name="Input">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="912915124970326">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="834751419352315" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="596841655577779" type="Ennemies">
+                                                    <param id="0" name="Vector X">- Shields.Bullet.Speed *0.75</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="746065081479013" type="System">
+                                                    <param id="0" name="Seconds">1.0</param>
+                                                </action>
+                                                <action behavior="Platform" id="1" name="Set max speed" sid="131173634316683" type="Ennemies">
+                                                    <param id="0" name="Max Speed">50</param>
+                                                </action>
+                                                <action behavior="Platform" id="0" name="Set ignoring input" sid="214083664547666" type="Ennemies">
+                                                    <param id="0" name="Input">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <comment>L&apos;ennemi qui se prend un chandelier meurt</comment>
                                 <event-block sid="865805183640821">
@@ -4644,6 +4660,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="6" name="Set speed" sid="615639269649295" type="spr_GoblinArcher">
+                                            <param id="0" name="Speed">15</param>
+                                        </action>
                                         <action id="4" name="Set animation" sid="895326902678914" type="spr_GoblinArcher">
                                             <param id="0" name="Animation">&quot;GobelinQuiTire&quot;</param>
                                             <param id="1" name="From">1</param>
