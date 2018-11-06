@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Events Démo</name>
     <events>
+        <variable comment="Stock la quantité de bouclies entre les map" constant="0" name="BouclierStock" sid="448680464500745" static="0" type="number">0</variable>
+        <variable comment="Stock la quantité de dégât bouclies entre les map" constant="0" name="BouclierRésistance" sid="136903922041529" static="0" type="number">0</variable>
         <variable comment="Quand un shield pête, ça s&apos;active" constant="0" name="AShieldBroke" sid="152627776031349" static="0" type="number">0</variable>
         <variable comment="Turn on when the first shield is selected" constant="0" name="FirstShield" sid="328874446184526" static="0" type="text">false</variable>
         <variable comment="Remembers which way the player is moving" constant="0" name="PlayerDirection" sid="893716178524945" static="0" type="text"></variable>
@@ -56,6 +58,14 @@
                         <action id="-13" name="Set boolean" sid="178325556108797" type="Shields">
                             <param id="0" name="Instance variable">InUse</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="523778319109186" type="Shields">
+                            <param id="0" name="Instance variable">DamageResistance</param>
+                            <param id="1" name="Value">BouclierRésistance</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="124504769651053" type="spr_Player">
+                            <param id="0" name="Instance variable">QuantityShield</param>
+                            <param id="1" name="Value">BouclierStock</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1144,6 +1154,14 @@
                                     <param id="0" name="Variable">FirstShield</param>
                                     <param id="1" name="Value">Shields.SpriteName</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="805609389445355" type="System">
+                                    <param id="0" name="Variable">BouclierRésistance</param>
+                                    <param id="1" name="Value">Shields.DamageResistance</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="228350308337039" type="System">
+                                    <param id="0" name="Variable">BouclierStock</param>
+                                    <param id="1" name="Value">spr_Player.QuantityShield</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block any="1" sid="739347869432800">
@@ -2026,6 +2044,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
+                                <comment>Sauf s&apos;il vise ou est sur une echelle</comment>
                                 <event-block sid="236745494743015">
                                     <conditions>
                                         <condition id="1" inverted="1" name="Is overlapping another object" sid="665138552076622" type="spr_Player">
@@ -2234,15 +2253,44 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
+                                                <comment>Augmente la vitesse du surf à chaque tick</comment>
                                                 <event-block sid="296359354878131">
                                                     <conditions>
                                                         <condition id="-1" name="Every tick" sid="175129377315190" type="System" />
                                                     </conditions>
                                                     <actions>
-                                                        <action behavior="Platform" id="1" name="Set max speed" sid="222888400248749" type="spr_Player">
-                                                            <param id="0" name="Max Speed">spr_Player.Platform.MaxSpeed +30</param>
+                                                        <action id="-10" name="Set value" sid="771909553835572" type="spr_Player">
+                                                            <param id="0" name="Instance variable">SurfSpeed</param>
+                                                            <param id="1" name="Value">spr_Player.Platform.MaxSpeed</param>
                                                         </action>
                                                     </actions>
+                                                    <sub-events>
+                                                        <event-block sid="801528646594826">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="273212322619675" type="spr_Player">
+                                                                    <param id="0" name="Instance variable">SurfSpeed</param>
+                                                                    <param id="1" name="Comparison">2</param>
+                                                                    <param id="2" name="Value">500</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action behavior="Platform" id="1" name="Set max speed" sid="222888400248749" type="spr_Player">
+                                                                    <param id="0" name="Max Speed">spr_Player.Platform.MaxSpeed +30</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <comment>Une fois le maximum possible atteint, ça bloque la vitesse</comment>
+                                                        <event-block sid="483275047395757">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="386175936950518" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action behavior="Platform" id="1" name="Set max speed" sid="960618470778706" type="spr_Player">
+                                                                    <param id="0" name="Max Speed">500</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-block sid="205074248498917">
                                                     <conditions>
@@ -2361,7 +2409,7 @@
                                     </sub-events>
                                 </event-block>
                                 <comment>Fais tourner le joueur pour qu&apos;il fasse face à la direction vers laquelle il surf</comment>
-                                <event-block bookmark="1" sid="136605842859906">
+                                <event-block sid="136605842859906">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="462205446656490" type="System">
                                             <param id="0" name="Variable">Surfing</param>
@@ -2563,6 +2611,15 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;surf&quot;</param>
                                         </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="144297510775551" type="spr_Player">
+                                            <param id="0" name="Instance variable">canDash</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="627187737767087" type="spr_Player">
+                                            <param id="0" name="Instance variable">Invincible</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="258923004302498" type="spr_Player">
+                                            <param id="0" name="Instance variable">CooldownParry</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="698530131888855" type="spr_Player">
@@ -2577,11 +2634,6 @@
                                             <param id="0" name="Animation">&quot;Parry&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
-                                        <action behavior="Timer" id="0" name="Start timer" sid="287838515730675" type="spr_Player">
-                                            <param id="0" name="Duration">0.5</param>
-                                            <param id="1" name="Type">0</param>
-                                            <param id="2" name="Tag">&quot;Durée du parry&quot;</param>
-                                        </action>
                                         <action id="-13" name="Set boolean" sid="537980948333085" type="spr_Player">
                                             <param id="0" name="Instance variable">isParrying</param>
                                             <param id="1" name="Value">1</param>
@@ -2590,11 +2642,16 @@
                                             <param id="0" name="Instance variable">canDash</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
+                                        <action behavior="Timer" id="0" name="Start timer" sid="287838515730675" type="spr_Player">
+                                            <param id="0" name="Duration">0.5</param>
+                                            <param id="1" name="Type">0</param>
+                                            <param id="2" name="Tag">&quot;Durée du parry&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Reintialise le joueur</comment>
+                        <comment>Reintialise le joueur + cooldown</comment>
                         <event-block sid="971048685485394">
                             <conditions>
                                 <condition behavior="Timer" id="0" name="On timer" sid="786933887694473" type="spr_Player">
@@ -2602,9 +2659,17 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-13" name="Set boolean" sid="265392358781949" type="spr_Player">
+                                    <param id="0" name="Instance variable">isParrying</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="405736269535716" type="spr_Player">
                                     <param id="0" name="Instance variable">playerState</param>
                                     <param id="1" name="Value">&quot;idle&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="705552114889603" type="spr_Player">
+                                    <param id="0" name="Instance variable">CooldownParry</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="271911967068966" type="spr_Player">
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
@@ -2614,8 +2679,23 @@
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="265392358781949" type="spr_Player">
-                                    <param id="0" name="Instance variable">isParrying</param>
+                                <action behavior="Timer" id="0" name="Start timer" sid="451196820751925" type="spr_Player">
+                                    <param id="0" name="Duration">0.5</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;ParryCooldown&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Cooldown off</comment>
+                        <event-block sid="132820052690442">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="218221960205985" type="spr_Player">
+                                    <param id="0" name="Tag">&quot;ParryCooldown&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="821813791965092" type="spr_Player">
+                                    <param id="0" name="Instance variable">CooldownParry</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
@@ -2636,7 +2716,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <comment>Lance le bouclier si le joueur ne l&apos;a pas déjà fait</comment>
+                                <comment>Lance le bouclier si le joueur ne l&apos;a pas déjà fait - impossible si mur ou décor</comment>
                                 <event-block sid="720070272799495">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="591184481926664" type="spr_Player">
@@ -2649,6 +2729,9 @@
                                         </condition>
                                         <condition id="1" inverted="1" name="Is overlapping another object" sid="112984456665528" type="Shields">
                                             <param id="0" name="Object">tile_WallHitbox</param>
+                                        </condition>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="952502339577757" type="Shields">
+                                            <param id="0" name="Object">Décors</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -3121,6 +3204,7 @@
                                 </action>
                             </actions>
                             <sub-events>
+                                <comment>Se pose seulement</comment>
                                 <event-block sid="650576520243919">
                                     <conditions>
                                         <condition id="-8" name="Is boolean instance variable set" sid="575704313024276" type="Shields">
@@ -3129,6 +3213,7 @@
                                     </conditions>
                                     <actions />
                                 </event-block>
+                                <comment>Devient une plateforme</comment>
                                 <event-block sid="436553223242274">
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="249182500681335" type="Shields">

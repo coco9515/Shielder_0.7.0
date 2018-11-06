@@ -2,7 +2,7 @@
 <c2project>
     <name>Shielder</name>
     <description></description>
-    <version>0.8.3</version>
+    <version>0.8.4</version>
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
@@ -65,7 +65,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">NW.js</prop>
+        <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -1096,6 +1096,8 @@
                     <instance-variable comment="Combien de bouclier le joueur a en stock ?" name="QuantityShield" sid="144486089824002" type="number" />
                     <instance-variable comment="Force the stop of the dash" name="ForceStopDashing" sid="647108499184579" type="boolean" />
                     <instance-variable comment="Invincibilité durant le dash - uniquement pour les ennemies, pas les pièges" name="DashInvincible" sid="879202033820451" type="boolean" />
+                    <instance-variable comment="Est-ce que parry est en cooldown ?" name="CooldownParry" sid="634804498966847" type="boolean" />
+                    <instance-variable comment="How fast the max surf speed is ?" name="SurfSpeed" sid="862577803723295" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="754739628599200">

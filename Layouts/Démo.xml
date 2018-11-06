@@ -1773,6 +1773,8 @@
                         <QuantityShield>2</QuantityShield>
                         <ForceStopDashing>false</ForceStopDashing>
                         <DashInvincible>false</DashInvincible>
+                        <CooldownParry>false</CooldownParry>
+                        <SurfSpeed>0</SurfSpeed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
