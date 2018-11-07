@@ -4185,14 +4185,26 @@
                 <event-group description="Comportement des pics" sid="784783767533523" title="Enemy : Spikes">
                     <sub-events>
                         <comment>Lorsque le joueur touche les pics, s&apos;il est dans un état autre que surf, il perd 1PV</comment>
+                        <variable comment="Est-ce que les dégâts des piques sont en cooldown ?" constant="0" name="SpikeCooldown" sid="764814949956123" static="0" type="text">false</variable>
                         <event-block sid="905586278203015">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="837862754477476" type="spr_Spikes">
                                     <param id="0" name="Object">spr_Player</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="913584478916278" type="System">
+                                    <param id="0" name="Variable">SpikeCooldown</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;false&quot;</param>
+                                </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="842238705009978" type="System">
+                                    <param id="0" name="Variable">SpikeCooldown</param>
+                                    <param id="1" name="Value">&quot;true&quot;</param>
+                                </action>
+                            </actions>
                             <sub-events>
+                                <comment>Il perd 1PV et le cooldown s&apos;active pour éviter de toucher plusieurs piques en même temps</comment>
                                 <event-block sid="138999386638978">
                                     <conditions>
                                         <condition id="-7" inverted="1" name="Compare instance variable" sid="412529804381950" type="spr_Player">
@@ -4203,11 +4215,19 @@
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="886174943111926" type="spr_Player">
                                             <param id="0" name="Instance variable">Invincible</param>
                                         </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="895676904364738" type="System" />
                                     </conditions>
                                     <actions>
                                         <action id="-11" name="Add to" sid="925655606052461" type="spr_Player">
                                             <param id="0" name="Instance variable">Blessures</param>
                                             <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="597697741276361" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="393059169463195" type="System">
+                                            <param id="0" name="Variable">SpikeCooldown</param>
+                                            <param id="1" name="Value">&quot;false&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -4867,7 +4887,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Safe-fail : reset les blessures à 0 pour éviter un état invincible permanent</comment>
+                        <comment>Fail-safe : reset les blessures à 0 pour éviter un état invincible permanent</comment>
                         <event-block sid="763450851254720">
                             <conditions>
                                 <condition behavior="Timer" id="0" name="On timer" sid="981806478348579" type="spr_Player">
@@ -5005,15 +5025,15 @@
                                         <action id="0" name="Set text" sid="240111199210578" type="text_QuantityShield">
                                             <param id="0" name="Text">&quot;x 0&quot;</param>
                                         </action>
-                                        <action id="-13" name="Set time scale" sid="999642687165735" type="System">
-                                            <param id="0" name="Time scale">0</param>
-                                        </action>
                                         <action id="-15" name="Set visible" sid="798911579065279" type="fnt_text">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="283291750378169" type="System">
                                             <param id="0" name="Variable">AShieldBroke</param>
                                             <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action id="-13" name="Set time scale" sid="999642687165735" type="System">
+                                            <param id="0" name="Time scale">0</param>
                                         </action>
                                     </actions>
                                 </event-block>

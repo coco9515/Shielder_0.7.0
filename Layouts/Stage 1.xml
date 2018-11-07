@@ -3882,33 +3882,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="text_GameOver" uid="245">
-                    <properties>
-                        <text>Your defenses yielded. Press A to restart</text>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-16,700,0</font>
-                        <color>255,255,255</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>160</x>
-                        <y>128</y>
-                        <z>0</z>
-                        <width>200</width>
-                        <height>96</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="icon_Lifebar" uid="246">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -3924,6 +3897,36 @@
                         <z>0</z>
                         <width>24.592077255</width>
                         <height>25.958303452</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="fnt_text" uid="245">
+                    <properties>
+                        <character-width>34</character-width>
+                        <character-height>34</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-?!&apos;&quot;</character-set>
+                        <text>Your defenses yielded      Press A to restart</text>
+                        <scale>0.5</scale>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>-4</character-spacing>
+                        <line-height>15</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>384</x>
+                        <y>224</y>
+                        <z>0</z>
+                        <width>279.571411133</width>
+                        <height>154</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
