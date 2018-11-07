@@ -127,28 +127,38 @@
                 </action>
             </actions>
             <sub-events>
-                <comment>Place le shield devant le joueur sauf s&apos;il le lance</comment>
+                <comment>Actualise la barre de vie</comment>
                 <event-block sid="669244702999834">
                     <conditions>
-                        <condition id="-7" inverted="1" name="Compare instance variable" sid="953955061473198" type="spr_Player">
-                            <param id="0" name="Instance variable">playerState</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;throw&quot;</param>
-                        </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="807534464405875" type="Shields">
                             <param id="0" name="Instance variable">InUse</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-4" name="Set position to another object" sid="976004236733269" type="Shields">
-                            <param id="0" name="Object">spr_Player</param>
-                            <param id="1" name="Image point (optional)">spr_Player.imagepointBras</param>
-                        </action>
                         <action id="3" name="Set progress" sid="690912980384413" type="Lifebar">
                             <param id="0" name="Value">Shields.DamageResistance</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <comment>Place le shield devant le joueur sauf s&apos;il le lance</comment>
+                        <event-block sid="796507578938128">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="953955061473198" type="spr_Player">
+                                    <param id="0" name="Instance variable">playerState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;throw&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="976004236733269" type="Shields">
+                                    <param id="0" name="Object">spr_Player</param>
+                                    <param id="1" name="Image point (optional)">spr_Player.imagepointBras</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
+                <comment>Actualise ces variables</comment>
                 <event-block sid="403329185229644">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="721572969944074" type="Shields">
@@ -1874,6 +1884,63 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Ajout d&apos;un effet de ghost sur le dash</comment>
+                        <event-block sid="682610306633680">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="898143141726229" type="spr_Player">
+                                    <param id="0" name="Instance variable">isSpawningGhosts</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="105377039019311">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="107519972991841" type="System">
+                                            <param id="0" name="Interval (seconds)">0.02</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="977084587459460" type="spr_Player">
+                                            <param id="0" name="Object">spr_Ghost</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="185986548774746">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="392937198321002" type="spr_Player">
+                                                    <param id="0" name="Instance variable">playerSens</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;gauche&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="117749683581901" type="spr_Ghost">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="698007802411199">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="814805159834564" type="spr_Player">
+                                                    <param id="0" name="Instance variable">playerSens</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;droite&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="451841240770913" type="spr_Ghost">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="L&apos;abri bouclier du joueur" sid="628983490665557" title="Player Control : Shelter">
@@ -3535,10 +3602,11 @@
                 </event-group>
                 <event-group description="Gère les boost : réparations et gain boucliers" sid="585875262973198" title="Player Control : Boost">
                     <sub-events>
+                        <comment>Quand le joueur ramasse un boost</comment>
                         <variable comment="Le joueur gagne un bouclier" constant="0" name="AddShield" sid="483026309134163" static="0" type="text">false</variable>
                         <event-block sid="425334805356434">
                             <conditions>
-                                <condition id="9" name="Is overlapping at offset" sid="691433013641822" type="Shields">
+                                <condition id="9" name="Is overlapping at offset" sid="691433013641822" type="spr_Player">
                                     <param id="0" name="Object">Boost</param>
                                     <param id="1" name="Offset X">15</param>
                                     <param id="2" name="Offset Y">15</param>
@@ -3546,97 +3614,107 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <comment>Ajoute un bouclier s&apos;il s&apos;agit d&apos;un bouclier et le supprime</comment>
-                                <event-block sid="461011672310375">
+                                <event-block sid="771422532077543">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="691815544731333" type="Boost">
-                                            <param id="0" name="Instance variable">RepairValue</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">10</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="535049868909188" type="spr_Player">
-                                            <param id="0" name="Instance variable">QuantityShield</param>
-                                            <param id="1" name="Comparison">2</param>
-                                            <param id="2" name="Value">2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="25" name="Play at object" sid="466203193279396" type="Audio">
-                                            <param id="0" name="Audio file">pickup anvil</param>
-                                            <param id="1" name="Loop">0</param>
-                                            <param id="2" name="Volume">0</param>
-                                            <param id="3" name="Object">spr_Player</param>
-                                            <param id="4" name="Inner angle">360</param>
-                                            <param id="5" name="Outer angle">360</param>
-                                            <param id="6" name="Outer gain">0</param>
-                                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
-                                        </action>
-                                        <action id="0" name="Spawn another object" sid="225084499762931" type="Boost">
-                                            <param id="0" name="Object">fx_itemget</param>
-                                            <param id="1" name="Layer">1</param>
-                                            <param id="2" name="Image point">0</param>
-                                        </action>
-                                        <action id="-9" name="Destroy" sid="900250621532320" type="Boost" />
-                                        <action id="-9" name="Set value" sid="826752946540625" type="System">
-                                            <param id="0" name="Variable">AddShield</param>
-                                            <param id="1" name="Value">&quot;true&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <comment>Ne répare pas le bouclier avec un marteau et le supprime pas si le joueur est déjà max PV</comment>
-                                <event-block sid="672235972220773">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="566078379536724" type="System" />
-                                        <condition id="-7" name="Compare instance variable" sid="694098625103299" type="Shields">
-                                            <param id="0" name="Instance variable">DamageResistance</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">4</param>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="481328635403991" type="Shields">
+                                            <param id="0" name="Instance variable">InUse</param>
                                         </condition>
                                     </conditions>
                                     <actions />
-                                </event-block>
-                                <comment>Répare le bouclier avec un marteau et le supprime</comment>
-                                <event-block sid="281141464909441">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="538452011199871" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="25" name="Play at object" sid="995758022391532" type="Audio">
-                                            <param id="0" name="Audio file">pickup anvil</param>
-                                            <param id="1" name="Loop">0</param>
-                                            <param id="2" name="Volume">0</param>
-                                            <param id="3" name="Object">spr_Player</param>
-                                            <param id="4" name="Inner angle">360</param>
-                                            <param id="5" name="Outer angle">360</param>
-                                            <param id="6" name="Outer gain">0</param>
-                                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="848928879509196" type="Shields">
-                                            <param id="0" name="Instance variable">DamageResistance</param>
-                                            <param id="1" name="Value">Shields.DamageResistance + Boost.RepairValue</param>
-                                        </action>
-                                        <action id="0" name="Spawn another object" sid="151993221162204" type="Boost">
-                                            <param id="0" name="Object">fx_itemget</param>
-                                            <param id="1" name="Layer">1</param>
-                                            <param id="2" name="Image point">0</param>
-                                        </action>
-                                        <action id="-9" name="Destroy" sid="468515615873442" type="Boost" />
-                                    </actions>
-                                </event-block>
-                                <event-block sid="175743903932131">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="591911876497456" type="Shields">
-                                            <param id="0" name="Instance variable">DamageResistance</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="806996483859552" type="Shields">
-                                            <param id="0" name="Instance variable">DamageResistance</param>
-                                            <param id="1" name="Value">4</param>
-                                        </action>
-                                    </actions>
+                                    <sub-events>
+                                        <comment>Ajoute un bouclier s&apos;il s&apos;agit d&apos;un bouclier et le supprime</comment>
+                                        <event-block sid="461011672310375">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="691815544731333" type="Boost">
+                                                    <param id="0" name="Instance variable">RepairValue</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">10</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="535049868909188" type="spr_Player">
+                                                    <param id="0" name="Instance variable">QuantityShield</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="25" name="Play at object" sid="466203193279396" type="Audio">
+                                                    <param id="0" name="Audio file">pickup anvil</param>
+                                                    <param id="1" name="Loop">0</param>
+                                                    <param id="2" name="Volume">0</param>
+                                                    <param id="3" name="Object">spr_Player</param>
+                                                    <param id="4" name="Inner angle">360</param>
+                                                    <param id="5" name="Outer angle">360</param>
+                                                    <param id="6" name="Outer gain">0</param>
+                                                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="225084499762931" type="Boost">
+                                                    <param id="0" name="Object">fx_itemget</param>
+                                                    <param id="1" name="Layer">1</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                                <action id="-9" name="Destroy" sid="900250621532320" type="Boost" />
+                                                <action id="-9" name="Set value" sid="826752946540625" type="System">
+                                                    <param id="0" name="Variable">AddShield</param>
+                                                    <param id="1" name="Value">&quot;true&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>Ne répare pas le bouclier avec un marteau et le supprime pas si le joueur est déjà max PV</comment>
+                                        <event-block sid="672235972220773">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="566078379536724" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="694098625103299" type="Shields">
+                                                    <param id="0" name="Instance variable">DamageResistance</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                        <comment>Répare le bouclier avec un marteau et le supprime</comment>
+                                        <event-block sid="281141464909441">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="538452011199871" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="25" name="Play at object" sid="995758022391532" type="Audio">
+                                                    <param id="0" name="Audio file">pickup anvil</param>
+                                                    <param id="1" name="Loop">0</param>
+                                                    <param id="2" name="Volume">0</param>
+                                                    <param id="3" name="Object">spr_Player</param>
+                                                    <param id="4" name="Inner angle">360</param>
+                                                    <param id="5" name="Outer angle">360</param>
+                                                    <param id="6" name="Outer gain">0</param>
+                                                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="848928879509196" type="Shields">
+                                                    <param id="0" name="Instance variable">DamageResistance</param>
+                                                    <param id="1" name="Value">Shields.DamageResistance + Boost.RepairValue</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="151993221162204" type="Boost">
+                                                    <param id="0" name="Object">fx_itemget</param>
+                                                    <param id="1" name="Layer">1</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                                <action id="-9" name="Destroy" sid="468515615873442" type="Boost" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="175743903932131">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="591911876497456" type="Shields">
+                                                    <param id="0" name="Instance variable">DamageResistance</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="806996483859552" type="Shields">
+                                                    <param id="0" name="Instance variable">DamageResistance</param>
+                                                    <param id="1" name="Value">4</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -4821,6 +4899,11 @@
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="182422485310992" type="spr_Player">
                                             <param id="0" name="Instance variable">DashInvincible</param>
                                         </condition>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="745270423346161" type="spr_Player">
+                                            <param id="0" name="Instance variable">playerState</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;surf&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="25" name="Play at object" sid="630642034180704" type="Audio">
@@ -4926,7 +5009,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="6" name="Set speed" sid="615639269649295" type="spr_GoblinArcher">
-                                            <param id="0" name="Speed">15</param>
+                                            <param id="0" name="Speed">12</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="895326902678914" type="spr_GoblinArcher">
                                             <param id="0" name="Animation">&quot;GobelinQuiTire&quot;</param>
@@ -5331,61 +5414,5 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-block sid="682610306633680">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="898143141726229" type="spr_Player">
-                    <param id="0" name="Instance variable">isSpawningGhosts</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="105377039019311">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="107519972991841" type="System">
-                            <param id="0" name="Interval (seconds)">0.02</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="977084587459460" type="spr_Player">
-                            <param id="0" name="Object">spr_Ghost</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="185986548774746">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="392937198321002" type="spr_Player">
-                                    <param id="0" name="Instance variable">playerSens</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;gauche&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="7" name="Set mirrored" sid="117749683581901" type="spr_Ghost">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="698007802411199">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="814805159834564" type="spr_Player">
-                                    <param id="0" name="Instance variable">playerSens</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;droite&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="7" name="Set mirrored" sid="451841240770913" type="spr_Ghost">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
     </events>
 </c2eventsheet>
