@@ -797,6 +797,37 @@
                     </effects>
                     <texture original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier 3.png" />
                 </object-type>
+                <object-type name="fx_itemget" sid="764623915120992">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="103473026727996">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="19" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="296046853452151" speed="60">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-type name="spr_StairsDown" sid="361614628708377">
                 <plugin id="Sprite" />
@@ -1513,7 +1544,7 @@
                 <listener-z-height>600</listener-z-height>
                 <reference-distance>600</reference-distance>
                 <maximum-distance>10000</maximum-distance>
-                <roll-off-factor>1</roll-off-factor>
+                <roll-off-factor>10</roll-off-factor>
             </properties>
         </global-instance>
     </global-instances>
@@ -1535,6 +1566,18 @@
         <file name="Arc - Flèche non parée.ogg" />
         <file name="porte secrète.m4a" />
         <file name="porte secrète.ogg" />
+        <file name="Levier.ogg" />
+        <file name="chandelier crash.ogg" />
+        <file name="Chandelier décrochage.ogg" />
+        <file name="Bruit de torche.m4a" />
+        <file name="Bruit de torche.ogg" />
+        <file name="bouclier broken.ogg" />
+        <file name="dash hit.ogg" />
+        <file name="parryclash.ogg" />
+        <file name="pickup anvil.ogg" />
+        <file name="hurt.ogg" />
+        <file name="swish-4.ogg" />
+        <file name="stairs.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
