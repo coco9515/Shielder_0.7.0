@@ -67,7 +67,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -1564,8 +1564,6 @@
         <file name="Arc - Flèche parée.m4a" />
         <file name="Arc - Flèche parée.ogg" />
         <file name="Arc - Flèche non parée.ogg" />
-        <file name="porte secrète.m4a" />
-        <file name="porte secrète.ogg" />
         <file name="Levier.ogg" />
         <file name="chandelier crash.ogg" />
         <file name="Chandelier décrochage.ogg" />
@@ -1579,7 +1577,9 @@
         <file name="swish-4.ogg" />
         <file name="stairs.ogg" />
     </sounds-folder>
-    <music-folder />
+    <music-folder>
+        <file name="Morgana Rides.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />

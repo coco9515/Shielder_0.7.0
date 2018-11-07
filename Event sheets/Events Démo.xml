@@ -34,6 +34,12 @@
                     <param id="6" name="Outer gain">0</param>
                     <param id="7" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action id="0" name="Play" sid="276762592817754" type="Audio">
+                    <param id="0" name="Audio file">Morgana Rides</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-12</param>
+                    <param id="1" name="Tag (optional)">&quot;Musique du stage&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="467039077596529">
@@ -1213,6 +1219,9 @@
                                 </action>
                                 <action id="-43" name="Go to next/previous layout" sid="116773537823177" type="System">
                                     <param id="0" name="Which">0</param>
+                                </action>
+                                <action id="6" name="Stop" sid="768650218300805" type="Audio">
+                                    <param id="0" name="Tag">&quot;Musique du stage&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3493,12 +3502,6 @@
                                             <param id="0" name="Audio file">Levier</param>
                                             <param id="2" name="Loop">0</param>
                                             <param id="3" name="Volume">-5</param>
-                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                        </action>
-                                        <action id="0" name="Play" sid="349747554129762" type="Audio">
-                                            <param id="0" name="Audio file">porte secrète</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">0</param>
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="579966218905883" type="System">
