@@ -41,6 +41,8 @@
     <used-effects>
         <effect author="Scirra" id="glowhorizontal">Glow Horizontal</effect>
         <effect author="Scirra" id="glowvertical">Glow Vertical</effect>
+        <effect author="Scirra" id="pixellate">Pixellate</effect>
+        <effect author="Scirra" id="tint">Tint</effect>
         <effect author="Scirra" id="warp">Warp</effect>
     </used-effects>
     <configurations>
@@ -65,7 +67,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -786,6 +788,46 @@
                     <plugin id="Particles" />
                     <texture original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\particle_mur.png" />
                 </object-type>
+                <object-type name="fx_brokenshield" sid="145360401537569">
+                    <plugin id="Particles" />
+                    <effects>
+                        <effect-type name="Pixellate">
+                            <effect id="pixellate" />
+                        </effect-type>
+                    </effects>
+                    <texture original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\bouclier 3.png" />
+                </object-type>
+                <object-type name="fx_itemget" sid="764623915120992">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="103473026727996">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="19" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="296046853452151" speed="60">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-type name="spr_StairsDown" sid="361614628708377">
                 <plugin id="Sprite" />
@@ -1098,6 +1140,7 @@
                     <instance-variable comment="Invincibilité durant le dash - uniquement pour les ennemies, pas les pièges" name="DashInvincible" sid="879202033820451" type="boolean" />
                     <instance-variable comment="Est-ce que parry est en cooldown ?" name="CooldownParry" sid="634804498966847" type="boolean" />
                     <instance-variable comment="How fast the max surf speed is ?" name="SurfSpeed" sid="862577803723295" type="number" />
+                    <instance-variable comment="Le joueur spawne t&apos;il des ghosts ?" name="isSpawningGhosts" sid="723980447659460" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="754739628599200">
@@ -1312,6 +1355,34 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="spr_Ghost" sid="284061566033286">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="537523614612327">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Dash" pingpong="0" repeatcount="1" repeatto="0" sid="891489765765788" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Loki Wrynn\Desktop\Leko\Game Design\Bachelor 3\Projets perso\Shielder\Sprites\chevalier 3 vert.png">
+                            <image-point name="Bras" x="0.825" y="0.5" />
+                            <image-point name="Up" x="0.475" y="0.1" />
+                            <image-point name="Down" x="0.5" y="0.933333" />
+                            <collision-poly>
+                                <point x="0.125" y="0.183333" />
+                                <point x="0.674999" y="0.183333" />
+                                <point x="0.675" y="1" />
+                                <point x="0.125" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Camera">
             <object-type name="CameraVertical" sid="485147451187593">
@@ -1473,7 +1544,7 @@
                 <listener-z-height>600</listener-z-height>
                 <reference-distance>600</reference-distance>
                 <maximum-distance>10000</maximum-distance>
-                <roll-off-factor>1</roll-off-factor>
+                <roll-off-factor>10</roll-off-factor>
             </properties>
         </global-instance>
     </global-instances>
@@ -1495,6 +1566,18 @@
         <file name="Arc - Flèche non parée.ogg" />
         <file name="porte secrète.m4a" />
         <file name="porte secrète.ogg" />
+        <file name="Levier.ogg" />
+        <file name="chandelier crash.ogg" />
+        <file name="Chandelier décrochage.ogg" />
+        <file name="Bruit de torche.m4a" />
+        <file name="Bruit de torche.ogg" />
+        <file name="bouclier broken.ogg" />
+        <file name="dash hit.ogg" />
+        <file name="parryclash.ogg" />
+        <file name="pickup anvil.ogg" />
+        <file name="hurt.ogg" />
+        <file name="swish-4.ogg" />
+        <file name="stairs.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
